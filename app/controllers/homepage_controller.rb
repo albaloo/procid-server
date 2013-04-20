@@ -63,6 +63,7 @@ class HomepageController < ApplicationController
 			end
 			currentIssue.find_conversations(numPrevComments,5,2)
 			currentIssue.find_ideas(numPrevComments,10,1,3)
+
 		end
 		return currentIssue.id	
 	end

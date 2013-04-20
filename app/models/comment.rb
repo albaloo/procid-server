@@ -32,8 +32,7 @@ class Comment
   end
 
   def updateSummary
-    Rails.logger = Logger.new("#{Rails.root}/roziank.txt")
-
+    
     if (summary.nil? || summary.empty?)
       summary = " commented."
       Rails.logger.debug "Roshanak ends"

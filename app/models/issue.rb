@@ -367,6 +367,7 @@ class Issue
   	end
   end
   def find_ideas(start,numCheck,minWithImg,minNoImg)
+        Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minWithImg: #{minWithImg}, , minNoImg: #{minNoImg}"
   	comments = Comment.all(:issue_id=>id)
   	references=Array.new(comments.length) {Array.new}
   	x=start
