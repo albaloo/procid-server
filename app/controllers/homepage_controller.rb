@@ -91,6 +91,7 @@ class HomepageController < ApplicationController
 			curr_json["tone"]="positive"
 			curr_json["criteria"]=Array.new
 			curr_json["commented_at"]=comments[count].commented_at
+			comments[count].updateSummary()
 			curr_json["summary"]=comments[count].summary
 		
 			comments_json[count]=curr_json

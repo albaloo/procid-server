@@ -31,8 +31,7 @@ class Comment
     link = link.concat(id.to_s)
   end
 
-  def updateSummary
-    
+  def updateSummary  
     if (summary.nil? || summary.empty?)
       summary = " commented."
       Rails.logger.debug "Roshanak ends"
