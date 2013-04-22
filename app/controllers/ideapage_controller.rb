@@ -18,6 +18,25 @@ class IdeapageController < ApplicationController
 		render :json => { }
 	end
 
+        def addNewComment
+		issueLink = params[:issueLink]
+		userName = params[:userName]
+                commentTitle = params[:commentTitle]
+		commentContent = params[:content]
+		tone = params[:tone]
+		
+		if(issueLink.ends_with?('#'))
+                  issueLink.chop
+                end
+		currentIssue = Issue.first(:link => issueLink)
+		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
+		currentParticipant = Participant.first_or_create({:user_name =>userName})
+		newCommentTitle = currentIssue.getNewCommentTitle()
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea})
+
+		render :json => { }
+	end
+
         def addCriteria
 		issueLink = params[:issueLink]
 		userName = params[:userName]
@@ -56,8 +75,6 @@ class IdeapageController < ApplicationController
 		#newComment.updateLink()
 
 		render :json => { }
-
-
 	end
 
 	def editCriteria

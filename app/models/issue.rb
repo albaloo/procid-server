@@ -46,6 +46,7 @@ class Issue
     potentials.concat(find_consensus_potential_participants_Dmapper)
     potentials.concat(find_recent_potential_participants_Dmapper)
 
+    potentials = potentials.uniq
     return potentials.sample(30)
   end
   

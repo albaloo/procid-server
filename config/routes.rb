@@ -9,6 +9,7 @@ Backend::Application.routes.draw do
 	match "/updateCriteriaStatus" => "ideapage#updateCriteriaStatus"
 	match "/editCriteria" => "ideapage#editCriteria"
 	match "/deleteCriteriaStatus" => "ideapage#deleteCriteria"
+	match "/addNewComment" => "ideapage#addNewComment"
 
 
 
