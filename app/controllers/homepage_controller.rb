@@ -41,6 +41,7 @@ class HomepageController < ApplicationController
 						:content => curr["content"],
 						:participant => currentParticipant,
 						:issue=>currentIssue
+#TODO: set the patch attribute for comment
 						}
 			if !(curr["image"].eql?(" "))
 				currentComment.has_image=true

@@ -370,38 +370,32 @@ class Issue
   def find_ideas(start,numCheck,minWithImg,minNoImg)
         Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minWithImg: #{minWithImg}, , minNoImg: #{minNoImg}"
   	comments = Comment.all(:issue_id=>id)
-  	references=Array.new(comments.length) {Array.new}
-  	x=start
-  	if(x<numCheck)
-  		y=0
- 		while(y<numCheck && y<comments.length)
-  			i=0
-  			while(i<y)
-  				if(comments[y].content.include?(comments[i].title) || comments[y].content.include?(comments[i].participant.first_name))
-  					references[i].push(comments[i])
-  				end
-  				i+=1
-  			end
-  			y+=1
-  		end
-  	end
-  	while(x< (comments.length - numCheck))
-  		i=x-numCheck
-  		while(i<x)
-  			if(comments[x].content.include?(comments[i].title) || comments[x].content.include?(comments[i].participant.first_name))
-  				references[i].push(comments[i])
-  			end
-  			i+=1
-  		end
-  		check=x-numCheck
-  		if(references[check].length>=minNoImg || (comments[check].has_image && references[check].length >= minWithImg))
-			idea = Idea.first_or_create({:comment=> comments[check]},{:status=>"Ongoing"})	
-			comments[check].ideasource = idea
-			tag = Tag.first_or_create({:name => "idea", :comment => comments[check]})
-			comments[x].save		
-		end
-  		x+=1
-  	end	  	
+      references=Array.new(comments.length) {Array.new}
+      x=start
+      while(x<comments.length)
+          i=x+1
+          stop=(x+numCheck)+1
+          if(stop>comments.length)
+              stop=comments.length
+          end
+          checkNames=true
+          while(i<stop)
+              if(checkNames && comments[i].participant == comments[x].participant)
+                  checkNames=false
+              end
+              if(comments[i].content.include?(comments[x].title) || (checkNames && (comments[i].content.include?(comments[x].participant.first_name || comments[i].content.include?(comments[x].participant.user_name)))))
+                  references[x].push(comments[i])
+              end
+              i+=1
+          end
+          if(references[x].length>=minNoImg || (comments[x].has_image && references[x].length >= minWithImg))
+            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
+            comments[x].ideasource = idea
+            tag = Tag.first_or_create({:name => "idea", :comment => comments[x]})
+            comments[x].save        
+        end
+          x+=1
+      end            	
   end
 
 
