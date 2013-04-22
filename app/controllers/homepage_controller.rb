@@ -51,6 +51,9 @@ class HomepageController < ApplicationController
 			tags = curr["tags"]
 			tags.each do |t|
 				tag = Tag.first_or_create({:name => t, :comment => currentComment})		
+				if(t.eql?("patch"))
+					currentComment.attributes = {:patch => true}
+				end
 			end
 								
 			currentComment.raise_on_save_failure = true
