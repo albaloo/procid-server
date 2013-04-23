@@ -66,7 +66,8 @@ class HomepageController < ApplicationController
 				numPrevComments-=7
 			end
 			currentIssue.find_conversations(numPrevComments,5,2)
-			currentIssue.find_ideas(numPrevComments,10,1,3)
+			#currentIssue.find_ideas(numPrevComments,10,1,3)
+			currentIssue.find_ideas(numPrevComments,10,4,1,2,2,2)
 
 		end
 		return currentIssue.id	
@@ -93,7 +94,17 @@ class HomepageController < ApplicationController
 			curr_json["comments"]=Array.new
 			curr_json["idea"]="#1"
 			curr_json["tone"]="positive"
-			curr_json["criteria"]=Array.new
+			curr_json["criteriaStatuses"]=Array.new
+			if !(comments[count].ideasource.nil?)
+				comments[count].ideasource.criteria_statuses.each do |stat|
+					curr_criterion = Hash.new
+					curr_criterion["id"]=stat.criteria.id
+					curr_criterion["value"]=stat.score
+					curr_criterion["comment"]=stat.comment.content
+					curr_json["criteriaStatuses"].push(curr_criterion)
+				end
+			end
+
 			curr_json["commented_at"]=comments[count].commented_at
 			comments[count].updateSummary()
 			curr_json["summary"]=comments[count].summary

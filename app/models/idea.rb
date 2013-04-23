@@ -9,6 +9,6 @@ class Idea
   has n, :comments, :required => false
 
   # comment has n criteria status if it's an idea
-  has n, :criteria_statuses, :required => false
+  has n, :criteria_statuses#, :required => false
 
 end

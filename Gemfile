@@ -9,6 +9,7 @@ gem 'actionmailer',       RAILS_VERSION, :require => 'action_mailer'
 gem 'activeresource',     RAILS_VERSION, :require => 'active_resource'
 gem 'railties',           RAILS_VERSION, :require => 'rails'
 gem 'tzinfo'
+gem 'tactful_tokenizer'
 
 gem 'dm-rails', '1.2.1', :git => 'https://github.com/datamapper/dm-rails.git', :branch => 'release-1.2'
 gem 'dm-active_model', '1.2.1', :git => 'https://github.com/datamapper/dm-active_model.git', :branch => 'release-1.2'

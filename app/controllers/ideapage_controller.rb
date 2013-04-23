@@ -1,5 +1,7 @@
 class IdeapageController < ApplicationController
 
+#	before_filter :authenticate
+
 	def setIdeaStatus
                 issueLink = params[:issueLink]
 		commentTitle = params[:commentTitle]
@@ -32,7 +34,7 @@ class IdeapageController < ApplicationController
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		newCommentTitle = currentIssue.getNewCommentTitle()
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea})
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea, :commented_at=>Time.now})
 
 		render :json => { }
 	end
@@ -109,6 +111,14 @@ class IdeapageController < ApplicationController
 		currentCriteria.save
 		render :json => { }		
 
+	end
+
+	protected
+
+	def authenticate
+ 		authenticate_or_request_with_http_basic do |username, password|
+			username == "procid" && password == "procid"
+		end
 	end
 
 end

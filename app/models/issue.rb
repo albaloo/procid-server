@@ -367,6 +367,88 @@ class Issue
   		end
   	end
   end
+
+
+def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
+        Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
+      comments = Comment.all(:issue_id=>id)
+    references=Array.new(comments.length) {Array.new}
+    tonal=Array.new(comments.length){Boolean}
+    x=start
+    tokenizer = TactfulTokenizer::Model.new
+    while(x<comments.length)
+        tonal[x]=false
+        i=x+1
+        stop=(x+numCheck)+1
+        if(stop>comments.length)
+            stop=comments.length
+        end
+        checkNames=true
+        while(i<comments.length)
+            if(comments[i].content.include?(comments[x].title+' ')) 
+                if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].title))
+                    tonal[x]=true
+                end
+                references[x].push(comments[i])
+            elsif(i<stop)
+                if(checkNames && comments[i].participant == comments[x].participant)
+                    checkNames=false
+                end
+                if(checkNames && comments[i].content.include?(comments[x].participant.user_name))
+                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.user_name))
+                        tonal[x]=true
+                    end
+                    references[x].push(comments[i])
+                elsif(checkNames && comments[i].content.include?(comments[x].participant.first_name))
+                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.first_name))
+                        tonal[x]=true
+                    end
+                    references[x].push(comments[i])
+                end
+            end
+            i+=1
+        end
+        rank = (references[x].length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
+        if(rank > minRank)
+            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
+            comments[x].ideasource = idea
+            tag = Tag.first_or_create({:name => "idea", :comment => comments[x]})
+            comments[x].save        
+        end
+        if(x==0)
+            tmp_file = "#{Rails.root}/out2.txt"
+        File.open(tmp_file, 'wb') do |f|
+            f.write references
+        end
+        end
+        x+=1
+    end                
+  end
+
+
+  def isTonal(tokenizer,content,reference)
+    sentences = tokenizer.tokenize_text(content)
+    iter=0
+    while(iter<sentences.length)
+        if(sentences[iter].include?(reference))
+            if(sentences[iter].length == reference.length)
+                if((sentences.length > iter+1) && (sentences[iter+1] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter+1].include?('+1'))
+                    return true
+                elsif((sentences.length > iter+2) && (sentences[iter+2] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter+2].include?('+1'))
+                    return true
+                end
+            end
+            if((sentences[iter] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter].include?('+1'))
+                return true
+            end
+        end
+        iter+=1
+    end
+  end
+
+  
+
+=begin
   def find_ideas(start,numCheck,minWithImg,minNoImg)
         Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minWithImg: #{minWithImg}, , minNoImg: #{minNoImg}"
   	comments = Comment.all(:issue_id=>id)
@@ -397,8 +479,7 @@ class Issue
           x+=1
       end            	
   end
-
-
+=end
 
 
 def find_recent_potential_participants_Dmapper

@@ -6,5 +6,5 @@ class CriteriaStatus
   belongs_to :criteria
   belongs_to :idea
   belongs_to :participant
-  has 1, :comment, :required => false
+  has 1, :comment#, :required => false
 end
