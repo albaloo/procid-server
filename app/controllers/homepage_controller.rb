@@ -39,9 +39,9 @@ class HomepageController < ApplicationController
 						:title => curr["title"],
 						:link => curr["link"],
 						:content => curr["content"],
+						:commented_at => curr["commented_at"],
 						:participant => currentParticipant,
 						:issue=>currentIssue
-#TODO: set the patch attribute for comment
 						}
 			if !(curr["image"].eql?(" "))
 				currentComment.has_image=true
@@ -96,7 +96,7 @@ class HomepageController < ApplicationController
 			curr_json["tone"]="positive"
 			curr_json["criteriaStatuses"]=Array.new
 			if !(comments[count].ideasource.nil?)
-				comments[count].ideasource.criteria_statuses.each do |stat|
+				comments[count].ideasource.getSortedCriteriaStatuses.each do |stat|
 					curr_criterion = Hash.new
 					curr_criterion["id"]=stat.criteria.id
 					curr_criterion["value"]=stat.score

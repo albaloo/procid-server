@@ -11,4 +11,8 @@ class Idea
   # comment has n criteria status if it's an idea
   has n, :criteria_statuses#, :required => false
 
+  def getSortedCriteriaStatuses
+	result = criteria_statuses.sort {|x,y| x.comment.commented_at <=> y.comment.commented_at}
+	return result
+  end
 end
