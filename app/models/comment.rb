@@ -6,7 +6,7 @@ class Comment
   property :title, String, :required => true
   property :link, String,:length=>500, :required => true
   property :content,String,:length=>60000
-  property :tone,String
+  property :tone,String, :default => "nuetral"
   property :commented_at, DateTime
   property :summary, String,:length=>500
   property :patch, Boolean, :default => false
@@ -51,4 +51,13 @@ class Comment
     return summary
   end
 
+  def getRelatedCommentInfo
+    result = Hash.new
+    result["title"] = title
+    result["link"] = link
+    result["content"] = content
+    result["tone"] = tone
+    result["author"] = participant.user_name		
+    return result
+  end
 end

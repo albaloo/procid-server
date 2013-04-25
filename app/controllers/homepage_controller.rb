@@ -92,6 +92,11 @@ class HomepageController < ApplicationController
 				curr_json["status"]=comments[count].ideasource.status
 			end
 			curr_json["comments"]=Array.new
+			if !(comments[count].ideasource.nil?)
+				comments[count].ideasource.getRelatedComments.each do |com|
+					curr_json["comments"].push(com.getRelatedCommentInfo)
+				end
+			end
 			curr_json["idea"]="#1"
 			curr_json["tone"]="positive"
 			curr_json["criteriaStatuses"]=Array.new

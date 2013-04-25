@@ -413,7 +413,11 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
             idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
             comments[x].ideasource = idea
             tag = Tag.first_or_create({:name => "idea", :comment => comments[x]})
-            comments[x].save        
+            comments[x].save
+            references[x].each do |reference|        
+              reference.idea = idea
+              reference.save
+            end
         end
         if(x==0)
             tmp_file = "#{Rails.root}/out2.txt"

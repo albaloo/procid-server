@@ -67,13 +67,21 @@ class IdeapageController < ApplicationController
 		if(issueLink.ends_with?('#'))
                   issueLink.chop
                 end
+
+		tone = "positive"
+		if(criteriaValue.to_i < 3)
+			tone = "negative"
+		elsif(criteriaValue.to_i == 3)
+			tone = "natural"
+		end
+
 		currentIssue = Issue.first(:link => issueLink)
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
 		currentCriteriaStatus = CriteriaStatus.first_or_create({:criteria=>currentCriteria, :participant=>currentParticipant, :idea => currentIdea},{:created_at=>Time.now, :score => criteriaValue})
 		newCommentTitle = currentIssue.getNewCommentTitle()
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus})
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => Time.now})
 		#newComment.updateLink()
 
 		render :json => { }
