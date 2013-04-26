@@ -89,18 +89,27 @@ class IdeapageController < ApplicationController
 
 	def editCriteria
 		issueLink = params[:issueLink]
-		updatedCriterias = params[:updatedCriterias]
-            
+		userName = params[:userName]
+		criteriaTitle = params[:title]
+                criteriaDescription = params[:description]
+                criteriaID = params[:id]
+		
 		if(issueLink.ends_with?('#'))
                   issueLink.chop
                 end
 		currentIssue = Issue.first(:link => issueLink)
-		updatedCriterias.each do |curr|	
+		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
+		currentCriteria.update({:title => criteriaTitle, :description => criteriaDescription})
+		currentCriteria.save
+		render :json => { }		
+
+=begin		updatedCriterias.each do |curr|	
 			currentCriteria = Criteria.first({:issue => currentIssue, :id => curr["id"]})
 			currentCriteria.update({:title => curr["title"], :description => curr["description"]})
 			currentCriteria.save
 		end
 		render :json => { }		
+=end
 	end
 
 	def deleteCriteria
