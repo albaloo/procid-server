@@ -399,7 +399,7 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
                         tonal[x]=true
                     end
                     references[x].push(comments[i])
-                elsif(checkNames && comments[i].content.include?(comments[x].participant.first_name))
+                elsif(checkNames && !comments[x].participant.first_name.eql?("") && comments[i].content.include?(comments[x].participant.first_name))
                     if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.first_name))
                         tonal[x]=true
                     end
@@ -429,6 +429,23 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
     end                
   end
   def contains_post_num_ref(content,postnum)
+=begin
+    x=0
+    subContent = content.gsub( "@", "#")
+    contentArray = subContent.split("#")
+    index = 1
+    if(subContent.starts_with?("#"))
+      index = 0
+    end
+    contentArray.from(index).each do |curr|
+      numString = curr.slice(0,3)	
+        if(numString[/\d+/].to_i == postnum)
+          return true
+        end
+    end
+    return false
+
+=end
   	charArray=content.chars.to_a
   	x=0
   	while(x<charArray.length)
@@ -446,6 +463,7 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
   		x+=1
   	end	
   	return false
+
   end
 
   def isTonal(tokenizer,content,reference)
