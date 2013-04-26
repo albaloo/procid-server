@@ -24,7 +24,7 @@ test:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
-  adapter: postgresql
+  adapter: mysql
   encoding: unicode
   database: procid_production
   pool: 5
