@@ -60,7 +60,7 @@ class HomepageController < ApplicationController
 			currentComment.save
 		end
 		if(numPrevComments==0)
-			currentIssue.find_ideas(numPrevComments,10,4,1,2,2,2)
+			currentIssue.find_ideas(numPrevComments,10,4,1,3,2,3)#changed the patch and image value to 3
 		end
 		if(numPrevComments < commentInfos.length)
 			if(numPrevComments<7)
