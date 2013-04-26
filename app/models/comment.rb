@@ -1,6 +1,6 @@
 class Comment
   include DataMapper::Resource
-
+require Rails.root.to_s+"/app/controllers/AlchemyAPI.rb"
   # define our schema
   property :id,   Serial
   property :title, String, :required => true
@@ -30,6 +30,21 @@ class Comment
   def updateLink
     link = link.concat(id.to_s)
   end
+
+def findSentiment (comment)
+	# Create an AlchemyAPI object.
+	alchemyObj = AlchemyAPI.new();
+
+	# Load the API key from disk.
+	alchemyObj.loadAPIKey(Rails.root.to_s+"/api_key.txt");
+
+
+	# Get sentiment for a text string.
+	result = alchemyObj.TextGetTextSentiment(comment);
+
+	puts result
+
+	end
 
   def updateSummary  
     if (summary.nil? || summary.empty?)

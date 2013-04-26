@@ -410,7 +410,9 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
         end
 	#IF a single person refered to a comment more than once, it needs to be removed.
 
-        rank = (references[x].length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
+	ref_participants=references[x].uniq{|com| com.participant}
+        rank = (ref_participants.length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
+
         if(rank > minRank)
             idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
             comments[x].ideasource = idea
