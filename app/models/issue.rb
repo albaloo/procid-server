@@ -371,7 +371,7 @@ class Issue
 
 def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
         Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
-      comments = Comment.all(:issue_id=>id)
+    comments = Comment.all(:issue_id=>id)
     references=Array.new(comments.length) {Array.new}
     tonal=Array.new(comments.length){Boolean}
     x=start
@@ -385,7 +385,7 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
         end
         checkNames=true
         while(i<comments.length)
-            if(comments[i].content.include?(comments[x].title+' ')) 
+            if(contains_post_num_ref(comments[i].content,comments[x].title[/\d+/].to_i))
                 if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].title))
                     tonal[x]=true
                 end
@@ -419,16 +419,34 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
               reference.save
             end
         end
-        if(x==0)
-            tmp_file = "#{Rails.root}/out2.txt"
-        File.open(tmp_file, 'wb') do |f|
-            f.write references
-        end
-        end
+        if(x==22)
+  					tmp_file = "#{Rails.root}/out2.txt"
+					File.open(tmp_file, 'wb') do |f|
+						f.write references[22]
+					end
+			end
         x+=1
     end                
   end
-
+  def contains_post_num_ref(content,postnum)
+  	charArray=content.chars.to_a
+  	x=0
+  	while(x<charArray.length)
+  		if(charArray[x]=='#'||charArray[x]=='@')
+  			x+=1
+  			ref=""
+  			while(charArray[x].to_i !=0)
+  				ref << charArray[x]
+  				x+=1
+  			end
+  			if(ref.to_i==postnum)
+  				return true
+  			end
+  		end
+  		x+=1
+  	end	
+  	return false
+  end
 
   def isTonal(tokenizer,content,reference)
     sentences = tokenizer.tokenize_text(content)
@@ -438,11 +456,11 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
             if(sentences[iter].length == reference.length)
                 if((sentences.length > iter+1) && (sentences[iter+1] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter+1].include?('+1'))
                     return true
-                elsif((sentences.length > iter+2) && (sentences[iter+2] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter+2].include?('+1'))
+                end
+                if((sentences.length > iter+2) && (sentences[iter+2] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter+2].include?('+1'))
                     return true
                 end
-            end
-            if((sentences[iter] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter].include?('+1'))
+            elsif((sentences[iter] =~ /(?:like|liked|prefer|glad|cool|nice|nicely|good|consensus|rather|well)/i) || sentences[iter].include?('+1'))
                 return true
             end
         end

@@ -59,6 +59,9 @@ class HomepageController < ApplicationController
 			currentComment.raise_on_save_failure = true
 			currentComment.save
 		end
+		if(numPrevComments==0)
+			currentIssue.find_ideas(numPrevComments,10,4,1,2,2,2)
+		end
 		if(numPrevComments < commentInfos.length)
 			if(numPrevComments<7)
 				numPrevComments=0
@@ -66,9 +69,6 @@ class HomepageController < ApplicationController
 				numPrevComments-=7
 			end
 			currentIssue.find_conversations(numPrevComments,5,2)
-			#currentIssue.find_ideas(numPrevComments,10,1,3)
-			currentIssue.find_ideas(numPrevComments,10,4,1,2,2,2)
-
 		end
 		return currentIssue.id	
 	end
