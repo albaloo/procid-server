@@ -131,4 +131,44 @@ class HomepageController < ApplicationController
 		final_json["criteria"]=criteria_json		
 		render :json => final_json.to_json
 	end
+
+	def addTag
+		issueLink = params[:issueLink]
+		userName = params[:userName]
+                commentTitle = params[:commentTitle]
+		tagName = params[:tag]
+		
+		if(issueLink.ends_with?('#'))
+                  issueLink.chop
+                end
+
+		currentIssue = Issue.first(:link => issueLink)
+		currentComment = Comment.first(:title => commentTitle, :issue => currentIssue)
+		currentParticipant = Participant.first_or_create({:user_name =>userName})
+
+		currentTag = Tag.first_or_create({:comment => currentComment, :name => tagName})
+		currentTag.attributes = {:participant => currentParticipant}
+		currentTag.save
+		render :json => { }
+	end
+
+	def removeTag
+		issueLink = params[:issueLink]
+		userName = params[:userName]
+                commentTitle = params[:commentTitle]
+		tagName = params[:tag]
+		
+		if(issueLink.ends_with?('#'))
+                  issueLink.chop
+                end
+
+		currentIssue = Issue.first(:link => issueLink)
+		currentComment = Comment.first(:title => commentTitle, :issue => currentIssue)
+		#currentParticipant = Participant.first_or_create({:user_name =>userName})
+
+		currentTag = Tag.first({:comment => currentComment, :name => tagName})#, {:participant => currentParticipant})
+		currentTag.destroy
+		render :json => { }
+	end
+
 end

@@ -79,7 +79,12 @@ class IdeapageController < ApplicationController
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
-		currentCriteriaStatus = CriteriaStatus.first_or_create({:criteria=>currentCriteria, :participant=>currentParticipant, :idea => currentIdea},{:created_at=>Time.now, :score => criteriaValue})
+		currentCriteriaStatus = CriteriaStatus.first_or_create({:criteria=>currentCriteria, :participant=>currentParticipant, :idea => currentIdea})
+		currentCriteriaStatus.attributes = {
+			:created_at=>Time.now, 
+			:score => criteriaValue
+		}
+		currentCriteriaStatus.save
 		newCommentTitle = currentIssue.getNewCommentTitle()
 		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => Time.now})
 		#newComment.updateLink()
