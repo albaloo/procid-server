@@ -370,7 +370,7 @@ class Issue
 
 
 def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
-        Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
+        Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
     comments = Comment.all(:issue_id=>id)
     references=Array.new(comments.length) {Array.new}
     tonal=Array.new(comments.length){Boolean}
@@ -416,7 +416,7 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
         if(rank > minRank)
             idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
             comments[x].ideasource = idea
-            tag = Tag.first_or_create({:name => "idea", :comment => comments[x]})
+            tag = Tag.first_or_create({:name => "idea", :comment => comments[x], :participant => comments[x].participant})
             comments[x].save
             references[x].each do |reference|        
               reference.idea = idea
