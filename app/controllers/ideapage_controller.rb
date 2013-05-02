@@ -34,7 +34,7 @@ class IdeapageController < ApplicationController
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		newCommentTitle = currentIssue.getNewCommentTitle()
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea, :commented_at=>Time.now})
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea, :commented_at=>Time.now, :tone => tone})
 
 		render :json => { }
 	end
