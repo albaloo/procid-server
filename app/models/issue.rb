@@ -414,7 +414,11 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
         rank = (ref_participants.length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
 
         if(rank > minRank)
-            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
+	    statusStr = "Ongoing"
+	    if(comments[x].patch)
+	       statusStr = "Implemented"
+	    end
+            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>statusStr})    
             comments[x].ideasource = idea
             tag = Tag.first_or_create({:name => "idea", :comment => comments[x], :participant => comments[x].participant})
             comments[x].save

@@ -98,7 +98,7 @@ class HomepageController < ApplicationController
 				end
 			end
 			curr_json["idea"]="#1"
-			curr_json["tone"]="positive"
+			curr_json["tone"]=comments[count].tone
 			curr_json["criteriaStatuses"]=Array.new
 			if !(comments[count].ideasource.nil?)
 				comments[count].ideasource.getSortedCriteriaStatuses.each do |stat|
