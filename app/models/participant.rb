@@ -12,4 +12,5 @@ class Participant
   has n, :comments
   has n, :criterias, :required =>false
   has n, :issues,:required =>false
+  has n, :user_actions, :required =>false
 end

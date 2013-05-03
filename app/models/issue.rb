@@ -10,7 +10,8 @@ class Issue
   belongs_to :participant
   has n, :comments, :required => false
   has n, :criterias, :required => false
-
+  has n, :user_actions, :required =>false
+  
   def find_num_previous_comments
     return Comment.count(:issue_id=>id);
   end

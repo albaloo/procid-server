@@ -151,6 +151,9 @@ class HomepageController < ApplicationController
 		currentTag = Tag.first_or_create({:comment => currentComment, :name => tagName})
 		currentTag.attributes = {:participant => currentParticipant}
 		currentTag.save
+		
+		addAction(currentParticipant,currentIssue,"Add Criteria",nil,nil,currentTag.id,nil)
+		
 		render :json => { }
 	end
 
@@ -166,11 +169,55 @@ class HomepageController < ApplicationController
 
 		currentIssue = Issue.first(:link => issueLink)
 		currentComment = Comment.first(:title => commentTitle, :issue => currentIssue)
-		#currentParticipant = Participant.first_or_create({:user_name =>userName})
+		currentParticipant = Participant.first_or_create({:user_name =>userName})
 
 		currentTag = Tag.first({:comment => currentComment, :name => tagName})#, {:participant => currentParticipant})
+		oldName=currentTag.name
 		currentTag.destroy
+		
+		addAction(currentParticipant,currentIssue,"Remove Tag",oldName,nil,currentComment.id,nil)
+		
 		render :json => { }
 	end
+	
+	def tagClicked
+		issueLink = params[:issueLink]
+		userName = params[:userName]
+		tagName = params[:tagName]
+		if(issueLink.ends_with?('#'))
+                  issueLink.chop
+        end
+		currentIssue = Issue.first(:link => issueLink)
+		currentParticipant = Participant.first_or_create({:user_name =>userName})
+		
+		addAction(currentParticipant,currentIssue,"Tag Clicked",tagName,nil,nil,nil)
+		
+	end
+	
 
+=begin
+	Values for addAction call from various actions:
+	addTag = 				(participant,issue,"Add Tag",nil,nil,new tag ID,nil)
+	removeTag = 			(participant,issue,"Remove Tag",old tag name,nil,comment ID,nil)
+	tagClicked = 			(participant,issue,"Tag Clicked",tag name,nil,nil,nil)
+	setIdeaStatus = 		(participant,issue,"Set Idea Status",old status,nil,current comment idea ID,nil)
+	deleteIdea = 			(participant,issue,"Delete Idea",old comment title, old comment content,nil,nil)
+	addNewComment = 		(participant,issue,"Add New Comment",nil,nil,new comment ID, current idea ID)
+	addCriteria = 			(participant,issue,"Add Criteria",nil,nil, new criteria ID,nil)
+	updateCriteriaStatus = 	(participant,issue,"Update Criteria Status",old score, old content, current criteria ID,current criteria_status ID)
+	editCriteria = 			(participant,issue,"Edit Criteria",old criteria title,old criteria description,current criteria ID,nil)
+	deleteCriteria = 		(participant,issue,"Delete Criteria",old criteria title,old criteria description,nil,nil)
+=end	
+
+	def addAction(participant,issue,name,oldFirst,oldSecond,idFirst,idSecond)
+		action = UserAction.first_or_create({
+									:participant => participant,
+									:issue => issue,
+									:actionName => name, 
+									:oldContentFirst => oldFirst,
+									:oldContentSecond => oldSecond,
+									:newIDFirst => idFirst,
+									:newIDSecond => idSecond
+								})
+	end
 end
