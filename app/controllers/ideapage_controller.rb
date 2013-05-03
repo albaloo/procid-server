@@ -4,6 +4,7 @@ class IdeapageController < ApplicationController
 
 	def setIdeaStatus
                 issueLink = params[:issueLink]
+		userName = params[:userName]
 		commentTitle = params[:commentTitle]
                 ideaStatus = params[:status]
 
@@ -22,6 +23,7 @@ class IdeapageController < ApplicationController
 
 	def deleteIdea
                 issueLink = params[:issueLink]
+		userName = params[:userName]
 		commentTitle = params[:commentTitle]
 
 		if(issueLink.ends_with?('#'))
@@ -120,7 +122,7 @@ class IdeapageController < ApplicationController
 		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
 		currentCriteria.update({:title => criteriaTitle, :description => criteriaDescription})
 		currentCriteria.save
-		render :json => { }		
+ 		render :json => { }		
 
 =begin		updatedCriterias.each do |curr|	
 			currentCriteria = Criteria.first({:issue => currentIssue, :id => curr["id"]})
