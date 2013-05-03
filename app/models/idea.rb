@@ -34,7 +34,9 @@ class Idea
   	criteria_statuses.destroy
   	com=comment									#remove association to comment the idea was created in
   	com.ideasource=nil
+	com.summary=nil
   	com.save
+	com.updateSummary
   	comment=nil
   	comments.each do |t|						#remove association to references
   		t.idea=nil
