@@ -106,6 +106,8 @@ class HomepageController < ApplicationController
 					curr_criterion["id"]=stat.criteria.id
 					curr_criterion["value"]=stat.score
 					curr_criterion["comment"]=stat.comment.content
+					curr_criterion["author"]=stat.comment.participant.user_name
+					curr_criterion["commentTitle"]=stat.comment.title
 					curr_json["criteriaStatuses"].push(curr_criterion)
 				end
 			end

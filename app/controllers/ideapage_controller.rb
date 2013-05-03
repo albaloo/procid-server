@@ -20,6 +20,20 @@ class IdeapageController < ApplicationController
 		render :json => { }
 	end
 
+	def deleteIdea
+                issueLink = params[:issueLink]
+		commentTitle = params[:commentTitle]
+
+		if(issueLink.ends_with?('#'))
+                  issueLink.chop
+                end
+		currentIssue = Issue.first(:link => issueLink)
+		currentCommentIdea = Comment.first({:title => commentTitle, :issue=>currentIssue}).ideasource
+		currentCommentIdea.destroy_idea
+
+		render :json => { }
+	end
+
         def addNewComment
 		issueLink = params[:issueLink]
 		userName = params[:userName]
