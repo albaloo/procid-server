@@ -7,6 +7,7 @@ Backend::Application.routes.draw do
 	match "/receive" => "sendjson#receive"
 	match "/findPotentialParticipants" => "invitepage#findPotentialParticipants"
 	match "/setIdeaStatus" => "ideapage#setIdeaStatus"
+	match "/deleteIdea" => "ideapage#deleteIdea"
 	match "/addCriteria" => "ideapage#addCriteria"
 	match "/updateCriteriaStatus" => "ideapage#updateCriteriaStatus"
 	match "/editCriteria" => "ideapage#editCriteria"

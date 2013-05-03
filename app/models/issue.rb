@@ -460,7 +460,7 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
   		if(charArray[x]=='#'||charArray[x]=='@')
   			x+=1
   			ref=""
-  			while(charArray[x].to_i !=0)
+  			while(charArray[x].to_i !=0 || charArray[x] == "0")
   				ref << charArray[x]
   				x+=1
   			end
