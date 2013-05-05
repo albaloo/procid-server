@@ -29,20 +29,24 @@ class Idea
   		return true
   	end
   	Tag.first(:comment => comment).destroy		#destroy associated tag	
-  	criteria_statuses.comment.destroy			#destroy associated criteria statuses and their comments
-  	criteria_statuses.comment
-  	criteria_statuses.destroy
+	if not(criteria_statuses.nil?) 
+	 	criteria_statuses.comment.destroy			#destroy associated criteria statuses and their comments
+  		criteria_statuses.comment
+  		criteria_statuses.destroy
+	end
   	com=comment									#remove association to comment the idea was created in
   	com.ideasource=nil
 	com.summary=nil
   	com.save
 	com.updateSummary
   	comment=nil
-  	comments.each do |t|						#remove association to references
-  		t.idea=nil
-  		t.save
-  	end
-  	comments.clear
+	if not(comments.nil?)
+  		comments.each do |t|						#remove association to references
+  			t.idea=nil
+  			t.save
+  		end
+  		comments.clear
+	end
   	return destroy								#call destroy for this idea and return result
   end
   
