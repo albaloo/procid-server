@@ -25,9 +25,9 @@ class Idea
   end
   
   def destroy_idea
-  	if(destroy)									#return true if idea has already been destroyed
-  		return true
-  	end
+  #	if(destroy)									#return true if idea has already been destroyed
+  #		return true
+  #	end
   	Tag.first(:comment => comment).destroy		#destroy associated tag	
 	if not(criteria_statuses.nil?) 
 	 	criteria_statuses.comment.destroy			#destroy associated criteria statuses and their comments
