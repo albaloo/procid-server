@@ -2,6 +2,7 @@ Backend::Application.routes.draw do
 	
 	match "/input" => "homepage#input"
 	match "/postcomments" => "homepage#postcomments"
+	match "/findSentiment" => "homepage#findSentiment"
 	match "/addTag" => "homepage#addTag"
 	match "/removeTag" => "homepage#removeTag"
 	match "/receive" => "sendjson#receive"

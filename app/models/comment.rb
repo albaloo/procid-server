@@ -31,20 +31,17 @@ require Rails.root.to_s+"/app/controllers/AlchemyAPI.rb"
     link = link.concat(id.to_s)
   end
 
-def findSentiment (comment)
+  def self.findSentiment (currentContent)
 	# Create an AlchemyAPI object.
 	alchemyObj = AlchemyAPI.new();
-
 	# Load the API key from disk.
 	alchemyObj.loadAPIKey(Rails.root.to_s+"/api_key.txt");
-
-
 	# Get sentiment for a text string.
-	result = alchemyObj.TextGetTextSentiment(comment);
-
-	puts result
-
-	end
+	result = alchemyObj.TextGetTextSentiment(currentContent, "json");
+	parsed_result = ActiveSupport::JSON.decode(result)
+	info=parsed_result["docSentiment"]
+	return info
+  end
 
   def updateSummary  
     if (summary.nil? || summary.empty?)

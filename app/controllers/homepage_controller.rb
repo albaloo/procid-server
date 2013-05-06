@@ -47,6 +47,13 @@ class HomepageController < ApplicationController
 				currentComment.has_image=true
 			end
 
+			#average experience + 1 stdev = 349.6124759355
+			if!(currentParticipant.experience.nil?)
+				if(currentParticipant.experience >= 350)
+					Tag.first_or_create({:name => "expert", :comment => currentComment})		
+				end
+			end
+
 			#Since patch tag is determined in the client side it will be applied here
 			tags = curr["tags"]
 			tags.each do |t|
@@ -132,6 +139,28 @@ class HomepageController < ApplicationController
 		final_json["issueComments"]=comments_json
 		final_json["criteria"]=criteria_json		
 		render :json => final_json.to_json
+	end
+
+	def findSentiment
+		commentContent = params[:comment]
+		info = Comment.findSentiment(commentContent)
+		score = 0
+		if(info["type"] == "positive" || info["type"] == "negative")
+			score=info["score"].to_f
+		end
+
+		average = 0
+		if(info["type"] == "positive")
+			average=
+		elsif(info["type"] == "negative")
+			average=
+		end
+
+		result_json=Hash.new
+		result_json["sentimentScore"]=score
+		result_json["sentimentTone"]= info["type"]
+		result_json["sentimentAverage"]=average
+		render :json => result_json.to_json
 	end
 
 	def addTag
