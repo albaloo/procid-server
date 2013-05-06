@@ -48,10 +48,8 @@ class HomepageController < ApplicationController
 			end
 
 			#average experience + 1 stdev = 349.6124759355
-			if!(currentParticipant.experience.nil?)
-				if(currentParticipant.experience >= 350)
-					Tag.first_or_create({:name => "expert", :comment => currentComment})		
-				end
+			if (not(currentParticipant.experience.nil?) && currentParticipant.experience >= 350)
+					t=Tag.first_or_create({:name => "expert", :comment => currentComment})		
 			end
 
 			#Since patch tag is determined in the client side it will be applied here
@@ -141,25 +139,46 @@ class HomepageController < ApplicationController
 		render :json => final_json.to_json
 	end
 
-	def findSentiment
+	def findNegativeWords
 		commentContent = params[:comment]
-		info = Comment.findSentiment(commentContent)
-		score = 0
-		if(info["type"] == "positive" || info["type"] == "negative")
-			score=info["score"].to_f
-		end
+		words=Array.new
+#average= numpositive/numtotal, numngative/numtotal, -stopwords
+#find the number of negative and positive words, compare them to average number of positive and negative words.
 
-		average = 0
-		if(info["type"] == "positive")
-			average= 100
-		else if(info["type"] == "negative")
-			average= 200
+		words_file = "#{Rails.root}/words.json"
+		currentWords = ""
+		File.open(words_file, "r" ) do |f|
+			currentWords = JSON.load(f)
+		end
+		highlightedWords = Array.new
+		tokenizer = TactfulTokenizer::Model.new
+		sentences = tokenizer.tokenize_text(commentContent)
+		totalNumWords = 0
+		sentences.each do |sentence|
+			currentSentence = sentence.downcase
+			words = currentSentence.split(/\W+/)
+			words.each do |word|
+				if !(currentWords["stopwords"].include? (word))
+					totalNumWords = totalNumWords+1 
+					Rails.logger.info "non-stop-word: #{word}"
+				end
+			end
+
+			currentWords["negative"].each do |negativeWord|
+				if(negativeWord.include?(" ") && currentSentence.include?(negativeWord))
+					highlightedWords.push(negativeWord);
+					next		
+				end
+
+				if(words.include? negativeWord)
+					highlightedWords.push(negativeWord);
+				end
+			end
 		end
 
 		result_json=Hash.new
-		result_json["sentimentScore"]=score
-		result_json["sentimentTone"]= info["type"]
-		result_json["sentimentAverage"]=average
+		result_json["highlightedWords"]=highlightedWords
+		result_json["totalNumWords"]=totalNumWords
 		render :json => result_json.to_json
 	end
 
@@ -215,7 +234,7 @@ class HomepageController < ApplicationController
 		tagName = params[:tagName]
 		if(issueLink.ends_with?('#'))
                   issueLink.chop
-        end
+        	end
 		currentIssue = Issue.first(:link => issueLink)
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		
@@ -250,3 +269,30 @@ class HomepageController < ApplicationController
 								})
 	end
 end
+
+
+
+=begin
+	def findSentiment
+		commentContent = params[:comment]
+		info = Comment.findSentiment(commentContent)
+		score = 0
+		if(info["type"] == "positive" || info["type"] == "negative")
+			score=info["score"].to_f
+		end
+
+		average = 0
+		if(info["type"] == "positive")
+			average= 100
+		else if(info["type"] == "negative")
+			average= 200
+		end
+
+		result_json=Hash.new
+		result_json["sentimentScore"]=score
+		result_json["sentimentTone"]= info["type"]
+		result_json["sentimentAverage"]=average
+		render :json => result_json.to_json
+	end
+=end
+
