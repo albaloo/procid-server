@@ -151,9 +151,9 @@ class HomepageController < ApplicationController
 
 		average = 0
 		if(info["type"] == "positive")
-			average=
+			average= 100
 		else if(info["type"] == "negative")
-			average=
+			average= 200
 		end
 
 		result_json=Hash.new
