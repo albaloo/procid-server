@@ -154,31 +154,73 @@ class HomepageController < ApplicationController
 		tokenizer = TactfulTokenizer::Model.new
 		sentences = tokenizer.tokenize_text(commentContent)
 		totalNumWords = 0
+		numStopWords = 0
+		numNegativeWords = 0
+		numPositiveWords = 0
 		sentences.each do |sentence|
 			currentSentence = sentence.downcase
-			words = currentSentence.split(/\W+/)
-			words.each do |word|
-				if !(currentWords["stopwords"].include? (word))
-					totalNumWords = totalNumWords+1 
-					Rails.logger.info "non-stop-word: #{word}"
-				end
-			end
-
 			currentWords["negative"].each do |negativeWord|
 				if(negativeWord.include?(" ") && currentSentence.include?(negativeWord))
+					numNegativeWords = numNegativeWords + 1
+					totalNumWords = totalNumWords+1 
 					highlightedWords.push(negativeWord);
+					currentSentence = currentSentence.sub(negativeWord,"")
 					next		
 				end
+			end
 
-				if(words.include? negativeWord)
-					highlightedWords.push(negativeWord);
+			currentWords["positive"].each do |positiveWord|
+				if(positiveWord.include?(" ") && currentSentence.include?(positiveWord))
+					numPositiveWords = numPositiveWords + 1
+					totalNumWords = totalNumWords+1 
+					currentSentence = currentSentence.sub(positiveWord,"")
+					next		
 				end
 			end
+
+			words = currentSentence.split(/\W+/)
+			words.each do |word|
+				totalNumWords = totalNumWords+1 
+				if (currentWords["stopwords"].include? (word))	
+					numStopWords = numStopWords+1 
+				elsif (currentWords["positive"].include? (word))
+					numPositiveWords = numPositiveWords+1 
+				elsif (currentWords["negative"].include? (word))
+					numNegativeWords = numNegativeWords+1 
+				else
+					Rails.logger.info "word: #{word}"
+				end
+
+			end
+		end
+		message=""
+		positiveRatio = 0.0
+		negativeRatio = 0.0
+
+		if(totalNumWords-numStopWords == 0 || totalNumWords == 0)
+			message = "Please enter a valid comment."
+			highlightedWords = []
+		else
+			positiveRatio = numPositiveWords.to_f/(totalNumWords-numStopWords)
+			negativeRatio = numNegativeWords.to_f/(totalNumWords-numStopWords)
 		end
 
+		Rails.logger.info "numPositive: #{numNegativeWords}"
+		Rails.logger.info "numNegative: #{numPositiveWords}"
+		Rails.logger.info "numStop: #{numStopWords}"
+		Rails.logger.info "total: #{totalNumWords}"
+
+		if(positiveRatio > 0.05)
+			message = "Nice, your comment is more positive than average comments in Drupal!"
+			highlightedWords = []
+		end
+		if(negativeRatio > 0.01)
+			message = "Your comment is more negative than the average comments in Drupal. Please consider revising it."
+		end 
 		result_json=Hash.new
 		result_json["highlightedWords"]=highlightedWords
 		result_json["totalNumWords"]=totalNumWords
+		result_json["userMessage"]=message
 		render :json => result_json.to_json
 	end
 
