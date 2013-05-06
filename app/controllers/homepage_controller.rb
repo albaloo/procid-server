@@ -152,7 +152,7 @@ class HomepageController < ApplicationController
 		average = 0
 		if(info["type"] == "positive")
 			average=
-		elsif(info["type"] == "negative")
+		else if(info["type"] == "negative")
 			average=
 		end
 
