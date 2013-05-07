@@ -360,7 +360,7 @@ class Issue
   				end  				
   			end
   			tagComments.each do |curr|
-  				curr.tags.first_or_create(:name=>"conversation")
+  				curr.tags.first_or_create({:name=>"conversation", :participant => curr.participant})
   			end
   			x=pos
   		else 

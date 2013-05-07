@@ -49,13 +49,13 @@ class HomepageController < ApplicationController
 
 			#average experience + 1 stdev = 349.6124759355
 			if (not(currentParticipant.experience.nil?) && currentParticipant.experience >= 350)
-					t=Tag.first_or_create({:name => "expert", :comment => currentComment})		
+					t=Tag.first_or_create({:name => "expert", :comment => currentComment, :participant => currentParticipant})		
 			end
 
 			#Since patch tag is determined in the client side it will be applied here
 			tags = curr["tags"]
 			tags.each do |t|
-				tag = Tag.first_or_create({:name => t, :comment => currentComment})		
+				tag = Tag.first_or_create({:name => t, :comment => currentComment, :participant => currentParticipant})		
 				if(t.eql?("patch"))
 					currentComment.attributes = {:patch => true}
 				end
@@ -238,9 +238,9 @@ class HomepageController < ApplicationController
 		currentComment = Comment.first(:title => commentTitle, :issue => currentIssue)
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 
-		currentTag = Tag.first_or_create({:comment => currentComment, :name => tagName})
-		currentTag.attributes = {:participant => currentParticipant}
-		currentTag.save
+		currentTag = Tag.first_or_create({:comment => currentComment, :name => tagName, :participant => currentParticipant})
+		#currentTag.attributes = {:participant => currentParticipant}
+		#currentTag.save
 		
 		addAction(currentParticipant,currentIssue,"Add Criteria",nil,nil,currentTag.id,nil)
 		
