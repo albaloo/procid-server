@@ -142,9 +142,6 @@ class HomepageController < ApplicationController
 	def findNegativeWords
 		commentContent = params[:comment]
 		words=Array.new
-#average= numpositive/numtotal, numngative/numtotal, -stopwords
-#find the number of negative and positive words, compare them to average number of positive and negative words.
-
 		words_file = "#{Rails.root}/words.json"
 		currentWords = ""
 		File.open(words_file, "r" ) do |f|
@@ -210,6 +207,7 @@ class HomepageController < ApplicationController
 		Rails.logger.info "numStop: #{numStopWords}"
 		Rails.logger.info "total: #{totalNumWords}"
 
+#top 1% positive: 0.54, top negative: 0.11
 		if(positiveRatio > 0.05)
 			message = "Nice, your comment is more positive than average comments in Drupal!"
 			highlightedWords = []

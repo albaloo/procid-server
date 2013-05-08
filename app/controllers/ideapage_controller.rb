@@ -112,6 +112,7 @@ class IdeapageController < ApplicationController
 		oldComment=Comment.first({:title => commentTitle, :issue=>currentIssue})
 		oldScore=currentCriteriaStatus.score.to_s
 		oldContent=oldComment.content
+
 		currentCriteriaStatus.attributes = {
 			:created_at=>Time.now, 
 			:score => criteriaValue
@@ -120,10 +121,18 @@ class IdeapageController < ApplicationController
 		newCommentTitle = currentIssue.getNewCommentTitle()
 		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => Time.now})
 		#newComment.updateLink()
+
+		currentCriteriaStatus.attributes = {
+			:comment=>newComment, 
+		}
+		currentCriteriaStatus.save
+
 		
 		addAction(currentParticipant,currentIssue,"Update Criteria Status",oldScore,oldContent,currentCriteria.id,currentCriteriaStatus.id)
 
-		render :json => { }
+		result_json=Hash.new
+		result_json["newCommentTitle"]=newCommentTitle
+		render :json => result_json.to_json
 	end
 
 	def editCriteria
