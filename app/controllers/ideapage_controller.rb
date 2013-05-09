@@ -101,7 +101,7 @@ class IdeapageController < ApplicationController
 		if(criteriaValue.to_i < 3)
 			tone = "negative"
 		elsif(criteriaValue.to_i == 3)
-			tone = "natural"
+			tone = "neutral"
 		end
 
 		currentIssue = Issue.first(:link => issueLink)
