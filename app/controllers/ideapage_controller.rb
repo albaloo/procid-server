@@ -178,7 +178,7 @@ class IdeapageController < ApplicationController
 		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
 		oldTitle=currentCriteria.title
 		oldDescription=currentCriteria.description
-		currentCriteria.destroy
+		currentCriteria.destroy_criteria
 		
 		addAction(currentParticipant,currentIssue,"Delete Criteria",oldTitle,oldDescription,nil,nil)
 		
