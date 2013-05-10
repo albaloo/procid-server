@@ -184,6 +184,7 @@ class HomepageController < ApplicationController
 					numPositiveWords = numPositiveWords+1 
 				elsif (currentWords["negative"].include? (word))
 					numNegativeWords = numNegativeWords+1 
+					highlightedWords.push(word)
 				else
 					Rails.logger.info "word: #{word}"
 				end
@@ -202,10 +203,13 @@ class HomepageController < ApplicationController
 			negativeRatio = numNegativeWords.to_f/(totalNumWords-numStopWords)
 		end
 
-		Rails.logger.info "numPositive: #{numNegativeWords}"
-		Rails.logger.info "numNegative: #{numPositiveWords}"
+		Rails.logger.info "numNegative: #{numNegativeWords}"
+		Rails.logger.info "numPositive: #{numPositiveWords}"
 		Rails.logger.info "numStop: #{numStopWords}"
 		Rails.logger.info "total: #{totalNumWords}"
+		highlightedWords.each do |word|
+			Rails.logger.info "highlighted: #{word}"
+		end
 
 #top 1% positive: 0.54, top negative: 0.11
 		if(positiveRatio > 0.05)
