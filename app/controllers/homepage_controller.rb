@@ -217,7 +217,7 @@ class HomepageController < ApplicationController
 			highlightedWords = []
 		end
 		if(negativeRatio > 0.01)
-			message = "The nagtive words in your comment are highlighted, please rephrase them in a more constructive manner."
+			message = "Highlighted words are negative, please rephrase in a more constructive manner."
 			#message = "Your comment is more negative than the average comments in Drupal. Please consider revising it."
 		end 
 		result_json=Hash.new
