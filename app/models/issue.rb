@@ -48,6 +48,7 @@ class Issue
     potentials.concat(find_recent_potential_participants_Dmapper)
 
     potentials = potentials.uniq
+    potentials = potentials.select { |h| !(h['author'].include? "System Message") }
     return potentials.sample(30)
   end
   
@@ -87,7 +88,7 @@ class Issue
       end
     end
 
-   #Patch
+    #Patch
    if(currentParticipant.usabilityPatches.nil?)
       description.concat("no usability patch info")
    else
@@ -114,9 +115,10 @@ class Issue
     else
       description.concat(", not recently in a usability thread.")
     end
-    
 
   end
+
+
   def find_participant_consensus(p_id)
     adapter = DataMapper.repository(:default).adapter
     res = adapter.select("SELECT COUNT(t2.status) AS cb FROM (networks AS t1 INNER JOIN issues AS t2 ON t1.issue_id=t2.id) WHERE (t2.status LIKE 'closed%' OR t2.status LIKE 'fix%') AND t1.participant_id=#{p_id};")
