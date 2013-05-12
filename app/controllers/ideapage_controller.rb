@@ -115,6 +115,8 @@ class IdeapageController < ApplicationController
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		currentCriteria = Criteria.first({:issue => currentIssue, :currentId => criteriaID})
+
+		time = Time.now
 		currentCriteriaStatus = CriteriaStatus.first_or_create({:criteria=>currentCriteria, :participant=>currentParticipant, :idea => currentIdea})
 		oldScore = 0;
 		oldContent = "";
@@ -123,16 +125,20 @@ class IdeapageController < ApplicationController
 			oldContent=currentCriteriaStatus.comment.content
 			currentCriteriaStatus.comment.destroy
 		end
-		time = Time.now
+
 
 		currentCriteriaStatus.attributes = {
 			:created_at=>time, 
 			:score => criteriaValue
 		}
+
+		currentCriteriaStatus.raise_on_save_failure = true
 		currentCriteriaStatus.save
+
 		newCommentTitle = currentIssue.getNewCommentTitle()
 		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle});
 		newComment.attributes ={:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => time}
+		newComment.raise_on_save_failure = true
 		newComment.save
 		#newComment.updateLink()
 
@@ -148,8 +154,7 @@ class IdeapageController < ApplicationController
 		result_json["newCommentTone"]=tone
 		result_json["newCommentLink"]=issueLink+"#comment-"+newCommentTitle
 		result_json["newCommentTime"]=time
-		newComment.updateSummary()
-		result_json["newCommentSummary"]=newComment.summary
+		result_json["newCommentSummary"]=newComment.findSummary()
 		render :json => result_json.to_json
 	end
 

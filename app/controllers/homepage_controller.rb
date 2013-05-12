@@ -133,11 +133,11 @@ class HomepageController < ApplicationController
 		end
 		criteria=Criteria.all(:issue => issue)
 		criteria_json=Array.new
-		criteria.each do |curr|
+		criteria.each do |currCriteria|
 			curr_json=Hash.new
-			curr_json["id"]=curr.currentId
-			curr_json["title"]=curr.title
-			curr_json["description"]=curr.description
+			curr_json["id"]=currCriteria.currentId
+			curr_json["title"]=currCriteria.title
+			curr_json["description"]=currCriteria.description
 			criteria_json.push curr_json		
 		end
 		final_json=Hash.new

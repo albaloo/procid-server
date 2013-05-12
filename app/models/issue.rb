@@ -441,12 +441,6 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
               reference.save
             end
         end
-        if(x==22)
-  					tmp_file = "#{Rails.root}/out2.txt"
-					File.open(tmp_file, 'wb') do |f|
-						f.write references[22]
-					end
-			end
         x+=1
     end                
   end

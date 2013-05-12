@@ -63,6 +63,23 @@ require Rails.root.to_s+"/app/controllers/AlchemyAPI.rb"
     return summary
   end
 
+  def findSummary  
+      currentSummary = " commented."
+      if not (ideasource.nil?)
+        currentSummary = " proposed an idea."
+      elsif patch
+        currentSummary = " submitted a patch."
+      elsif not (idea.nil?) then
+        currentSummary = " commented on " + idea.comment.participant.user_name
+	currentSummary.concat(" idea")
+      else
+        currentSummary = " commented."
+      end
+    Rails.logger.debug "Summary doroste:#{summary}"
+    return currentSummary
+  end
+
+
   def getRelatedCommentInfo
     result = Hash.new
     result["title"] = title
