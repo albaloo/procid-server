@@ -87,13 +87,16 @@ class Issue
       end
     end
 
-    #Patch
-    patchString = "patches"
-    if(currentParticipant.usabilityPatches==1)
-      patchString = "patch"
+   #Patch
+   if(currentParticipant.usabilityPatches.nil?)
+      description.concat("no usability patch info")
+   else
+      patchString = "patches"
+      if(currentParticipant.usabilityPatches==1)
+        patchString = "patch"
+      end
+      description.concat(", #{currentParticipant.usabilityPatches} usability #{patchString}")
     end
-    description.concat(", #{currentParticipant.usabilityPatches} usability #{patchString}")
-
     #Consensus Threads
     threadString = "threads"
     if(num==1)

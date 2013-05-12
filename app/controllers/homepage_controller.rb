@@ -33,7 +33,14 @@ class HomepageController < ApplicationController
 		commentInfos.from(index).each do |curr|	
 			names=curr["author"].split
 			currentParticipant = Participant.first_or_create({:user_name =>curr["author"]},{:link=>curr["authorLink"],:first_name=>names[0],:last_name=>names[1]})
-			
+
+			#insert network objects
+			currentNet = Network.first_or_create({:participant => currentParticipant, :issue => currentIssue})
+			currentNet.attributes = {
+					:commented_at => curr["commented_at"]
+      			}
+      			currentNet.save			
+
 			currentComment = Comment.first_or_create(:link => curr["link"])
 			currentComment.attributes = {
 						:title => curr["title"],
