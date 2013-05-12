@@ -119,26 +119,31 @@ class IdeapageController < ApplicationController
 		oldComment=Comment.first({:title => commentTitle, :issue=>currentIssue})
 		oldScore=currentCriteriaStatus.score.to_s
 		oldContent=oldComment.content
+		time = Time.now
 
 		currentCriteriaStatus.attributes = {
-			:created_at=>Time.now, 
+			:created_at=>time, 
 			:score => criteriaValue
 		}
 		currentCriteriaStatus.save
 		newCommentTitle = currentIssue.getNewCommentTitle()
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => Time.now})
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => time})
 		#newComment.updateLink()
 
 		currentCriteriaStatus.attributes = {
 			:comment=>newComment, 
 		}
 		currentCriteriaStatus.save
-
 		
 		addAction(currentParticipant,currentIssue,"Update Criteria Status",oldScore,oldContent,currentCriteria.id,currentCriteriaStatus.id)
 
 		result_json=Hash.new
 		result_json["newCommentTitle"]=newCommentTitle
+		result_json["newCommentTone"]=tone
+		result_json["newCommentLink"]=issueLink+"#comment-"+newCommentTitle
+		result_json["newCommentTime"]=time
+		newComment.updateSummary()
+		result_json["newCommentSummary"]=newComment.summary
 		render :json => result_json.to_json
 	end
 
