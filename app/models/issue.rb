@@ -17,8 +17,16 @@ class Issue
   end
 
   def getNewCommentTitle
-    num = Comment.count(:issue_id=>id)+1;
-    return "#"+num.to_s;
+    #num = Comment.count(:issue_id=>id)+1;
+    result = Array.new
+    result.concat(Comment.all({:issue_id => id}))    
+    result = result.sort {|x,y| x.commented_at <=> y.commented_at}
+    lastCommentTitle = result.last.title[1..-1]
+    num = lastCommentTitle.to_i
+    lastCommentTitleNumber = num + 1
+    Rails.logger.info "lastCommentTitleNumber: #{lastCommentTitleNumber}, result.last.title: #{result.last.title}, lastCommentTitle: #{lastCommentTitle}, num: #{num}"
+    return "#"+lastCommentTitleNumber.to_s
+    #return "#"+num.to_s;
   end
   #Use helper methods to find potential participants
 

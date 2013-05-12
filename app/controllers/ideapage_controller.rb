@@ -84,7 +84,7 @@ class IdeapageController < ApplicationController
                 end
 		currentIssue = Issue.first(:link => issueLink)
 		currentParticipant = Participant.first_or_create({:user_name =>userName})#,{:link=>issue["authorLink"]})
-		currentCriteria = Criteria.first_or_create({:issue => currentIssue, :id => criteriaID},{:title=>criteriaTitle, :description=>criteriaDescription, :participant => currentParticipant})
+		currentCriteria = Criteria.first_or_create({:issue => currentIssue, :currentId => criteriaID},{:title=>criteriaTitle, :description=>criteriaDescription, :participant => currentParticipant})
 		currentCriteria.save
 		
 		addAction(currentParticipant,currentIssue,"Add Criteria",nil,nil,currentCriteria.id,nil)
@@ -114,11 +114,15 @@ class IdeapageController < ApplicationController
 		currentIssue = Issue.first(:link => issueLink)
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
-		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
+		currentCriteria = Criteria.first({:issue => currentIssue, :currentId => criteriaID})
 		currentCriteriaStatus = CriteriaStatus.first_or_create({:criteria=>currentCriteria, :participant=>currentParticipant, :idea => currentIdea})
-		oldComment=Comment.first({:title => commentTitle, :issue=>currentIssue})
-		oldScore=currentCriteriaStatus.score.to_s
-		oldContent=oldComment.content
+		oldScore = 0;
+		oldContent = "";
+		if not(currentCriteriaStatus.comment.nil?)
+			oldScore=currentCriteriaStatus.score.to_s
+			oldContent=currentCriteriaStatus.comment.content
+			currentCriteriaStatus.comment.destroy
+		end
 		time = Time.now
 
 		currentCriteriaStatus.attributes = {
@@ -127,7 +131,9 @@ class IdeapageController < ApplicationController
 		}
 		currentCriteriaStatus.save
 		newCommentTitle = currentIssue.getNewCommentTitle()
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => time})
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle});
+		newComment.attributes ={:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => time}
+		newComment.save
 		#newComment.updateLink()
 
 		currentCriteriaStatus.attributes = {
@@ -158,7 +164,7 @@ class IdeapageController < ApplicationController
                   issueLink.chop
                 end
 		currentIssue = Issue.first(:link => issueLink)
-		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
+		currentCriteria = Criteria.first({:issue => currentIssue, :currentId => criteriaID})
 		oldTitle=currentCriteria.title
 		oldDescription=currentCriteria.description
 		currentCriteria.update({:title => criteriaTitle, :description => criteriaDescription})
@@ -169,7 +175,7 @@ class IdeapageController < ApplicationController
  		render :json => { }		
 
 =begin		updatedCriterias.each do |curr|	
-			currentCriteria = Criteria.first({:issue => currentIssue, :id => curr["id"]})
+			currentCriteria = Criteria.first({:issue => currentIssue, :currentId => curr["id"]})
 			currentCriteria.update({:title => curr["title"], :description => curr["description"]})
 			currentCriteria.save
 		end
@@ -187,7 +193,7 @@ class IdeapageController < ApplicationController
                 end
 		currentIssue = Issue.first(:link => issueLink)
 		currentParticipant = Participant.first_or_create({:user_name =>userName})#,{:link=>issue["authorLink"]})
-		currentCriteria = Criteria.first({:issue => currentIssue, :id => criteriaID})
+		currentCriteria = Criteria.first({:issue => currentIssue, :currentId => criteriaID})
 		oldTitle=currentCriteria.title
 		oldDescription=currentCriteria.description
 		currentCriteria.destroy_criteria

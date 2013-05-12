@@ -115,7 +115,7 @@ class HomepageController < ApplicationController
 			if !(comments[count].ideasource.nil?)
 				comments[count].ideasource.getSortedCriteriaStatuses.each do |stat|
 					curr_criterion = Hash.new
-					curr_criterion["id"]=stat.criteria.id
+					curr_criterion["id"]=stat.criteria.currentId
 					curr_criterion["value"]=stat.score
 					curr_criterion["comment"]=stat.comment.content
 					curr_criterion["author"]=stat.comment.participant.user_name
@@ -135,7 +135,7 @@ class HomepageController < ApplicationController
 		criteria_json=Array.new
 		criteria.each do |curr|
 			curr_json=Hash.new
-			curr_json["id"]=curr.id
+			curr_json["id"]=curr.currentId
 			curr_json["title"]=curr.title
 			curr_json["description"]=curr.description
 			criteria_json.push curr_json		
