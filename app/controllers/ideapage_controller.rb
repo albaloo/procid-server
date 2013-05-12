@@ -58,11 +58,18 @@ class IdeapageController < ApplicationController
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		newCommentTitle = currentIssue.getNewCommentTitle()
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea, :commented_at=>Time.now, :tone => tone})
+		time = Time.now
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea, :commented_at=>time, :tone => tone})
 		
 		addAction(currentParticipant,currentIssue,"Add New Comment",nil,nil,newComment.id,currentIdea.id)
 
-		render :json => { }
+		result_json=Hash.new
+		result_json["title"]=newCommentTitle
+		result_json["link"]=issueLink+"#comment-"+newCommentTitle
+		result_json["commented_at"]=time
+		newComment.updateSummary()
+		result_json["summary"]=newComment.summary
+		render :json => result_json.to_json
 	end
 
         def addCriteria
