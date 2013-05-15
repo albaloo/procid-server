@@ -28,7 +28,7 @@ class Idea
   #	if(destroy)									#return true if idea has already been destroyed
   #		return true
   #	end
-  	Tag.first(:comment => comment).destroy		#destroy associated tag	
+  	Tag.first(:comment => comment, :name => "idea").destroy		#destroy associated tag	
 	if not(criteria_statuses.nil?) 
 	 	criteria_statuses.comment.destroy			#destroy associated criteria statuses and their comments
   		criteria_statuses.comment
