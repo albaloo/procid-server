@@ -297,11 +297,17 @@ class HomepageController < ApplicationController
 		end
 	        idea = Idea.first_or_create({:comment=> currentComment},{:status=>statusStr})    
 	        currentComment.ideasource = idea
+		currentComment.summary = nil
 		currentComment.save
+
+		currentComment.updateSummary
 		
 		addAction(Participant.first_or_create(:user_name=>userName),currentIssue,"Add New Idea",nil,nil,idea.id,currentComment.id)
 
-		render :json => { }
+		result_json=Hash.new
+		result_json["summary"]=currentComment.summary
+		render :json => result_json.to_json
+
 	end
 	
 	def tagClicked

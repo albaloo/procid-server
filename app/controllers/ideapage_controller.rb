@@ -33,15 +33,19 @@ class IdeapageController < ApplicationController
                   issueLink.chop
                 end
 		currentIssue = Issue.first(:link => issueLink)
-		currentCommentIdea = Comment.first({:title => commentTitle, :issue=>currentIssue}).ideasource
+		currentComment = Comment.first({:title => commentTitle, :issue=>currentIssue})
+		currentCommentIdea = currentComment.ideasource
 		oldComment=Comment.first({:title => commentTitle, :issue=>currentIssue})
 		oldTitle=oldComment.title
 		oldContent=oldComment.content
 		currentCommentIdea.destroy_idea
-		
+		currentComment.updateSummary
 		addAction(Participant.first_or_create(:user_name=>userName),currentIssue,"Delete Idea",oldTitle,oldContent,nil,nil)
 
-		render :json => { }
+		result_json=Hash.new
+		result_json["summary"]=currentComment.summary
+		render :json => result_json.to_json
+
 	end
 
         def addNewComment

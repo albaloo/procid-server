@@ -40,7 +40,7 @@ class Idea
   	com.ideasource=nil
 	com.summary=nil
   	com.save
-	com.updateSummary
+	#com.updateSummary
   	comment=nil
 	if not(comments.nil?)
   		comments.each do |t|						#remove association to references
