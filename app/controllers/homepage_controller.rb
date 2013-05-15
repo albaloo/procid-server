@@ -279,6 +279,30 @@ class HomepageController < ApplicationController
 		
 		render :json => { }
 	end
+
+	def addNewIdea
+	 	issueLink = params[:issueLink]
+		userName = params[:userName]
+		commentTitle = params[:commentTitle]
+
+		if(issueLink.ends_with?('#'))
+                  issueLink.chop
+                end
+	
+		currentIssue = Issue.first(:link => issueLink)
+		currentComment = Comment.first({:title => commentTitle, :issue=>currentIssue})
+		statusStr = "Ongoing"
+		if(currentComment.patch)
+			statusStr = "Implemented"
+		end
+	        idea = Idea.first_or_create({:comment=> currentComment},{:status=>statusStr})    
+	        currentComment.ideasource = idea
+		currentComment.save
+		
+		addAction(Participant.first_or_create(:user_name=>userName),currentIssue,"Add New Idea",nil,nil,idea.id,currentComment.id)
+
+		render :json => { }
+	end
 	
 	def tagClicked
 		issueLink = params[:issueLink]
@@ -297,6 +321,7 @@ class HomepageController < ApplicationController
 
 =begin
 	Values for addAction call from various actions:
+	addNewIdea =  (participant,issue,"Add New Idea",nil,nil,new idea ID,current comment ID)
 	addTag = 				(participant,issue,"Add Tag",nil,nil,new tag ID,nil)
 	removeTag = 			(participant,issue,"Remove Tag",old tag name,nil,comment ID,nil)
 	tagClicked = 			(participant,issue,"Tag Clicked",tag name,nil,nil,nil)

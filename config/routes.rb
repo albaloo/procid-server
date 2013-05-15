@@ -5,6 +5,7 @@ Backend::Application.routes.draw do
 	match "/findNegativeWords" => "homepage#findNegativeWords"
 	match "/addTag" => "homepage#addTag"
 	match "/removeTag" => "homepage#removeTag"
+	match "/addNewIdea" => "homepage#addNewIdea"
 	match "/receive" => "sendjson#receive"
 	match "/findPotentialParticipants" => "invitepage#findPotentialParticipants"
 	match "/setIdeaStatus" => "ideapage#setIdeaStatus"
