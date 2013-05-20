@@ -6,6 +6,7 @@ Backend::Application.routes.draw do
 	match "/addTag" => "homepage#addTag"
 	match "/removeTag" => "homepage#removeTag"
 	match "/addNewIdea" => "homepage#addNewIdea"
+	match "/lensClicked" => "homepage#lensClicked"
 	match "/receive" => "sendjson#receive"
 	match "/findPotentialParticipants" => "invitepage#findPotentialParticipants"
 	match "/setIdeaStatus" => "ideapage#setIdeaStatus"

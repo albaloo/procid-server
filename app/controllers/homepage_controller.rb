@@ -310,7 +310,7 @@ class HomepageController < ApplicationController
 
 	end
 	
-	def tagClicked
+	def lensClicked
 		issueLink = params[:issueLink]
 		userName = params[:userName]
 		tagName = params[:tagName]

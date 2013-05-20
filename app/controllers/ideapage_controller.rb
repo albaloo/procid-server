@@ -1,6 +1,6 @@
 class IdeapageController < ApplicationController
 
-#	before_filter :authenticate
+	before_filter :authenticate
 
 	def setIdeaStatus
                 issueLink = params[:issueLink]
@@ -245,9 +245,15 @@ class IdeapageController < ApplicationController
 	protected
 
 	def authenticate
- 		authenticate_or_request_with_http_basic do |username, password|
-			username == "procid" && password == "procid"
+		if(request.referer == "http://drupal.org")
+			return true
+		else
+			Rails.logger.info "request.referer: #{request.referer}"
+			return false
 		end
+ 		#authenticate_or_request_with_http_basic do |username, password|
+		#	username == "procid" && password == "procid"
+		#end
 	end
 
 end
