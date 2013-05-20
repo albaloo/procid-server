@@ -1,7 +1,7 @@
 class HomepageController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	@@data = Rails.root.to_s+'/input.json'
-
+	before_filter :authenticate
 
 	def postcomments
 		#render :nothing => true
@@ -350,6 +350,21 @@ class HomepageController < ApplicationController
 									:newIDFirst => idFirst,
 									:newIDSecond => idSecond
 								})
+	end
+
+
+protected
+
+	def authenticate
+		if(request.referer.start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/"))
+			return true
+		else
+			Rails.logger.info "request.referer: #{request.referer}"
+			head :ok
+		end
+ 		#authenticate_or_request_with_http_basic do |username, password|
+		#	username == "procid" && password == "procid"
+		#end
 	end
 end
 
