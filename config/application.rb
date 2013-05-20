@@ -8,7 +8,7 @@ require 'action_mailer/railtie'
 require 'active_resource/railtie'
 require 'rails/test_unit/railtie'
 
-DataMapper::setup(:default, ENV['CLEARDB_DATABASE_URL'] || "mysql://localhost/procid")
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "mysql://localhost/procid")
 #DataMapper::setup(:default, ENV['DATABASE_URL'] || "mysql://localhost/procid")
 
 if defined?(Bundler)

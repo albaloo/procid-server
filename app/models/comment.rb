@@ -5,8 +5,8 @@ require Rails.root.to_s+"/app/controllers/AlchemyAPI.rb"
   property :id,   Serial
   property :title, String, :required => true
   property :link, String,:length=>500, :required => true
-#  property :content,String,:length=>60000
-  property :content,String,:length=>21845
+  property :content,String,:length=>60000
+#  property :content,String,:length=>21845
   property :tone,String, :default => "neutral"
   property :commented_at, DateTime
   property :summary, String,:length=>500
