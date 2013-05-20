@@ -245,7 +245,7 @@ class IdeapageController < ApplicationController
 	protected
 
 	def authenticate
-		if(request.referer.start_with? "http://drupal.org/node/" || request.referer.start_with? "https://drupal.org/node/" || request.referer.start_with? "http://www.drupal.org/node/" || request.referer.start_with? "https://www.drupal.org/node/")
+		if(request.referer.start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/"))
 			return true
 		else
 			Rails.logger.info "request.referer: #{request.referer}"
