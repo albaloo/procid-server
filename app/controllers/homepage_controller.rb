@@ -321,7 +321,7 @@ class HomepageController < ApplicationController
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
 		
 		addAction(currentParticipant,currentIssue,"Tag Clicked",tagName,nil,nil,nil)
-		
+		render :json => { }
 	end
 	
 
