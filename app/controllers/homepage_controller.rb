@@ -92,6 +92,12 @@ class HomepageController < ApplicationController
 		count=0
 		comments.each do |curr|
 			curr_json=Hash.new
+			#Setting up idea image for one particular comment
+			if(issue.link == "/node/1337554" && comments[count].title == "#1")
+				curr_json["image"] = "http://drupal.org/files/Drupal8Wordmark_0.png"
+			else
+				curr_json["image"] = ""
+			end
 			curr_json["title"]=comments[count].title
 			curr_json["link"]=comments[count].link
 			curr_json["author"]=comments[count].participant.user_name
