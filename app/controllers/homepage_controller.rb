@@ -225,14 +225,14 @@ class HomepageController < ApplicationController
 		end
 
 #top 1% positive: 0.54, top negative: 0.11
-		if(positiveRatio > 0.05)
-			message = "Nice, your comment is more positive than average comments in Drupal!"
-			highlightedWords = []
-		end
-		if(negativeRatio > 0.01)
-			message = "Highlighted words are negative, please rephrase in a more constructive manner."
+		#if(positiveRatio > 0.05)
+		#	message = "Nice, your comment is more positive than average comments in Drupal!"
+		#	highlightedWords = []
+		#end
+		#if(negativeRatio > 0.01)
+			message = "To reach consensus, it is important to have a constructive tone. Highlighted words are negative, please consider rephrasing in a more constructive manner."
 			#message = "Your comment is more negative than the average comments in Drupal. Please consider revising it."
-		end 
+		#end 
 		result_json=Hash.new
 		result_json["highlightedWords"]=highlightedWords
 		result_json["totalNumWords"]=totalNumWords
