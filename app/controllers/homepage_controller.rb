@@ -13,8 +13,9 @@ class HomepageController < ApplicationController
 			f.write input[0]["author"]
 		end
 =end
-		issueId = processInputFile(commentInfos,issue)
-		prepareOutputFile(issueId)
+		#issueId = 
+		processInputFile(commentInfos,issue)
+		#prepareOutputFile(issueId)
 	end
 	
 	def processInputFile(commentInfos,issue)
@@ -71,6 +72,11 @@ class HomepageController < ApplicationController
 			currentComment.raise_on_save_failure = true
 			currentComment.save
 		end
+		if(numPrevComments == commentInfos.length)
+			cashed = true
+		else
+			cashed = false
+		end
 		if(numPrevComments==0)
 			currentIssue.find_ideas(numPrevComments,10,4,1,3,2,3)#changed the patch and image value to 3
 		end
@@ -82,10 +88,15 @@ class HomepageController < ApplicationController
 			end
 			currentIssue.find_conversations(numPrevComments,5,2)
 		end
-		return currentIssue.id	
+		prepareOutputFile(currentIssue.id, chashed)
+		#return currentIssue.id	
 	end
 	
-	def prepareOutputFile(issueId)
+	def prepareOutputFile(issueId, chashed)
+		final_json=Hash.new
+		if cashed
+			final_json = JSON.parse( IO.read(filename));
+		else
 		comments_json=Array.new
 		issue = Issue.first(:id => issueId)
 		comments=Comment.all(:issue => issue)
@@ -146,9 +157,15 @@ class HomepageController < ApplicationController
 			curr_json["description"]=currCriteria.description
 			criteria_json.push curr_json		
 		end
-		final_json=Hash.new
+		
 		final_json["issueComments"]=comments_json
 		final_json["criteria"]=criteria_json		
+		
+		File.open("results.json","w") do |f|
+ 			f.write(final_json.to_json)
+		end
+
+		end
 		render :json => final_json.to_json
 	end
 
