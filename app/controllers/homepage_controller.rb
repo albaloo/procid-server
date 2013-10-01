@@ -19,6 +19,7 @@ class HomepageController < ApplicationController
 	end
 	
 	def processInputFile(commentInfos,issue)
+		t1 = Time.now
 		names=issue["author"].split
 		threadInitiator = Participant.first_or_create({:user_name =>issue["author"]},{:link=>issue["authorLink"],:first_name=>names[0],:last_name=>names[1]})
 		
@@ -88,15 +89,19 @@ class HomepageController < ApplicationController
 			end
 			currentIssue.find_conversations(numPrevComments,5,2)
 		end
+		t2 = Time.now
+		msecs = time_diff_milli t1, t2
+		puts "Time it takes to run processinput file: #{msecs}"
 		prepareOutputFile(currentIssue.id, cashed)
 		#return currentIssue.id	
 	end
 	
 	def prepareOutputFile(issueId, cashed)
+		t1 = Time.now
 		final_json=Hash.new
-		if cashed
-			final_json = JSON.parse( IO.read("#{Rails.root}/results.json"));
-		else
+		#if cashed
+		#	final_json = JSON.parse( IO.read("#{Rails.root}/results.json"));
+		#else
 		comments_json=Array.new
 		issue = Issue.first(:id => issueId)
 		comments=Comment.all(:issue => issue)
@@ -161,13 +166,22 @@ class HomepageController < ApplicationController
 		final_json["issueComments"]=comments_json
 		final_json["criteria"]=criteria_json		
 		
-		File.open("results.json","w") do |f|
- 			f.write(final_json.to_json)
-		end
+		#File.open("results.json","w") do |f|
+ 		#	f.write(final_json.to_json)
+		#end
+
+		t2 = Time.now
+		msecs = time_diff_milli t1, t2
+		puts "Time it takes to run processoutput file: #{msecs}"
 
 		end
 		render :json => final_json.to_json
 	end
+
+	def time_diff_milli(start, finish)
+		(finish - start) * 1000.0
+	end
+
 
 	def findNegativeWords
 		commentContent = params[:comment]
