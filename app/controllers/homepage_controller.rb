@@ -174,7 +174,7 @@ class HomepageController < ApplicationController
 		msecs = time_diff_milli t1, t2
 		puts "Time it takes to run processoutput file: #{msecs}"
 
-		end
+		#end
 		render :json => final_json.to_json
 	end
 
