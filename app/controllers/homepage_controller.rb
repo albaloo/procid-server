@@ -88,11 +88,11 @@ class HomepageController < ApplicationController
 			end
 			currentIssue.find_conversations(numPrevComments,5,2)
 		end
-		prepareOutputFile(currentIssue.id, chashed)
+		prepareOutputFile(currentIssue.id, cashed)
 		#return currentIssue.id	
 	end
 	
-	def prepareOutputFile(issueId, chashed)
+	def prepareOutputFile(issueId, cashed)
 		final_json=Hash.new
 		if cashed
 			final_json = JSON.parse( IO.read(filename));
