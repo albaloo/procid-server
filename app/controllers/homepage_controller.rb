@@ -95,7 +95,7 @@ class HomepageController < ApplicationController
 	def prepareOutputFile(issueId, cashed)
 		final_json=Hash.new
 		if cashed
-			final_json = JSON.parse( IO.read("results.json"));
+			final_json = JSON.parse( IO.read("#{Rails.root}/results.json"));
 		else
 		comments_json=Array.new
 		issue = Issue.first(:id => issueId)
