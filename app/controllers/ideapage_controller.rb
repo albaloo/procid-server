@@ -52,6 +52,8 @@ class IdeapageController < ApplicationController
 		issueLink = params[:issueLink]
 		userName = params[:userName]
                 commentTitle = params[:commentTitle]
+                newCommentTitle = params[:newCommentTitle]
+                newCommentLink = params[:newCommentLink]
 		commentContent = params[:content]
 		tone = params[:tone]
 		
@@ -61,15 +63,12 @@ class IdeapageController < ApplicationController
 		currentIssue = Issue.first(:link => issueLink)
 		currentIdea = Comment.first(:title => commentTitle, :issue => currentIssue).ideasource
 		currentParticipant = Participant.first_or_create({:user_name =>userName})
-		newCommentTitle = currentIssue.getNewCommentTitle()
 		time = Time.now
-		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :idea => currentIdea, :commented_at=>time, :tone => tone})
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>commentContent, :link => newCommentLink, :idea => currentIdea, :commented_at=>time, :tone => tone})
 		
 		addAction(currentParticipant,currentIssue,"Add New Comment",nil,nil,newComment.id,currentIdea.id)
 
 		result_json=Hash.new
-		result_json["title"]=newCommentTitle
-		result_json["link"]=issueLink+"#comment-"+newCommentTitle
 		result_json["commented_at"]=time
 		newComment.updateSummary()
 		result_json["summary"]=newComment.summary
@@ -82,7 +81,10 @@ class IdeapageController < ApplicationController
 		criteriaTitle = params[:title]
                 criteriaDescription = params[:description]
                 criteriaID = params[:id]
-		
+		newCommentTitle = params[:newCommentTitle]
+                newCommentLink = params[:newCommentLink]
+                newCommentContent = params[:newCommentContent]
+	
 		if(issueLink.ends_with?('#'))
                   issueLink.chop
                 end
@@ -90,10 +92,17 @@ class IdeapageController < ApplicationController
 		currentParticipant = Participant.first_or_create({:user_name =>userName})#,{:link=>issue["authorLink"]})
 		currentCriteria = Criteria.first_or_create({:issue => currentIssue, :currentId => criteriaID},{:title=>criteriaTitle, :description=>criteriaDescription, :participant => currentParticipant})
 		currentCriteria.save
+
+		time = Time.now
+		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle}, {:content =>newCommentContent, :link => newCommentLink, :commented_at=>time, :tone => "neutral"})
 		
 		addAction(currentParticipant,currentIssue,"Add Criteria",nil,nil,currentCriteria.id,nil)
-		
-		render :json => { }		
+
+		result_json=Hash.new
+		result_json["commented_at"]=time
+		newComment.updateSummary()
+		result_json["summary"]=newComment.summary
+		render :json => result_json.to_json
 	end
 
 	def updateCriteriaStatus
@@ -102,6 +111,8 @@ class IdeapageController < ApplicationController
                 criteriaValue = params[:value]
                 criteriaID = params[:id]
                 commentTitle = params[:commentTitle]
+		newCommentTitle = params[:newCommentTitle]
+		newCommentLink = params[:newCommentLink]
 		commentContent = params[:content]
 		
 		if(issueLink.ends_with?('#'))
@@ -139,9 +150,8 @@ class IdeapageController < ApplicationController
 		currentCriteriaStatus.raise_on_save_failure = true
 		currentCriteriaStatus.save
 
-		newCommentTitle = currentIssue.getNewCommentTitle()
 		newComment = Comment.first_or_create({:issue => currentIssue, :participant => currentParticipant, :title => newCommentTitle});
-		newComment.attributes ={:content =>commentContent, :link => issueLink+"#comment-"+newCommentTitle, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => time}
+		newComment.attributes ={:content =>commentContent, :link => newCommentLink, :criteria_status => currentCriteriaStatus, :tone => tone, :commented_at => time}
 		newComment.raise_on_save_failure = true
 		newComment.save
 		#newComment.updateLink()
@@ -154,9 +164,7 @@ class IdeapageController < ApplicationController
 		addAction(currentParticipant,currentIssue,"Update Criteria Status",oldScore,oldContent,currentCriteria.id,currentCriteriaStatus.id)
 
 		result_json=Hash.new
-		result_json["newCommentTitle"]=newCommentTitle
 		result_json["newCommentTone"]=tone
-		result_json["newCommentLink"]=issueLink+"#comment-"+newCommentTitle
 		result_json["newCommentTime"]=time
 		result_json["newCommentSummary"]=newComment.findSummary()
 		render :json => result_json.to_json
