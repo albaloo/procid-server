@@ -238,16 +238,17 @@ class IdeapageController < ApplicationController
 	deleteCriteria = 		(participant,issue,"Delete Criteria",old criteria title,old criteria description,nil,nil)
 =end
 	def addAction(participant,issue,name,oldFirst,oldSecond,idFirst,idSecond)
-		Rails.logger.info "part: #{participant}, iss: #{issue}, name: #{name},oldfirst: #{oldFirst},oldSec: #{oldSecond},idFirst: #{idFirst},idSec: #{idSecond}"
+		Rails.logger.info "part: #{participant}, iss: #{issue}, name: #{name},oldfirst: #{oldFirst},oldSec: #{oldSecond},idFirst: #{idFirst},idSec: #{idSecond}, lasModified: #{Time.now}"
 		action = UserAction.first_or_create({
-									:participant => participant,
-									:issue => issue,
-									:actionName => name, 
-									:oldContentFirst => oldFirst,
-									:oldContentSecond => oldSecond,
-									:newIDFirst => idFirst,
-									:newIDSecond => idSecond
-								})
+			:participant => participant,
+			:issue => issue,
+			:actionName => name, 
+			:oldContentFirst => oldFirst,
+			:oldContentSecond => oldSecond,
+			:newIDFirst => idFirst,
+			:newIDSecond => idSecond,
+			:lastModified => Time.now
+		})
 	end
 
 	protected

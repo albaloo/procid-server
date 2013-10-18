@@ -6,6 +6,7 @@ class UserAction
   property :oldContentSecond, String,:length=>20000,:required =>false
   property :newIDFirst, Integer,:required =>false
   property :newIDSecond, Integer,:required =>false
+  property :lastModified, DateTime,:required =>false 
 
   belongs_to :participant
   belongs_to :issue
