@@ -98,7 +98,7 @@ class Issue
 
     #Patch
    if(currentParticipant.usabilityPatches.nil?)
-      description.concat("no usability patch info")
+      description.concat(", no usability patch info")
    else
       patchString = "patches"
       if(currentParticipant.usabilityPatches==1)
