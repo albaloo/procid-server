@@ -19,8 +19,10 @@ class Idea
   def getRelatedComments
     result = Array.new
     result.concat(criteria_statuses.map{|x| x.comment})
-    result.concat(comments)    
-    result = result.sort {|x,y| x.commented_at <=> y.commented_at}
+    result.concat(comments)
+    if!(result.empty?)    
+       result = result.sort {|x,y| x.commented_at <=> y.commented_at}
+    end
     return result
   end
   
