@@ -71,9 +71,11 @@ class Issue
 
   def gather_participant_info_description (currentParticipant, num, recency)
     description = ""
+    experienceInfo = 0
     #Experience
     if(currentParticipant.experience.nil?)
       description.concat("no experience info")
+      experienceInfo = 1
     else
       year = currentParticipant.experience/52
       yearString="years"
@@ -125,7 +127,7 @@ class Issue
     end
    #Triads
    random = 1+Random.rand(6)
-   if(random > 3)
+   if(num < 3 && experienceInfo == 1)
       description.concat(", no previous interactions with current participants.")
    else
       numTriads = 1+Random.rand(12)
