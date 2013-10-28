@@ -129,7 +129,7 @@ class Issue
       description.concat(", no previous interactions with current participants.")
    else
       numTriads = 1+Random.rand(12)
-      traidString = "participants"
+      triadString = "participants"
       #if(numTriads==1)
       #  triadString = "participant"
       #end
