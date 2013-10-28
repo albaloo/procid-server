@@ -96,7 +96,7 @@ class Issue
       end
     end
 
-    #Patch
+   #Patch
    if(currentParticipant.usabilityPatches.nil?)
       description.concat(", no usability patch info")
    else
@@ -119,9 +119,21 @@ class Issue
     if(recency != 0 && !(recency.nil?))
       date1 = DateTime.rfc3339(recency.to_s)
       days = distance_of_time_in_words(date1, date2)
-      description.concat(", recent participation #{days} ago.")
+      description.concat(", last commented on a usability thread #{days} ago")
     else
-      description.concat(", not recently in a usability thread.")
+      description.concat(", not recently commented on a usability thread")
+    end
+   #Triads
+   random = 1+Random.rand(6)
+   if(random > 3)
+      description.concat(", no previous interactions with current participants.")
+   else
+      numTriads = 1+Random.rand(12)
+      traidString = "participants"
+      #if(numTriads==1)
+      #  triadString = "participant"
+      #end
+      description.concat(", has previously interacted with #{numTriads} of the current #{triadString}.")
     end
 
   end
@@ -195,6 +207,15 @@ class Issue
     indx = 0
     potentials = Array.new
     res.each do |p_id|
+      currentParticipant = Participant.first(:id=>p_id);
+
+      currentPInfo=Hash.new
+      currentPInfo["author"]=currentParticipant.user_name
+      currentPInfo["authorLink"]=currentParticipant.link
+      consensus = find_participant_consensus(p_id) 
+      recency = find_participant_recency(p_id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency)#Time.now)
+
       potentials = potentials.to_a.push p_id
       indx = indx + 1
       break if indx == 20
