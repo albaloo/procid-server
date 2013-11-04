@@ -46,20 +46,22 @@ require Rails.root.to_s+"/app/controllers/AlchemyAPI.rb"
 
   def updateSummary  
     if (summary.nil? || summary.empty?)
-      summary = " commented."
-      Rails.logger.debug "Roshanak ends"
-      if not (ideasource.nil?)
-        summary = " proposed an idea."
-      elsif patch
-        summary = " submitted a patch."
-      elsif not (idea.nil?) then
-        summary = " commented on " + idea.comment.participant.user_name
-	summary.concat(" idea")
-      else
-        summary = " commented."
-      end
+      #summary = " commented."
+      #Rails.logger.debug "Roshanak ends"
+      #if not (ideasource.nil?)
+      #  summary = " proposed an idea."
+      #elsif patch
+      #  summary = " submitted a patch."
+      #elsif not (idea.nil?) then
+      #  summary = " commented on " + idea.comment.participant.user_name
+#	summary.concat(" idea")
+#      else
+#        summary = " commented."
+#      end
 	#self.update(:summary => summary)
-	self.save
+#	self.save
+       self.summary = findSummary
+       self.save
     end
     Rails.logger.debug "Summary doroste:#{summary}"
     return summary
