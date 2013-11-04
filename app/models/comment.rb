@@ -58,7 +58,8 @@ require Rails.root.to_s+"/app/controllers/AlchemyAPI.rb"
       else
         summary = " commented."
       end
-	self.update(:summary => summary)
+	#self.update(:summary => summary)
+	self.save
     end
     Rails.logger.debug "Summary doroste:#{summary}"
     return summary
