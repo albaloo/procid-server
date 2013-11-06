@@ -52,8 +52,8 @@ class Issue
     potentials = Array.new
     potentials.concat(find_experienced_potential_participants)
     potentials.concat(find_patchsubmitter_potential_participants)
-    potentials.concat(find_consensus_potential_participants_Dmapper)
-    potentials.concat(find_recent_potential_participants_Dmapper)
+    potentials.concat(find_consensus_potential_participants)
+    potentials.concat(find_recent_potential_participants)
 
     potentials = potentials.uniq
     potentials = potentials.select { |h| !(h['author'].include? "System Message") }
@@ -159,8 +159,8 @@ class Issue
   def find_participant_triad(p_id)
     issueid = Issue.first(:link => link).id
     adapter = DataMapper.repository(:default).adapter
-    res = adapter.select("SELECT COUNT(t1.target) FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t1.target=t2.participant_id) WHERE t1.source=#{p_id} AND t2.issue_id=#{issueid});")
-    res2 = adapter.select("SELECT COUNT(t1.source) FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t1.source=t2.participant_id) WHERE t1.target=#{p_id} AND t2.issue_id=#{issueid});") 
+    res = adapter.select("SELECT COUNT(t1.target_id) AS tr FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t1.target_id=t2.participant_id) WHERE t1.source_id=#{p_id} AND t2.issue_id=#{issueid};")
+    res2 = adapter.select("SELECT COUNT(t1.source_id) FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t1.source_id=t2.participant_id) WHERE t1.target_id=#{p_id} AND t2.issue_id=#{issueid};") 
     return res[0]+res2[0]
   end
   #randomly selects 10 participants between 100 experienced members who are not participating in this thread
@@ -255,7 +255,7 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       recency = find_participant_recency(row[0])
-      triads = find_participant_triad(p_id)
+      triads = find_participant_triad(row[0])
       currentPInfo["description"]= gather_participant_info_description(currentParticipant, row[1], recency, triads)
       
       potentials.push currentPInfo
@@ -280,7 +280,7 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       consensus = find_participant_consensus(row[0])
-      triads = find_participant_triad(p_id)
+      triads = find_participant_triad(row[0])
       currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, row[1], triads)
       
       potentials.push currentPInfo
@@ -422,7 +422,7 @@ class Issue
     end
   end
 
-
+=begin
   def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal,frequentPostVal,experienceVal)
     #Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
     scores = {}
@@ -509,6 +509,70 @@ class Issue
       x+=1
     end              
   end
+=end
+
+def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
+        Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
+    comments = Comment.all(:issue_id=>id)
+    references=Array.new(comments.length) {Array.new}
+    tonal=Array.new(comments.length){Boolean}
+    x=start
+    tokenizer = TactfulTokenizer::Model.new
+    while(x<comments.length)
+        tonal[x]=false
+        i=x+1
+        stop=(x+numCheck)+1
+        if(stop>comments.length)
+            stop=comments.length
+        end
+        checkNames=true
+        while(i<comments.length)
+            if(contains_post_num_ref(comments[i].content,comments[x].title[/\d+/].to_i))
+                if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].title))
+                    tonal[x]=true
+                end
+                references[x].push(comments[i])
+            elsif(i<stop)
+                if(checkNames && comments[i].participant == comments[x].participant)
+                    checkNames=false
+                end
+                if(checkNames && comments[i].content.include?(comments[x].participant.user_name))
+                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.user_name))
+                        tonal[x]=true
+                    end
+                    references[x].push(comments[i])
+                elsif(checkNames && !comments[x].participant.first_name.nil? && !comments[x].participant.first_name.eql?("") && comments[i].content.include?(comments[x].participant.first_name))
+                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.first_name))
+                        tonal[x]=true
+                    end
+                    references[x].push(comments[i])
+                end
+            end
+            i+=1
+        end
+	#IF a single person refered to a comment more than once, it needs to be removed.
+
+	ref_participants=references[x].uniq{|com| com.participant}
+        rank = (ref_participants.length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
+
+        if(rank > minRank)
+	    statusStr = "Ongoing"
+	    if(comments[x].patch)
+	       statusStr = "Implemented"
+	    end
+            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>statusStr})    
+            comments[x].ideasource = idea
+            tag = Tag.first_or_create({:name => "idea", :comment => comments[x], :participant => comments[x].participant})
+            comments[x].save
+            references[x].each do |reference|        
+              reference.idea = idea
+              reference.save
+            end
+        end
+        x+=1
+    end                
+  end
+
 
   def find_top_experienced_participants
     adapter = DataMapper.repository(:default).adapter
@@ -597,7 +661,8 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       consensus = find_participant_consensus(row.participant_id)
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, row.commented_at)
+      triads = find_participant_triad(row.participant_id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, row.commented_at, triads)
       
       potentials.push currentPInfo
     end
@@ -617,7 +682,8 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       recency = find_participant_recency(row.id)
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, row.total, recency)
+      triads = find_participant_triad(row.id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, row.total, recency, triads)
       
       potentials.push currentPInfo
     end			

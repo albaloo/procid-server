@@ -1,4 +1,4 @@
-require iconv
+require 'iconv'
 class HomepageController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	@@data = Rails.root.to_s+'/input.json'
