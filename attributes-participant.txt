@@ -1,1181 +1,1308 @@
-		0			0	2
--Shaman-	/user/153145	301			0	3
--enzo-	/user/294937	253	Jose Eduardo	Garcia Torres	3	10
-2createwdrupal	/user/238928	267			0	3
-Adam S	/user/584600	186			0	3
-Agogo	/user/425311	216			0	2
-Ahqar	/user/340266	243			0	2
-AjK	/user/39030	384			0	3
-Alan D.	/user/198838	282			0	17
-Alan.Guggenheim	/user/681112	169			0	3
-Alex UA	/user/110386	320	Alex	UA	2	17
-AlexBowman	/user/495280	204			0	2
-AlexisWilke	/user/356197	239			2	8
-Amazon	/user/18703	421	Kieran	Lal	0	4
-Amitaibu	/user/57511	360	Amitai	Burstein	39	120
-AmrMostafa	/user/19220	419			3	7
-Andrew Schulman	/user/279446	257			1	10
-Andy B	/user/886622	136			0	9
-AndyF	/user/220112	273			0	2
-Angry Dan	/user/1147930	112	Dan	James	0	3
-Ankabout	/user/838974	144			0	2
-Aren Cambre	/user/97356	327			0	123
-Aveu	/user/363658	236			0	5
-B-Prod	/user/407852	222			0	2
-BTMash	/user/60422	357	Ashok	Modi	13	34
-Balefire	/user/279966	257			0	2
-BarisW	/user/107229	321	Baris	Wanschers	17	58
-BenStallings	/user/210009	277			0	2
-Berdir	/user/214652	275	Sascha	Grossenbacher	13	92
-Bevan	/user/49989	369	Bevan	Rudge	0	51
-BeyersdorferTJ	/user/612090	181			0	2
-BioALIEN	/user/90217	333			0	2
-Bojhan	/user/87969	334	Bojhan	Somers	103	2182
-Boris Mann	/user/4426	494			0	22
-Brandonian	/user/77766	342	Brandon	Morrison	1	2
-Brian Altenhofel	/user/550616	193	Brian	Altenhofel	5	7
-BrightLoudNoise	/user/124991	314			7	19
-BrockBoland	/user/660472	173	Brock	Boland	0	2
-Brolag	/user/699674	166	Alfredo	Bonilla	0	2
-BryanPflug	/user/7905	468			0	2
-Ber Kessels	/user/2663	510			0	9
-COBadger	/user/1102918	115	Jordan	Graham	0	2
-Carsten Muller	/user/124707	314	Carsten	Muller	1	2
-Chad_Dupuis	/user/91360	332			0	2
-Charles Belov	/user/569178	189			0	4
-Chi	/user/556138	192			1	8
-Chris Johnson	/user/2794	508	Chris	Johnson	0	2
-ChrisBryant	/user/70716	348			0	4
-ChrisKennedy	/user/32005	393			1	15
-Christefano	/user/76901	342			0	2
-Christian Biggins	/user/1045484	121	Christian	Biggins	3	8
-Ciril Tharayil	/user/724052	162	???	????	0	2
-Cliff	/user/295067	253	Cliff	Tyllick	0	46
-Cloud	/user/23543	409			0	4
-CorniI	/user/136353	309			0	2
-Cottser	/user/1167326	110	Scott	Reeves	1	13
-CrashTest_	/user/261457	261	Patrick	Teglia	6	8
-Crell	/user/26398	404	Larry	Garfield	2	158
-CrookedNumber	/user/97023	327			0	3
-Cvbge	/user/22153	0			0	2
-Cybergarou	/user/104226	322			0	4
-CydeWeys	/user/1878712	52	Ben	McIlwain	0	2
-DSheffler	/user/239818	266	Danielle	Sheffler	0	2
-Daemon_Byte	/user/376945	232			0	5
-Damien Tournoud	/user/22211	412	Damien	Tournoud	27	176
-DamienMcKenna	/user/108450	321	Damien	McKenna	1	29
-Dan Silver	/user/309262	250	Dan	Silver	0	5
-DanW	/user/210766	277			0	2
-Dane Powell	/user/339326	244	Dane	Powell	0	2
-Daniel Norton	/user/357269	238			0	6
-Darrell	/user/30072	396			0	3
-Dave Cohen	/user/18468	421			0	17
-Dave Reid	/user/53892	365	Dave	Reid	87	331
-David D	/user/594638	184			0	4
-David Latapie	/user/54988	363			0	23
-David Lesieur	/user/17157	424	David	Lesieur	6	19
-David Strauss	/user/93254	330	David	Strauss	0	6
-David4514	/user/761510	156			0	6
-David_Rothstein	/user/124982	314	David	Rothstein	156	976
-Davy Van Den Bremt	/user/185175	287	Davy	Van Den Bremt	3	21
-Devin Carlson	/user/290182	254	Devin	Carlson	2	8
-Digidog	/user/1001934	126			0	3
-DjebbZ	/user/421165	217			0	8
-DocuAnt	/user/39542	383			0	4
-Dragan Eror	/user/409433	221	Dragan	Eror	2	8
-Dries	/user/1	624	Dries	Buytaert	0	624
-DrupalSza	/user/597442	184			0	2
-Desire	/user/212866	276	Marton	Juhasz	1	2
-E.Z	/user/256095	263			0	6
-ELC	/user/784944	153			2	9
-EZ@drupal.org.il	/user/169785	294			0	2
-EclipseGc	/user/61203	357	Kris	Vanderwater	16	70
-Elijah Lynn	/user/353190	240	Elijah	Lynn	0	3
-EllaTheHarpy	/user/2293700	28			1	3
-EmanueleQuinto	/user/24864	407			0	2
-Employee Goals	/user/1142316	0			0	2
-Emyr42	/user/425109	216			0	2
-Encarte	/user/206125	279			0	4
-Eric_A	/user/344430	242			0	5
-EvanDonovan	/user/168664	294	Evan	Donovan	7	161
-Everett Zufelt	/user/406552	222	Everett	Zufelt	7	370
-Fabianx	/user/693738	167	Fabian	Franz	0	15
-Fannon	/user/722104	162	Simon	Heimler	0	2
-FiNeX	/user/40413	382			0	2
-Fidelix	/user/786032	153			0	6
-Floydm	/user/502450	202	Floyd	Mann	5	7
-Fluffy Convict	/user/34356	389			0	2
-Flying Drupalist	/user/30179	396			0	2
-Francewhoa	/user/204003	280	Francois	Carpentier	0	9
-Frando	/user/21850	413			9	25
-Frank Ralf	/user/216048	275			11	60
-FredCK	/user/74499	344			0	21
-Freso	/user/27504	401			2	7
-Gaelan	/user/1597262	74			1	8
-Garrett Albright	/user/191212	285	Garrett	Albright	3	13
-Gary Feldman	/user/46755	373			0	3
-Geir19	/user/430190	214			0	2
-George2	/user/231638	269			0	9
-GiorgosK	/user/62448	355			0	6
-GreenLED	/user/215784	275			0	5
-Gurpartap Singh	/user/41470	381	Gurpartap	Singh	6	67
-GuyPaddock	/user/156932	299			0	2
-Gyt	/user/313100	249			2	2
-Gabor Hojtsy	/user/4166	494	Gabor	Hojtsy	272	1613
-HS	/user/390611	227			0	3
-Heine	/user/17943	422	Heine	Deelstra	0	3
-HenkAbma	/user/57668	360			0	6
-IceCreamYou	/user/201425	281	Isaac	Sukin	0	4
-IceCreamYou2	/user/1021676	123			0	2
-Island Usurper	/user/86683	335	Lyle	Mantooth	0	3
-Jacine	/user/88931	334	Jacine	Luisi	13	67
-Jack Harich	/user/876398	138			0	2
-JacobSingh	/user/68912	349	Jacob	Singh	23	110
-JamesAn	/user/322251	248	James	An	9	14
-Jan Krummrey	/user/186580	287			0	2
-Jao	/user/139860	0			0	4
-Jarek Foksa	/user/479726	206			0	11
-JayKayAu	/user/473152	207			0	2
-Jaza	/user/15277	431			2	2
-Jeff Burnz	/user/61393	356			18	228
-Jelle_S	/user/829198	146	Jelle	Sebreghts	4	14
-Jennifer_M	/user/324829	247			0	4
-JirkaRybka	/user/106464	322			0	31
-Jody Lynn	/user/112500	319	Jody	Hamilton	69	123
-John Bryan	/user/105119	322			0	2
-John Morahan	/user/58170	360			2	2
-John Pitcairn	/user/425866	215			0	33
-John T. Haller	/user/35896	388			0	2
-JohnAlbin	/user/32095	393	John Albin	Wilkins	17	127
-Johnny vd Laar	/user/248932	264			14	39
-Jolidog	/user/347132	241	Joao	Belchior	1	3
-Jon Pugh	/user/17028	425	Jon	Pugh	1	8
-JonBob	/user/831	624			0	2
-Jonah Ellison	/user/217669	274	Jonah	Ellison	2	4
-JordiTR	/user/25348	406			0	4
-Jorge Campo	/user/213590	276			0	2
-Jose Reyero	/user/4299	494	Jose Antonio	Reyero del Prado	0	10
-Josh Waihi	/user/188162	286			3	6
-JoshOrndorff	/user/723948	162			0	2
-JoshuaRogers	/user/157922	299			4	19
-JuliaKM	/user/109542	321			7	22
-JulienD	/user/519520	199			2	3
-JurriaanRoelofs	/user/52638	366			0	2
-JvE	/user/892998	136			2	2
-KarenS	/user/45874	375	Karen	Stevenson	0	29
-Kars-T	/user/224499	271	Karsten	Frohwein	1	7
-Kartagis	/user/742906	159			0	2
-Kazanir	/user/2279698	29	Christian	Sieber	0	2
-KeithH	/user/1004086	126			0	2
-Ken Hawkins	/user/196351	283	Kenneth	Hawkins	0	3
-KentBye	/user/21673	413	Kent	Bye	0	3
-Kevin Hankens	/user/78090	342	Kevin	Hankens	5	5
-Kevin Morse	/user/1348530	95	Kevin	Morse	2	8
-KingMoore	/user/209791	277			0	3
-Kiphaas7	/user/248880	264			1	72
-KrisBulman	/user/190735	285	Kris	Bulman	0	2
-Kristen Pol	/user/8389	465	Kristen	Pol	0	2
-LPCA	/user/256027	263	Luis Pedro	Algarvio	0	24
-LUTi	/user/32063	393			0	2
-Lars Bo Jensen	/user/1432838	88	Lars Bo	Jensen	0	3
-Lars Toomre	/user/23809	409			0	13
-LarsKramer	/user/712596	163			0	5
-LeeHunter	/user/117834	317	Lee	Hunter	0	4
-Lenz Grimmer	/user/94885	329			0	4
-Les Lim	/user/84263	337	Les	Lim	1	11
-Letharion	/user/373603	233	Claes	Gyllensvard	10	23
-LewisNyman	/user/751964	158	Lewis	Nyman	19	124
-LoMo	/user/628196	178			2	26
-Lukas von Blarer	/user/598412	184	Lukas	von Blarer	3	24
-MGParisi	/user/243021	266			0	17
-Mac_Weber	/user/789986	152	Weber	Macedo	6	17
-Magnity	/user/267154	260			0	2
-Manuel Garcia	/user/213194	276			3	29
-Mark Conroy	/user/336910	244	Mark	Conroy	0	2
-Mark Trapp	/user/212019	277			4	17
-MegaChriz	/user/654114	174	Youri	van Koppen	0	2
-MichaelCole	/user/8121	467			0	6
-Michelle	/user/23570	409	Michelle	Cox	0	19
-MickL	/user/1429064	88			0	3
-Mike Wacker	/user/79520	340	Mike	Wacker	11	37
-Mile23	/user/116231	318	Paul	Mitchum	1	11
-Mirabuck	/user/554270	192			0	5
-Mohammed J. Razem	/user/255384	263	Mohammed	Razem	2	3
-Morbus Iff	/user/9034	461			0	13
-NROTC_Webmaster	/user/1030166	123			5	6
-NancyDru	/user/101412	324	Nancy	Wichmann	6	49
-Nchase	/user/180094	290			0	2
-Nick Lewis	/user/27072	402			1	10
-NikLP	/user/71221	347	Nik	LePage	0	2
-Niklas Fiekas	/user/1089248	117			15	27
-Noyz	/user/338771	244			1	86
-OddJob	/user/2252684	32	Wes	Stansbury	1	3
-Oleksa	/user/367588	235			0	5
-Onnovp	/user/200013	281			0	5
-Oostie	/user/1446250	87	Cor	van Oostenbrugge	0	2
-Owen Barton	/user/19668	418	Owen	Barton	13	44
-Pancho	/user/15425	430			4	45
-Pasqualle	/user/80733	339			2	82
-Paul Natsuo Kis...	/user/70498	348			0	6
-Paul Simard	/user/902868	134			0	2
-PawelR	/user/1136936	113	Pawel	Ratajczak	4	5
-Pedro Lozano	/user/123766	315	Pedro	Lozano	1	12
-Pete B	/user/554130	192			3	4
-Pinolo	/user/443350	212	Marcello	Testi	1	4
-RKS	/user/875154	138			0	5
-Ralf	/user/43568	378			2	2
-Ralt	/user/1217654	106			0	4
-RaulMuroc	/user/491326	205			0	2
-RdeBoer	/user/404007	223	Rik	De Boer	0	11
-ReMedAct	/user/98944	326			0	5
-Remon	/user/143827	306	Remon	Georgy	0	2
-Renee S	/user/141051	307	Renee	Stephen	0	2
-Richard Barry	/user/918220	0			0	2
-Rob C	/user/313382	249			2	6
-Rob Loach	/user/61114	357	Rob	Loach	59	196
-RobRoy	/user/22975	410			0	21
-RobW	/user/524696	198			0	51
-Robin Monks	/user/12246	442			0	3
-RoboPhred	/user/131239	312			0	4
-Rosamunda	/user/10590	452			0	4
-Rowanw	/user/100861	324			0	13
-RoySegall	/user/1812910	58	roy	segall	1	10
-RumpledElf	/user/173054	292	Robyn	Stanley	0	4
-Ryan Palmer	/user/44161	377			1	4
-Sborsody	/user/321061	248			0	2
-Schnitzel	/user/643820	176	Michael	Schmid	18	37
-Scott Reynolds	/user/60009	358			0	8
-SeanBannister	/user/163996	296			0	46
-Seb_CKSource	/user/1943110	46			0	2
-Senpai	/user/65470	352	Joel	Farris	9	74
-Sergio Beristain	/user/17386	424			0	2
-Shai	/user/50259	369			6	64
-Shawn DeArmond	/user/77785	342	Shawn	DeArmond	10	25
-Shyamala	/user/85730	336	Shyamala	Rajaram	0	84
-Simx0r	/user/89380	333			0	2
-Snugug	/user/820332	147	Sam	Richard	0	8
-Soul88	/user/1074416	118			1	2
-SpikeX	/user/240916	266			0	3
-Stalski	/user/322618	248			0	14
-Stefan Nagtegaal	/user/612	624			0	30
-Steve Dondley	/user/4131	494			5	15
-SteveJBayer	/user/117646	317			0	20
-Stevel	/user/569048	189	Steven	Langenaken	9	19
-Steven	/user/10	624			0	18
-Steven Merrill	/user/218671	274	Steven	Merrill	0	2
-StuartDH	/user/28583	399			0	2
-Susurrus	/user/118433	317			0	8
-Sutharsan	/user/73854	345	Erik	Stielstra	10	41
-Sylvain Lecoy	/user/613378	181			0	11
-System Message	/user/180064	290			0	2060
-TBarregren	/user/16678	426	Thomas	Barregren	1	2
-TR	/user/202830	280			0	2
-TUc	/user/107814	321			0	2
-Taxoman	/user/95746	328			0	14
-Tectonic	/user/397212	225			0	2
-TheRec	/user/146860	304			53	126
-Thox	/user/21913	413			0	4
-Tiburon	/user/58001	360			0	2
-TimRogersCool	/user/213823	276			0	10
-Tlommy	/user/1136874	113			0	2
-Todd Nienkerk	/user/92096	331	Todd	Nienkerk	0	14
-TomDude48	/user/258411	262	Tom	McCracken	0	8
-Tor Arne Thune	/user/290961	254	Tor Arne	Thune	1	15
-Tpainton	/user/44393	377			0	2
-Transition	/user/820752	147			1	7
-TravisCarden	/user/236758	267	Travis	Carden	6	22
-TwoD	/user/244227	265	Henrik	Danielsson	0	9
-TwoMice	/user/600924	183	Allen	Shaw	0	2
-VM	/user/72806	346			0	12
-Vako	/user/391899	227			0	2
-Webrotta	/user/258211	262			0	6
-WilliamB	/user/1172982	110			0	2
-Wim Leers	/user/99777	325	Wim	Leers	76	373
-Wolfflow	/user/62483	355	Wolf	Zirbs	0	2
-WorldFallz	/user/155304	300			0	15
-WormFood	/user/665880	172	Dave		0	8
-Xano	/user/62965	355	Bart	Feenstra	68	408
-Xen	/user/91385	332			5	10
-YaxBalamAhaw	/user/299444	252			1	8
-YesCT	/user/258568	262	Cathy	Theys	51	811
-Zach Harkey	/user/16015	428			0	2
-Zen	/user/21209	414			0	7
-Zgear	/user/1582816	75	Zachary	Soper	0	2
-ZoeN	/user/53584	365			1	5
-aLearner	/user/1436816	87			0	2
-a_thakur	/user/945606	130			0	3
-aaron	/user/33420	391	Aaron	Winborn	1	13
-aaronbauman	/user/384578	230	Aaron	Bauman	12	25
-aburrows	/user/577844	188	Alex	Burrows	0	2
-acbramley	/user/1036766	122			1	2
-acouch	/user/151868	302			1	2
-adam.hastings	/user/722942	162			9	31
-adamdicarlo	/user/100783	324	Adam	DiCarlo	3	5
-adixon	/user/29205	398			0	2
-adrian	/user/1337	624			0	4
-adrinux	/user/2239	516			0	3
-afreeman	/user/450370	211			2	2
-agentrickard	/user/20975	415	Ken	Rickard	10	44
-aharown07	/user/278693	257			0	11
-ainigma32	/user/311972	250			0	2
-aiwata55	/user/498504	203			1	5
-aj045	/user/183938	288			0	2
-ajeverson	/user/2215052	35	Anna	Everson	0	2
-akamustang	/user/796188	151			0	8
-alanburke	/user/35997	387	Alan	Burke	0	8
-alberto56	/user/245583	265	Albert	Albala	6	25
-alex_b	/user/53995	364	Alex	Barth	0	9
-alexanderpas	/user/41017	382			12	101
-alexkb	/user/35674	388			2	2
-alexpott	/user/157725	299	Alex	Pott	4	20
-alpritt	/user/91319	332			5	50
-amateescu	/user/729614	161	Andrei	Mateescu	23	47
-amc	/user/136955	309			0	79
-amontero	/user/166637	295			8	20
-amyhribar	/user/1965486	44	amy	hribar	0	2
-anarcat	/user/1274	624			2	7
-ancamp	/user/1677448	69			2	7
-andreiashu	/user/212904	276			0	6
-andrew.elvis	/user/719694	162			0	2
-andrewfn	/user/60662	357			0	4
-andrewmacpherson	/user/265648	260	Andrew	Macpherson	0	11
-andyceo	/user/152512	301	Andrey	Andreev	2	2
-andymartha	/user/1204604	107			0	2
-andypost	/user/118908	317	Andrey	Postnikov	65	249
-animelion	/user/108010	321			0	5
-ano1	/user/79254	341			1	3
-anrikun	/user/410199	220			10	32
-antgiant	/user/61047	357			2	3
-anthonyR	/user/1033102	122	Anthony	Ringoet	0	3
-arbel	/user/162520	297			0	3
-arcaneadam	/user/234551	268	Adam	Gregory	4	8
-arhak	/user/334209	245			6	56
-arianek	/user/158886	299	Ariane	Khachatourians	5	59
-aritra.ghosh	/user/1830998	56	aritra	ghosh	0	3
-arshadcn	/user/571032	189			1	9
-asak	/user/194818	283			0	2
-aschiwi	/user/107667	321	Anja	Schirwinski	0	6
-asimmonds	/user/5598	494			1	5
-aspilicious	/user/172527	293	Bram	Goffings	37	265
-asrob	/user/105777	322	Peter	Borsa	0	2
-attheshow	/user/249768	264	Mark W.	Jarrell	3	7
-attiks	/user/105002	322	Peter	Droogmans	91	354
-audster	/user/1019520	124			0	7
-authentictech	/user/79816	340			0	2
-axel.rutz	/user/229048	270			0	3
-axyjo	/user/303551	251			5	11
-babbage	/user/270434	259			7	56
-balrob	/user/741406	159			0	5
-balsama	/user/223087	272			2	2
-bangpound	/user/100456	324			3	24
-barraponto	/user/511760	201	Capi	Etheriel	1	9
-bartmcpherson	/user/1683664	68			1	2
-batigolix	/user/22175	412			0	2
-bchoc	/user/120294	316			0	2
-bcn	/user/46820	373			4	13
-bdone	/user/687670	167	Brent	Dunn	2	5
-bdragon	/user/53081	366	Brandon	Bergren	2	3
-bdu	/user/656476	174	Bernard		0	2
-bdurbin	/user/165644	295	Ben	Durbin	4	6
-beefzilla	/user/1033158	122			4	14
-beejeebus	/user/38580	384			1	14
-beeradb	/user/120651	316	Brad	Bowman	1	42
-beginner	/user/23181	410			0	5
-behindthepage	/user/29262	397			0	8
-bekasu	/user/326562	247			0	2
-beltofte	/user/151799	302	Jens	Beltofte	21	54
-benjifisher	/user/683300	168	Benji	Fisher	7	38
-bennybobw	/user/72949	346			5	8
-berenddeboer	/user/143552	306			7	14
-bergco	/user/260055	262			0	2
-bertboerland	/user/188	624	bert	boerland	0	2
-bflora	/user/144212	305			0	2
-bforchhammer	/user/216396	275	Benedikt	Forchhammer	3	14
-bfroehle	/user/381391	231			2	21
-binford2k	/user/12534	441			0	5
-birdmanx35	/user/95826	328			1	12
-birwel	/user/437088	213			0	2
-bjaspan	/user/46413	374	Barry	Jaspan	2	29
-bjeurn	/user/415444	219			0	2
-bkayne	/user/759114	157			0	2
-blackdog	/user/110169	320			2	3
-bleen18	/user/77375	342	Alexander	Ross	44	145
-bloomaniac	/user/94862	329			0	2
-blueblade	/user/319444	248			0	3
-bluffit	/user/490388	205			0	2
-bmadore	/user/49282	370	Barry	Madore	0	2
-bmx269	/user/686040	168	Trent	Stromkins	0	2
-boaz_r	/user/107854	321			0	2
-bojanz	/user/86106	336	Bojan	Zivanovic	4	40
-boombatower	/user/214218	276			0	2
-borfast	/user/48765	371			0	2
-boris sondagh	/user/209246	278	Boris	Sondagh	1	8
-bowersox	/user/186415	287	Brandon	Bowersox-Johnson	51	173
-bradfordcp	/user/126799	313			8	9
-bradlis7	/user/16643	426			2	9
-brainless	/user/59022	359			0	4
-bramvdkroef	/user/536320	196			2	2
-brantwynn	/user/252788	263	Brant	Wynn	2	11
-brianV	/user/46854	373	Brian	Vuyk	21	71
-bryan kennedy	/user/9777	457			0	2
-bsandor	/user/291898	254			0	2
-bsherwood	/user/64410	353			0	27
-bstoppel	/user/304569	251	Brett	Stoppel	0	2
-btopro	/user/24286	408	Bryan	Ollendyke	0	4
-budda	/user/13164	438	Mike	Carter	0	4
-c31ck	/user/1231448	105	Cedric	Meiresonne	6	9
-c4doug	/user/634672	177			1	3
-c4rl	/user/235047	268	Carl	Wiedemann	0	2
-c960657	/user/216078	275	Christian	Schmidt	11	30
-cachee	/user/1531834	79	Caroline	Achee	0	2
-caelon	/user/153500	301	Don	VanDemark	0	2
-cafuego	/user/218525	274	Peter	Lieverdink	25	46
-caktux	/user/257108	262			0	2
-captaingeek	/user/121786	316			0	2
-carlos8f	/user/454578	210			1	12
-casey	/user/32403	392			57	182
-casmaron	/user/58331	359	Michael	Chik	0	2
-catch	/user/35733	388	Nathaniel	Catchpole	141	1299
-cburschka	/user/28680	399	Christoph	Burschka	6	68
-cdale	/user/298835	252			0	3
-cdnsteve	/user/1878906	52	Steven	Leggett	0	2
-ceardach	/user/79082	341	Kathleen	Murtagh	0	2
-cellmaker	/user/211206	277			0	2
-ceng	/user/1150042	111	John	Ennew	9	13
-cfennell	/user/10297	454			0	14
-cha0s	/user/260571	261			6	14
-chachasikes	/user/50674	369			0	3
-chanderbhushan	/user/1470400	85			0	3
-chellman	/user/55991	362			1	2
-chia	/user/398572	225	Tushar	Mahajan	0	2
-chiladelphia	/user/210687	277			0	2
-chrisada	/user/8495	465			0	4
-chrisshattuck	/user/166383	295	Chris	Shattuck	16	39
-christefano	/user/104	624		Christefano	1	5
-christian_gnoth	/user/260607	261			0	2
-chx	/user/9446	459	Charlie	Negyesi	32	220
-clashar	/user/531068	197			0	3
-claudinec	/user/6225	494	Claudine	Chionh	3	4
-clemens.tolboom	/user/125814	314	Clemens	Tolboom	13	48
-cluke009	/user/394258	226			0	2
-cmsquickstart	/user/134449	310			0	2
-coderintherye	/user/297478	252	Kevin	O'Brien	0	28
-codycraven	/user/524692	198			16	42
-cog.rusty	/user/33697	390			0	9
-colan	/user/58704	359			0	8
-coltrane	/user/91990	331			3	32
-corbacho	/user/420096	217	David	Corbacho Roman	1	19
-corey.aufang	/user/163737	296	Corey	Aufang	0	4
-coreyp_1	/user/32335	392			1	2
-corvus_ch	/user/1865206	53	Christian	Hausler	0	2
-cosmicdreams	/user/42579	380	Chris	Weber	1	102
-cossovich	/user/127560	313			0	2
-couturier	/user/835716	145			0	2
-cpugeniusmv	/user/103696	322			0	2
-craigkendall	/user/385465	229	Craig	Kendall	0	2
-crazyrohila	/user/1274328	101	Sanjay	Rohila	0	3
-crimsondryad	/user/385597	229	Angela	Gann	0	12
-criscom	/user/188985	286	Christoph	Potzinger	0	2
-cross	/user/639442	176			6	11
-crowdcg	/user/995722	127	Sean	Walsh	0	2
-crunchywelch	/user/5212	494	Aaron	Welch	0	2
-cschaub	/user/54218	364			0	2
-cweagans	/user/404732	223	Cameron	Eagans	6	58
-cwgordon7	/user/157412	299			67	141
-daggerhart	/user/167806	294	Jonathan	Daggerhart	0	5
-dagmar	/user/154086	301	Mariano	D'Agostino	9	14
-dahacouk	/user/99862	325	Daniel	Harris	0	47
-dalin	/user/18981	420	Dave	Hansen-Lange	0	9
-damiankloip	/user/1037976	122	Damian	Lee	14	62
-danbohea	/user/484924	206	Dan	Bohea	0	2
-danielb	/user/134005	310			0	2
-danielnolde	/user/79829	340			0	2
-danillonunes	/user/346803	242			7	28
-das-peter	/user/762870	156	Peter	Philipp	21	38
-dasjo	/user/228295	270			0	5
-dastagg	/user/626068	179	David	Stagowski	0	2
-davbusu	/user/385424	229			0	2
-davidchendry	/user/1192498	0			0	2
-davidhunter	/user/66111	352			0	2
-davidwatson	/user/533896	196	David	Watson	0	20
-davidzz	/user/778620	154			0	2
-dawehner	/user/99340	326	Daniel	Wehner	64	200
-dbazuin	/user/1437736	87	Dirk	Bazuin	0	28
-dbeall	/user/381695	231	dave	beall	0	12
-dboulet	/user/139316	308	Daniel	Boulet	1	4
-dcam	/user/1791830	60	David	Cameron	2	4
-dchris	/user/593940	184			0	2
-dcmistry	/user/1134874	113	Dharmesh	Mistry	0	79
-dcmouyard	/user/376907	232	Dan	Mouyard	0	8
-dcor	/user/474296	207	Diliny	Corlosquet	2	10
-dcrocks	/user/705266	165			0	31
-dddave	/user/412465	219			0	7
-ddorian	/user/325815	247			0	2
-dead_arm	/user/597730	184			10	26
-decibel.places	/user/58977	359	Randall	Goya	0	7
-deekayen	/user/972	624	David	Norman	5	11
-deixadilson	/user/497970	203			0	2
-den33775	/user/897456	135			0	2
-derMatze	/user/987342	127			0	2
-derhasi	/user/83474	338	Johannes	Haseitl	7	21
-derjochenmeyer	/user/106134	322	Jochen	Meyer	5	8
-dev.cmswebsites...	/user/701430	165			3	3
-deviantintegral	/user/71291	347	Andrew	Berry	9	31
-dhalbert	/user/191328	285			0	2
-dhthwy	/user/677134	170			0	2
-didlix	/user/530486	197			0	3
-diedlikeahero	/user/1791884	60			2	3
-dimitriseng	/user/1009954	125			2	5
-dipen chaudhary	/user/100291	325	Dipen	Chaudhary	0	2
-ditcheva	/user/1310504	98			2	3
-dixon_	/user/239911	266	Dick	Olsson	6	22
-djroshi	/user/727548	161			9	15
-dman	/user/33240	391	Dan	Morrison	0	38
-dmitrig01	/user/47566	372	Dmitri	Gaskin	41	135
-dodorama	/user/41189	381			1	26
-doka	/user/73749	345			0	2
-donquixote	/user/459338	209	Andreas	Hennings	0	6
-dopry	/user/22202	412			2	4
-doq	/user/47016	373			0	2
-douggreen	/user/29191	398	Doug	Green	22	43
-draftkraft	/user/850938	142			0	2
-drew reece	/user/168163	294			0	2
-drewish	/user/34869	389	andrew	morton	3	29
-drifter	/user/26187	404			4	6
-drob	/user/16216	427			0	2
-dropcube	/user/37031	386			9	48
-droplet	/user/591932	185			19	133
-drumm	/user/3064	504	Neil	Drumm	0	11
-drunken monkey	/user/205582	279	Thomas	Seidl	1	7
-drupaljoe	/user/613292	181			1	2
-drupalmethod	/user/402524	224			0	2
-drupalninja99	/user/42248	380	Jay	Callicott	0	2
-drupalshrek	/user/620770	180			0	2
-dshaw	/user/39611	383	David	Shaw	0	4
-dsnopek	/user/266527	260	David	Snopek	0	11
-dstol	/user/329570	246	David	Stoline	2	4
-duckzland	/user/492890	204	Jason	Xie	0	3
-dugh	/user/190125	285			0	4
-durgeshs	/user/822172	147	Durgesh	Srivastava	2	2
-duvien	/user/228216	270			2	9
-dvessel	/user/56782	361			0	13
-dww	/user/46549	374			52	335
-dysrama	/user/494630	204	Louise	Kummel	2	4
-e0ipso	/user/550110	193			21	47
-eMPee584	/user/105286	322			2	20
-earnie	/user/86710	335			0	29
-eatings	/user/105524	322	David	Hwang	0	2
-eaton	/user/16496	426	Jeff	Eaton	2	69
-echoz	/user/38665	384			11	45
-eddie_c	/user/681326	169	Ed	Crompton	1	2
-edmund.kwok	/user/44079	377			6	8
-edrupal	/user/742990	159			14	26
-edward_or	/user/801928	150			2	7
-effulgentsia	/user/78040	342	Alex	Bronstein	39	251
-eigentor	/user/96718	328			41	445
-ejort	/user/18321	421			0	2
-ekes	/user/10083	455			0	2
-eliza411	/user/33570	390	Melissa	Anderson	0	7
-elv	/user/22508	411	Philippe	Gervaise	0	4
-elvis2	/user/49666	370			2	7
-emarchak	/user/952004	130	Erin	Marchak	2	8
-emmajane	/user/1773	624	Emma Jane	Hogbin	14	53
-emok	/user/222186	272			0	2
-eojthebrave	/user/79230	341	Joe	Shindelar	34	62
-erics14	/user/1569542	76			0	3
-estenrick	/user/183570	288			0	14
-eternalistic	/user/72964	346	Jeremy	Caldwell	0	2
-ewhipple	/user/90064	333			0	11
-factoryjoe	/user/3458	500			0	4
-fago	/user/16747	425	Wolfgang	Ziegler	1	34
-fajerstarter	/user/20459	416			0	13
-falcon03	/user/1498740	82	Vincenzo	Rubano	9	72
-farrington	/user/321343	248	Marcus	Farrington	3	3
-fastangel	/user/348228	241	Jacinto	Capote Robles	3	8
-fax8	/user/13637	436			1	9
-femrich	/user/104769	322			0	2
-fending	/user/267790	260			0	2
-ff1	/user/41738	381			0	9
-fgm	/user/27985	400	Frederic	Marand	0	7
-fietserwin	/user/750928	158			3	9
-floretan	/user/66163	352	Florian	Loretan	1	6
-forngren	/user/40238	383			2	5
-franz	/user/581844	187	Franz Glauber	Vanderlinde	0	24
-frega	/user/243377	266	Fredrik	Lassen	23	44
-fubhy	/user/761344	156	Sebastian	Siemssen	2	9
-fureigh	/user/111437	320			1	3
-gaele	/user/1765	624			2	58
-galapas	/user/87379	335			1	2
-galundin	/user/252714	263			0	2
-gavri	/user/76616	343			0	2
-ged3000	/user/62461	355			3	5
-geerlingguy	/user/389011	228	Jeff	Geerling	2	47
-geodaniel	/user/37266	386	Dan	Karran	1	8
-getting-wiser	/user/399565	224			0	4
-ggamba	/user/31877	393			0	3
-ghoti	/user/47696	372			0	2
-giorgio79	/user/235790	268			0	10
-girishmuraly	/user/61249	357			0	2
-glewe	/user/351858	240			0	2
-glipay	/user/381697	231			7	13
-glitz	/user/755994	157			0	3
-gmclelland	/user/136048	309			0	26
-good_man	/user/265439	260			5	20
-gopherspidey	/user/35238	388			0	7
-gordon	/user/959	624	Gordon	Heydon	4	10
-gpk	/user/80140	340			3	35
-grandmaa	/user/438942	213			0	2
-greenSkin	/user/173855	292			0	18
-greg.1.anderson	/user/438598	213			0	7
-greg.harvey	/user/130383	312			0	10
-greggles	/user/36762	386	Greg	Knaddison	3	25
-grendzy	/user/96647	328	Dylan	Tack	1	18
-grndlvl	/user/103553	322	Jonathan	DeLaigle	3	5
-guardian	/user/40032	383			0	2
-gumanist	/user/773216	154	Pavel	Makhrinsky	8	13
-hansrossel	/user/39422	383	hans	rossel	3	5
-hass	/user/85918	336			2	97
-haydeniv	/user/149501	303			2	10
-hctom	/user/112790	319			0	7
-heather	/user/740	624	Heather	James	7	66
-hedac	/user/81806	339			0	2
-hefox	/user/426416	215		Fox	1	4
-helmo	/user/449000	211	Herman	van Rink	1	5
-henrrrik	/user/113372	319			2	6
-herom	/user/1866898	53			3	5
-heyrocker	/user/128537	313	Greg	Dunlap	22	74
-hgmichna	/user/141046	307			0	19
-hgurol	/user/188026	286			0	2
-hickory	/user/70429	348			0	2
-hunmonk	/user/22079	412	Chad	Phillips	0	28
-hyrcan	/user/26618	403			0	2
-iLLin	/user/384543	230	Dennis	Blake	5	13
-iainH	/user/594118	184			0	2
-iantresman	/user/212878	276			0	15
-idflood	/user/200332	281			9	18
-iflista	/user/699286	166	Igor	Flista	7	12
-igorik	/user/77875	342			0	2
-illuminaut	/user/360451	238			0	2
-indigoblue	/user/154352	301			0	3
-indytechcook	/user/245817	265	Neil	Hastings	0	15
-int	/user/108542	321			0	15
-ipwa	/user/130909	312			0	3
-irunflower	/user/1566900	77	Hannah	Bottalla	1	2
-ivanjaros	/user/135190	310			0	2
-ivansf	/user/339335	244			1	2
-izmeez	/user/260168	262			0	3
-j.somers	/user/120892	316			1	3
-j0rd	/user/61506	356	Jordan	L	0	2
-jabapyth	/user/222666	272			1	3
-jablko	/user/162269	297			0	2
-jacauc	/user/22548	411			0	2
-jaffaralia	/user/1450720	86	Jaffar	Abdul Rasheed	1	2
-jakeg	/user/15674	429			0	4
-james.elliott	/user/720608	162			2	8
-jamesharv	/user/1508390	81			0	2
-janusman	/user/153120	301	Alejandro	Garza	0	13
-jastraat	/user/105111	322	Jess	Straatmann	0	2
-jayboodhun	/user/169479	294			6	13
-jbrauer	/user/12363	441	Joshua	Brauer	0	2
-jbrown	/user/46104	374	Jonathan	Brown	15	68
-jcnventura	/user/122464	315	Joao	Ventura	2	5
-jdipper	/user/388388	228			0	2
-jefflinwood	/user/793944	152	Jeff	Linwood	0	2
-jeffschuler	/user/239714	266	Jeff	Schuler	2	9
-jenlampton	/user/85586	336	Jen	Lampton	28	171
-jensimmons	/user/140882	307	Jen	Simmons	5	42
-jerdavis	/user/228997	270	Jeremiah	Davis	0	4
-jerdiggity	/user/334965	245			2	7
-jeremyjharris	/user/106714	0			0	2
-jerryitt	/user/866164	140			0	2
-jess_karels	/user/799680	151			2	4
-jessebeach	/user/748566	158	Jesse	Beach	56	190
-jesss	/user/203428	280	Jess	Snyder	0	2
-jhedstrom	/user/208732	278	Jonathan	Hedstrom	5	14
-jhodgdon	/user/155601	300	Jennifer	Hodgdon	27	324
-jibninjas	/user/428725	215			0	4
-jibran	/user/1198144	108	Jibran	Ijaz	10	38
-jide	/user/146088	304			18	104
-jix_	/user/389188	228			0	13
-jjeff	/user/17190	424	Jeff	Robbins	0	3
-jkaine	/user/942080	131			0	4
-jlgreen2012	/user/1800056	59	Jennifer		1	2
-jlinares	/user/34319	389			0	2
-jmarkel	/user/15171	431	Jeff	Markel	0	4
-jn2	/user/1001014	126			0	4
-joachim	/user/107701	321	Joachim	Noreiko	5	171
-joao28	/user/758038	157			0	2
-joates	/user/1009550	125			5	20
-joestewart	/user/64620	353	Joe	Stewart	2	2
-joetsuihk	/user/125025	314			0	2
-johandw	/user/1010860	0			0	2
-johnv	/user/591042	185			3	5
-jolos	/user/180109	289	Joris	Geessels	1	3
-jonathan1055	/user/92645	331			0	7
-jonhinkle	/user/339303	244			1	3
-jonthomas83	/user/673320	171			0	3
-joshk	/user/3313	502	Josh	Koenig	1	4
-joshmiller	/user/315047	249	Josh	Miller	3	22
-jpamental	/user/174960	292	Jason	Pamental	0	7
-jrglasgow	/user/36590	387			0	2
-jromine	/user/423887	216	John	Romine	2	2
-jschrab	/user/451678	210			0	2
-jstoller	/user/99012	326	Jeremy	Stoller	42	307
-jthorson	/user/148199	303	Jeremy	Thorson	2	7
-jtwalters	/user/1052318	120	Joel	Walters	1	8
-juan_g	/user/362115	237			0	2
-juhovh	/user/685306	0			0	2
-jumpfightgo@gro...	/user/327714	247			2	6
-jwilson3	/user/220177	273	James	Wilson	0	16
-k4v	/user/744246	159			0	2
-kaakuu	/user/535754	196			0	61
-kalabro	/user/1399638	90			3	9
-karschsp	/user/138216	308	Steve	Karsch	47	103
-kat3_drx	/user/395100	226	Katherine	Lynch	2	7
-katbailey	/user/172987	292	Katherine	Bailey	2	5
-kathyh	/user/404410	223			0	2
-kattekrab	/user/112345	319	Donna	Benjamin	3	21
-kazar	/user/229944	270			0	4
-kazim59	/user/72534	346			0	6
-keith.smith	/user/85980	336			5	70
-kenorb	/user/191974	284	Rafal		0	5
-kervi	/user/412147	220			0	2
-keyhitman	/user/866970	140	Colin	Watson	3	5
-kgoel	/user/820356	147	Kalpana	Goel	1	4
-kiamlaluno	/user/55077	363	Alberto	Paderno	1	7
-kid_icarus	/user/1482934	84	Ryan	Kois	1	2
-kika	/user/11	624	Kristjan	Jansen	9	159
-killes@www.drop.org	/user/227	624			0	10
-kiverson	/user/288645	0			0	2
-kkaefer	/user/14572	433			42	145
-klausi	/user/262198	261	Klaus	Purer	0	2
-klonos	/user/567014	190			0	192
-konstantin.komelin	/user/1195752	108	Konstantin	Komelin	5	21
-kpm	/user/60619	357			0	2
-kprmca	/user/358460	238			0	2
-kratkar	/user/896170	135			0	6
-kristofer	/user/822134	147			0	2
-krlucas	/user/271780	259	Kelly	Lucas	4	6
-kscheirer	/user/128191	313	Karl	Scheirer	1	7
-ksenzee	/user/139855	307	Katherine	Senzee	29	127
-kudokatz	/user/157156	299			0	2
-kwinters	/user/402579	223			4	15
-kyle_mathews	/user/144288	305	Kyle	Mathews	2	2
-lambic	/user/58843	359			3	6
-langworthy	/user/25556	405			3	4
-larowlan	/user/395439	226			7	40
-laura s	/user/18973	420	Laura	Scott	0	6
-legolas8911	/user/1573734	76			0	3
-leisareichelt	/user/362600	237			0	30
-lelizondo	/user/193303	284			0	2
-lightsurge	/user/1229204	105			0	19
-lilou	/user/105892	322			2	12
-linclark	/user/396253	226	Lin	Clark	1	14
-liquidcms	/user/44114	377	Peter	Lindstrom	0	2
-lisarex	/user/485222	206	Lisa	Rex	11	61
-lixiphp	/user/812208	149	Li	Xi	0	2
-lliss	/user/724750	162			2	3
-llizards	/user/38974	384			0	2
-loganfsmyth	/user/571728	189			7	9
-longwave	/user/246492	265	Dave	Long	0	2
-loophole080	/user/729056	161			0	2
-lostchord	/user/698126	166			0	6
-lreid	/user/32350	392			0	3
-lslinnet	/user/121684	316	Lars	Linnet	0	2
-lucascaro	/user/87585	335	Lucas	Caro	2	5
-lucaswoj	/user/473912	207			6	10
-luco	/user/266328	260			0	4
-lut4rp	/user/162357	297			0	4
-lyricnz	/user/33667	390			13	24
-m3avrck	/user/12932	439			0	33
-maartenvg	/user/109716	320			2	14
-macgirvin	/user/41805	381			0	9
-magico	/user/6238	494	Fernando	Silva	0	3
-mahaprasad	/user/403715	223			2	3
-mallezie	/user/814290	148	Tim	Mallezie	2	2
-manimejia	/user/333159	245	Manuel	Mejia	0	2
-mantyla	/user/99169	326			0	2
-marcelovani	/user/854220	142	Marcelo	Vani	5	16
-marcingy	/user/77320	342	Marc	Ingram	9	41
-marco.robotangel	/user/212039	277			0	8
-marcushenningsen	/user/178656	290			0	2
-marcvangend	/user/158153	299	Marc	van Gend	17	106
-mariomaric	/user/92248	331	Mario	Maric	0	2
-mariusz.slonina	/user/553840	192			11	34
-markabur	/user/217822	274			0	7
-markboulton	/user/471666	207			0	2
-markdorison	/user/346106	242	Mark	Dorison	0	2
-markj	/user/25887	405			0	2
-markus_petrux	/user/39593	383			3	22
-marthinal	/user/387593	228			4	7
-martinjbaker	/user/236009	268			0	4
-marvil07	/user/132175	311	Marco	Villegas	3	7
-maryedith	/user/437438	213	Mary Edith	Ingraham	0	4
-masagin	/user/490666	205			5	12
-matason	/user/81488	339			2	10
-mathankumarc	/user/1315174	98			2	2
-matt westgate	/user/2275	515	Matt	Westgate	0	4
-matt2000	/user/143172	306	Matt	Chapman	10	36
-matt@antinomia	/user/23810	409	Matt	Koglin	10	21
-mattconnolly	/user/319903	248			1	2
-mbrett5062	/user/1182744	109	Michael	Brett	9	39
-mbutcher	/user/201798	280	Matt	Butcher	0	3
-mcarbone	/user/68488	350	Marco	Carbone	3	4
-mcjim	/user/160479	298	James	Panton	7	17
-mcrittenden	/user/420631	217	Mike	Crittenden	0	106
-mcurry	/user/60090	358			0	11
-mdrummond	/user/360968	237			0	11
-mdupont	/user/400288	224	Michael	Dupont	1	6
-mean0dspt	/user/213395	276			0	2
-meatsack	/user/106185	322	Jon	Nunan	0	2
-meba	/user/31977	393	Jakub	Suchy	0	18
-medden	/user/123104	315			0	11
-merlinofchaos	/user/26979	402	Earl	Miles	0	23
-mertskeli	/user/818442	148			0	3
-mfb	/user/12302	442	mark	burdett	5	8
-mfer	/user/25701	405	Matt	Farina	4	49
-mgifford	/user/27930	400	Mike	Gifford	111	650
-michaelfavia	/user/49137	371			28	76
-michaelschutz	/user/106142	322			0	2
-micnap	/user/169037	294	Mickey	Williamson	5	9
-midkemia	/user/104850	322			0	8
-mikeschinkel	/user/30451	395			0	2
-mikespence	/user/2007822	41	Mike	Spence	2	4
-mikey_p	/user/62496	355			1	17
-mikeytown2	/user/282446	256	Mike	Carper	0	15
-mikkopaltamaa	/user/549850	193	Mikko	Paltamaa	0	3
-mindless	/user/33033	391			0	3
-minimism	/user/3424	501			0	2
-miro_dietiker	/user/227761	270	Miro	Dietiker	0	2
-misterT	/user/1435254	87			0	2
-misty3	/user/99058	326			0	6
-mitchell	/user/68284	350			0	20
-mitchmac	/user/281206	256			3	6
-mitron	/user/2349814	22	Garcon	Boulanger	1	16
-mjlF95	/user/325433	247			0	2
-mjohnq3	/user/43433	378			7	39
-mjonesdinero	/user/1409988	89			2	5
-mjreich	/user/939950	0			0	2
-mkadin	/user/1093166	116	Mike	Kadin	4	5
-mkalkbrenner	/user/124705	314			0	2
-mki	/user/58150	360			1	4
-mlncn	/user/64383	353	Benjamin	Melancon	0	48
-mlsamuelson	/user/47411	373	Michael	Samuelson	0	2
-mnp	/user/380457	231			0	2
-moe4715	/user/2344064	0			1	3
-mohammadjolani	/user/1431134	88	Mohammad	Jolani	0	3
-mohammed76	/user/74667	344			0	6
-momendo	/user/30654	395			0	12
-mooffie	/user/78454	341			0	3
-moonray	/user/68275	350			0	2
-mori	/user/710680	164	Marcus	Morba	0	2
-morphir	/user/37969	385			0	22
-moshe weitzman	/user/23	624	Moshe	Weitzman	9	235
-mot	/user/304270	251			0	3
-mototribe	/user/1232608	105			0	4
-mpearrow	/user/13144	438			0	2
-mr.baileys	/user/383424	230	Ivo	Van Geertruyen	10	26
-mradcliffe	/user/157079	299	Matthew	Radcliffe	1	9
-mrfelton	/user/305669	251	Tom	Kirkpatrick	25	68
-mrtoner	/user/79398	340	Don	Morris	0	4
-msameer	/user/9094	461			0	2
-msonnabaum	/user/75278	344	Mark	Sonnabaum	0	3
-mstrelan	/user/314289	249			1	13
-mtolmacs	/user/72361	346	Mark	Tolmacs	0	2
-my-family	/user/237482	267			0	2
-myke	/user/23956	408			0	2
-mysak	/user/161988	297			0	4
-nagiek	/user/655986	174			0	2
-nagwani	/user/278167	257	Prafful	Nagwani	14	34
-naquah	/user/26342	404	Dennis	Stevense	0	2
-naught101	/user/44216	377			0	18
-naxoc	/user/297068	253	Camilla	Krag Jensen	15	23
-nbz	/user/123528	315			2	30
-neclimdul	/user/48673	371	James	Gilliland	0	8
-nedjo	/user/4481	494			3	28
-neilnz	/user/284465	255			2	4
-netsensei	/user/350460	241	Matthias	Vandermaesen	2	11
-nevergone	/user/58654	359			0	7
-nevets	/user/12856	439			0	4
-newz2000	/user/92678	331			0	2
-nick_schuch	/user/1412036	89			0	3
-nickbits	/user/83492	338			0	2
-nigel	/user/61837	356			2	6
-nikkubhai	/user/1083990	117			0	5
-nneuman	/user/639854	176			0	2
-no_angel	/user/2238022	33	Ange	Maunz	0	2
-no_longer_active_13	/user/209696	0			0	22
-nod_	/user/598310	184	Theodore	Biadala	29	195
-noels	/user/551958	193			0	2
-oddbit	/user/758702	157			0	2
-odegard	/user/703222	165			0	2
-olamaekle	/user/769756	155	Ola Maele	Kleppa	1	4
-omar	/user/7909	468			0	8
-omaster	/user/838114	144	Dane	Cavanagh	5	10
-oresh	/user/2282630	29	Kirill	Cebotari	0	2
-oriol_e9g	/user/66422	352			5	15
-oseldman	/user/147794	304	Oliver	Seldman	0	2
-p.brouwers	/user/308654	250			3	10
-pameeela	/user/1431110	88			0	9
-pandaeskimo	/user/1393336	91			0	2
-paradiso	/user/12369	441			0	2
-paranojik	/user/19501	418	Tadej	Basa	0	8
-patrickd	/user/1358080	94	Patrick	Drotleff	0	3
-paul.lovvik	/user/289213	254			1	2
-pbz1912	/user/337318	244			1	5
-pdjohnson	/user/72810	346	Paul	Johnson	0	2
-penyaskito	/user/959536	129	Christian	Lopez Espinola	8	28
-peterx	/user/23516	409			0	12
-peximo	/user/209981	277	Francesco	Pesenti	15	27
-pfrenssen	/user/382067	230			0	2
-philbar	/user/99951	325			0	12
-piersonr	/user/36870	386			0	2
-pillarsdotnet	/user/36148	387			13	53
-pixelbandito	/user/535902	0			0	2
-pixelite	/user/341265	243	Suzanne	Kennedy	1	2
-plach	/user/183211	288	Francesco	Placella	92	418
-plopesc	/user/282415	256			2	4
-podarok	/user/116002	318	Andriy	Podanenko	0	17
-pp	/user/59215	359			25	41
-profix898	/user/35192	388			0	9
-psicomante	/user/29518	397			5	12
-pvasili	/user/88480	334			0	2
-pverrier	/user/1563974	77			0	2
-pwarn	/user/457580	210	Patrick	Warn	0	5
-pwaterz	/user/672996	171			0	2
-pwolanin	/user/49851	370	Peter	Wolanin	29	205
-q0rban	/user/31022	394	James	Sansbury	0	2
-qbnflaco	/user/187780	286			0	3
-quartsize	/user/760454	156			5	9
-quicksketch	/user/35821	388	Nathan	Haug	59	270
-rachellawson	/user/66273	352	Rachel	Lawson	2	4
-radoeka	/user/585480	186			0	4
-rafamd	/user/795678	151			0	7
-ray007	/user/96114	328			0	4
-raytiley	/user/577124	188	Ray	Tiley	0	14
-rbayliss	/user/772738	154			2	4
-rcaracaus	/user/272310	259	Robert	Caracaus	1	5
-rcross	/user/35936	387	Ryan	Cross	0	2
-realityloop	/user/139189	308	Brian	Gilbert	0	8
-redben	/user/125039	314			0	2
-redndahead	/user/160320	298	Adam	Moore	7	20
-reglogge	/user/205988	279	Reinhard	Gloggengiesser	28	59
-rema52	/user/354561	239			0	4
-rfay	/user/30906	395	Randy	Fay	3	41
-rfsbsb	/user/4382	494	Rafael	Silva	0	2
-rgristroph	/user/516442	200	Robert	Ristroph	1	4
-rhimes	/user/194545	283			0	3
-rhouse	/user/171604	293			0	7
-ricardobaeta	/user/111786	320			0	4
-richardj	/user/557716	191	Richard	Japenga	0	4
-rickvug	/user/42239	380			3	39
-risoy	/user/780154	0			0	2
-rkerr	/user/20129	417			2	5
-rli	/user/633216	177			0	4
-rlmumford	/user/794682	151	Rob	Mumford	0	2
-roball	/user/405360	222	Robert	Allerstorfer	0	2
-robertDouglass	/user/5449	494	Robert	Douglass	0	27
-robertgarrigos	/user/16581	426	Robert	Garrigos	0	5
-roborn	/user/139474	308	Roberto	Ornelas	2	4
-rocket_nova	/user/616296	180			14	24
-roderik	/user/8841	462	Roderik	Muit	0	2
-rogueturnip	/user/111498	320			0	7
-rokr	/user/118857	317			0	2
-ron_sparks	/user/824820	146			0	2
-ronald_istos	/user/200188	281			3	17
-ronan.orb	/user/174449	292			0	8
-ronia	/user/512448	200			0	3
-rootatwc	/user/1011436	125	Paris	Liakos	2	21
-rootwork	/user/28506	399	Ivan	Boothe	3	9
-roper.	/user/154438	301			0	6
-rovo	/user/248680	264			0	3
-rsaddington	/user/171394	293	Richard	Saddington	6	7
-rschwab	/user/586922	186			16	35
-rszrama	/user/49344	370	Ryan	Szrama	0	15
-rteijeiro	/user/780508	154	Ruben	Teijeiro	0	30
-rupl	/user/411999	220	Chris	Ruppel	0	3
-rvilar	/user/293298	253	Ramon	Vilar Gavalda	1	2
-ry5n	/user/1883808	51	Ryan	Frederick	44	211
-ryan.armstrong	/user/382704	230	Ryan	Armstrong	0	8
-ryanissamson	/user/1312756	98	Ryan	Gibson	3	9
-s.Daniel	/user/140989	307	Sebastian	Daniel	0	5
-sai571	/user/378164	232			0	5
-salvis	/user/82964	338	Hans	Salvisberg	0	16
-samhassell	/user/18915	420			2	5
-saml	/user/44397	377			0	2
-samwillc	/user/1333274	96			0	2
-sanduhrs	/user/28074	400	Stefan	Auditor	1	3
-sanketmedhi	/user/68419	350			0	4
-sannejanssen	/user/1668166	70	Sanne	Janssen	3	7
-sbakshian	/user/1048116	121			0	8
-scor	/user/52142	367	Stephane	Corlosquet	1	20
-scorchio	/user/882788	137	Zoltan	Adamek	3	6
-scottrigby	/user/145945	305	Scott	Rigby	0	6
-scottrouse	/user/571892	189	Scott	Rouse	0	2
-scronide	/user/138817	308	Marcus	Campbell	0	2
-scroogie	/user/35351	388			0	2
-sdboyer	/user/146719	304	Sam	Boyer	8	27
-seanburlington	/user/142969	306			0	3
-seanyo	/user/504434	202			1	3
-sepeck	/user/5195	494			0	3
-sergiu.savva	/user/1758280	63	Sergiu	Savva	2	2
-sethcohn	/user/14944	432	Seth	Cohn	0	2
-seutje	/user/264148	261	Steve	De Jonghe	57	214
-sfyn	/user/400944	224			4	6
-sgabe	/user/232117	269			0	4
-sgtsaughter	/user/1355676	94	Patrick	Baxter	0	2
-shartz	/user/1454748	86			0	2
-shenzhuxi	/user/193802	284	Liang	Shen	0	2
-shp	/user/112279	319			0	2
-shuklasp	/user/112059	320			0	10
-shunting	/user/123690	315			0	24
-sidharthap	/user/1159696	111	Sidhartha	Panda	0	4
-sign	/user/37679	385			12	27
-sillygwailo	/user/8791	463			0	2
-silverhosting	/user/531532	197			0	2
-silverwing	/user/13009	438			0	3
-sir_squall	/user/361698	237			0	3
-sirkitree	/user/59025	359	Jerad	Bitner	3	4
-sirtet	/user/1209728	107	Thomas	Rogenmoser	2	7
-sitiveni	/user/652858	174			2	3
-sivaji	/user/328724	246			8	18
-skilip	/user/100880	324			10	64
-skiminki	/user/265179	260			0	2
-skiquel	/user/143673	306			0	3
-skor	/user/27014	402			0	2
-smiletrl	/user/1353082	94			4	11
-smileytech	/user/863224	0			0	2
-smk-ka	/user/48898	371	Stefan	Kudwien	0	2
-snorkers	/user/329611	0			0	6
-snufkin	/user/58645	359	Balazs	Dianiska	0	6
-softfacade	/user/626642	179			0	8
-solange_sari	/user/1859768	54	Solange	Sari	0	2
-solipsist	/user/37564	386			0	2
-solodky	/user/613710	181			0	2
-sparr	/user/91299	332			0	8
-spatz4000	/user/46472	374			1	2
-sphism	/user/195684	283			1	3
-ssemaganda	/user/150270	302			0	2
-stBorchert	/user/36942	386	Stefan	Borchert	79	163
-starbow	/user/33290	391			10	34
-starlilyth	/user/285561	255			0	3
-stefano73	/user/7410	471			0	2
-steinmb	/user/74669	344	Stein Magne	Bjorklund	0	7
-stella	/user/66894	351	Stella	Power	8	25
-stephthegeek	/user/47874	372			0	4
-steve02476	/user/230003	270			0	2
-stevector	/user/179805	290	Steve	Persch	2	12
-suffering drupal	/user/215292	275			0	2
-sumitk	/user/267786	260	sumit	kataria	0	4
-sun	/user/54136	364	Daniel	Kudwien	338	1617
-sun.core	/user/420140	217			0	12
-sung-suh park	/user/172046	293			0	2
-sven.lauer	/user/848928	143			0	3
-svendecabooter	/user/35369	388	Sven	Decabooter	2	5
-svenryen	/user/667244	172			0	2
-swentel	/user/107403	321	Kristof	De Jaeger	48	144
-sxnc	/user/1298054	99	Victor	Kunzig	9	13
-sym	/user/21702	413			0	2
-synth3tk	/user/245163	265	David	Thomas	5	7
-szantog	/user/610310	181			3	4
-tara@neier.me	/user/128264	313			0	2
-tarekdj	/user/745218	159			5	10
-tarmstrong	/user/1155632	111			2	8
-tcarnell	/user/814464	148			0	2
-te-brian	/user/271439	259			1	41
-technicka	/user/488182	205	Becky	Gessler	0	2
-techsoldaten	/user/16339	426	Michael	Haggerty	0	8
-tedbow	/user/240860	266	Ted	Bowman	0	2
-teledyn	/user/1403	624			0	2
-tgeller	/user/181428	289	Tom	Geller	0	5
-thamas	/user/53339	365			0	4
-theborg	/user/116668	318			4	12
-thedavidmeister	/user/657782	174			1	17
-theresaanna	/user/215660	275			0	2
-thinker	/user/9853	457			0	2
-thinkyhead	/user/156379	300			0	2
-tic2000	/user/103877	322			3	40
-tim foley	/user/991782	127			0	5
-tim.plunkett	/user/241634	266	Tim	Plunkett	68	222
-timmillwood	/user/227849	270	Tim	Millwood	2	16
-timtrinidad	/user/211603	277			0	2
-tizzo	/user/168251	294	Howard	Tyson	6	15
-tkoleary	/user/627430	178			0	107
-tmsimont	/user/566678	190	Trevor	Simonton	0	2
-tobiasb	/user/183956	288	Tobias	Bahr	8	17
-toddgee	/user/83606	338			0	2
-tombigel	/user/173787	292			0	5
-tomdavidson	/user/693092	167	Tom	Davidson	0	4
-tomogden	/user/441644	212			6	8
-tostinni	/user/13041	438			0	3
-trobey	/user/653476	174	Thomas	Robey	0	2
-tronathan	/user/361851	237			0	30
-trrroy	/user/145613	305	Troy	Dohner	10	15
-tsi	/user/322980	247			2	9
-tstoeckler	/user/107158	321	Tobias	Stockler	14	239
-tsvenson	/user/364106	236	Thomas	Svenson	7	52
-tutumlum	/user/413570	219			0	2
-tvn	/user/999848	126			0	6
-tylor	/user/143420	306			8	14
-typhonius	/user/1295980	99	Adam	Malone	0	4
-uNeedStuff	/user/109297	321			0	6
-ugerhard	/user/153980	301			1	2
-ultimateboy	/user/153963	301	Matt	Tucker	5	38
-unstatu	/user/2419232	0			1	2
-valante	/user/541184	195			0	2
-valokettu	/user/110912	320			0	2
-valthebald	/user/239562	266	Valery	Lourie	2	4
-vangorra	/user/121671	316			4	14
-vasi1186	/user/342104	243	Vasile	Chindris	0	2
-vegantriathlete	/user/491720	205	Marc	Isaacson	0	4
-videographics	/user/521844	199	Brian	Shaw	0	2
-vijay.cgs	/user/2299234	27	Vijay	M	0	6
-vijaycs85	/user/93488	330	Vijayachandran	Mani	21	27
-vladimir.dolgopolov	/user/227283	270			0	4
-vordude	/user/150473	302	Matt	Kleve	1	8
-vosechu	/user/600756	183			0	2
-vrMarc	/user/1384894	92			0	2
-wanabeanon	/user/273059	0			0	3
-watbe	/user/285700	255	Wayne	Tsai	3	10
-webbykat	/user/1466686	85	Kat	Kuhl	1	2
-webchick	/user/24967	406	Angie	Byron	12	1479
-webcomm	/user/234504	268			0	2
-webflo	/user/254778	263	Florian	Weber	3	10
-webkenny	/user/246154	265	Kenny	Silanskas	1	10
-whoviz	/user/768058	155			1	3
-wildkatana	/user/307704	250			13	48
-wildmtsky	/user/294874	253			0	2
-willhall	/user/37875	385			2	7
-willmoy	/user/20611	416			0	7
-wilto	/user/2187426	36	Mathew	Marquis	0	2
-winston	/user/50839	368			5	15
-wizonesolutions	/user/739994	159	Kevin	Kaland	0	4
-wmbetts	/user/298264	252			2	3
-wmostrey	/user/21228	414	Wim	Mostrey	0	2
-wretched sinner...	/user/232164	269			5	20
-wwalc	/user/184556	288			0	5
-xatoo_	/user/397541	225			0	4
-ximo	/user/88701	334	Joakim	Stai	2	13
-xjm	/user/65776	352	Jess	(xjm)	39	449
-xmacinfo	/user/12131	443	Jacques	Blier	4	178
-xtfer	/user/31698	393			0	2
-yang_yi_cn	/user/87442	335			0	2
-yannickoo	/user/531118	197			0	6
-yannisc	/user/1145950	112			0	4
-yched	/user/39567	383	Yves	Chedemois	60	390
-yeti22	/user/990062	127			0	10
-yhager	/user/71425	347			0	2
-yhahn	/user/264833	260			4	18
-yktdan	/user/5827	494			0	3
-yoroy	/user/41502	381	Roy	Scholten	70	1284
-ytsurk	/user/1153644	111			0	8
-yukare	/user/889254	136	Fernando	Conceicao	0	3
-zatarain21	/user/653782	174			0	2
-zeta ?	/user/138528	308			0	8
-zilverdistel	/user/276047	258			0	2
-zirvap	/user/41459	381			0	14
-zoo33	/user/37075	386			0	2
-zroger	/user/67977	350	Roger	Lopez	5	7
-zuuperman	/user/361625	237	Nils	Destoop	1	4
-zzolo	/user/147331	304	Alan	Palazzolo	1	15
-null	/user/12734	440			0	2
+		0	0	16		
+-Shaman-	/user/153145	332	0	3		
+-enzo-	/user/294937	283	3	10	Jose Eduardo	Garcia Torres
+2createwdrupal	/user/238928	297	0	3		
+Adam S	/user/584600	217	0	3		
+Ahqar	/user/340266	274	0	4		
+AjK	/user/39030	414	0	3		
+AjitS	/user/981944	158	1	4	Ajit	Shinde
+Alan D.	/user/198838	312	0	17		
+Alan.Guggenheim	/user/681112	199	0	3		
+Albert Volkman	/user/429502	245	2	2	Albert	Volkman
+Alex UA	/user/110386	351	2	19	Alex	UA
+AlexBowman	/user/495280	234	0	4		
+AlexisWilke	/user/356197	269	2	8		
+Amazon	/user/18703	451	0	6	Kieran	Lal
+Amitaibu	/user/57511	391	39	124	Amitai	Burstein
+AmrMostafa	/user/19220	450	4	9		
+Andrew Schulman	/user/279446	287	2	12		
+Andy B	/user/886622	167	0	9		
+AndyF	/user/220112	304	0	2		
+Angry Dan	/user/1147930	142	0	3	Dan	James
+Ankabout	/user/838974	175	0	4		
+Aren Cambre	/user/97356	358	0	161		
+Aveu	/user/363658	267	0	5		
+B-Prod	/user/407852	252	0	2		
+BChandran	/user/248110	295	0	3		
+BTMash	/user/60422	388	13	34	Ashok	Modi
+Balefire	/user/279966	287	0	2		
+BarisW	/user/107229	352	22	83	Baris	Wanschers
+BenStallings	/user/210009	308	0	2		
+Berdir	/user/214652	304	23	124	Sascha	Grossenbacher
+Bevan	/user/49989	400	0	56	Bevan	Rudge
+BeyersdorferTJ	/user/612090	212	0	5		
+BioALIEN	/user/90217	363	0	2	Dee	Kadhem
+Bojhan	/user/87969	365	193	2894	Bojhan	Somers
+Boris Mann	/user/4426	524	0	24		
+Brandonian	/user/77766	372	1	2	Brandon	Morrison
+Brian Altenhofel	/user/550616	223	5	7	Brian	Altenhofel
+BrightLoudNoise	/user/124991	345	7	19		
+BrockBoland	/user/660472	204	0	2	Brock	Boland
+Brolag	/user/699674	196	0	2	Alfredo	Bonilla
+BryanPflug	/user/7905	499	0	4		
+Ber Kessels	/user/2663	540	0	9		
+CMS Dude	/user/1764030	93	0	2		
+COBadger	/user/1102918	146	0	2	Jordan	Graham
+Carsten Muller	/user/124707	345	1	2	Carsten	Muller
+Chad_Dupuis	/user/91360	362	0	2		
+Charles Belov	/user/569178	220	0	7		
+Chi	/user/556138	222	1	10		
+Chris Johnson	/user/2794	539	0	5	Chris	Johnson
+ChrisBryant	/user/70716	378	0	7		
+ChrisKennedy	/user/32005	423	1	15		
+Christefano	/user/76901	373	0	2		
+ChuChuNaKu	/user/1335196	126	0	3	J.S.	Carter
+Ciril Tharayil	/user/724052	192	0	4	Ciril	Tharayil
+Cliff	/user/295067	283	0	46	Cliff	Tyllick
+Cloud	/user/23543	440	0	4		
+CorniI	/user/136353	340	0	2		
+Cottser	/user/1167326	141	4	25	Scott	Reeves
+CrashTest_	/user/261457	292	6	8	Patrick	Teglia
+Crell	/user/26398	434	2	176	Larry	Garfield
+CrimbleCrumble	/user/1370026	123	1	2	James	Linnell
+CrookedNumber	/user/97023	358	0	3		
+Cvbge	/user/22153	0	0	4		
+Cybergarou	/user/104226	353	0	4		
+CydeWeys	/user/1878712	82	0	2	Ben	McIlwain
+DSheffler	/user/239818	297	0	2	Danielle	Sheffler
+Daemon_Byte	/user/376945	263	0	5		
+Damien Tournoud	/user/22211	442	28	176		
+DamienMcKenna	/user/108450	351	1	30	Damien	McKenna
+Dan Silver	/user/309262	281	0	7	Dan	Silver
+DanW	/user/210766	308	0	4		
+Dane Powell	/user/339326	274	0	2	Dane	Powell
+Daniel Norton	/user/357269	269	0	8		
+Darrell	/user/30072	426	0	3		
+Dave Cohen	/user/18468	452	0	17		
+Dave Reid	/user/53892	395	87	356	Dave	Reid
+David D	/user/594638	215	0	4		
+David Latapie	/user/54988	394	0	31		
+David Lesieur	/user/17157	455	6	19	David	Lesieur
+David Strauss	/user/93254	361	0	11	David	Strauss
+David4514	/user/761510	187	0	8		
+David_Rothstein	/user/124982	345	167	1103	David	Rothstein
+DeNelo	/user/980580	158	0	3		
+DeeLay	/user/386272	260	0	2		
+Deepakml	/user/646186	206	0	2		
+Devin Carlson	/user/290182	285	2	10	Devin	Carlson
+Dig1	/user/269925	290	1	2		
+Digidog	/user/1001934	156	0	3		
+DjebbZ	/user/421165	247	0	8		
+DocuAnt	/user/39542	414	0	9		
+Dragan Eror	/user/409433	251	2	8	Dragan	Eror
+Dries	/user/1	654	0	639	Dries	Buytaert
+DrupalSza	/user/597442	214	0	2		
+Desire	/user/212866	307	1	2	Marton	Juhasz
+E.Z	/user/256095	293	0	6		
+ELC	/user/784944	183	2	14		
+EZ@drupal.org.il	/user/169785	324	0	4		
+EclipseGc	/user/61203	387	18	76	Kris	Vanderwater
+Elijah Lynn	/user/353190	270	0	3	Elijah	Lynn
+EllaTheHarpy	/user/2293700	58	1	3		
+EmanueleQuinto	/user/24864	437	0	2		
+Employee Goals	/user/1142316	140	0	5	Jorge	R
+Emyr42	/user/425109	246	0	2		
+Encarte	/user/206125	309	0	4		
+Eric_A	/user/344430	273	0	5		
+EvanDonovan	/user/168664	325	7	163	Evan	Donovan
+Everett Zufelt	/user/406552	253	7	384	Everett	Zufelt
+Fabianx	/user/693738	197	1	17	Fabian	Franz
+Fannon	/user/722104	193	0	5	Simon	Heimler
+FatGuyLaughing	/user/377114	263	0	5		
+FiNeX	/user/40413	413	0	4		
+Fidelix	/user/786032	183	0	6		
+Floydm	/user/502450	233	5	7	Floyd	Mann
+Fluffy Convict	/user/34356	420	0	4		
+Flying Drupalist	/user/30179	426	0	4		
+Francewhoa	/user/204003	310	0	9	Francois	Carpentier
+Frando	/user/21850	443	7	20		
+Frank Ralf	/user/216048	306	11	60		
+FredCK	/user/74499	375	0	21		
+Freso	/user/27504	431	2	7		
+Gaelan	/user/1597262	105	2	13		
+Garrett Albright	/user/191212	315	3	14	Garrett	Albright
+Gary Feldman	/user/46755	404	0	3		
+Geir19	/user/430190	245	0	2		
+George2	/user/231638	300	0	14		
+GiorgosK	/user/62448	386	0	8		
+GreenLED	/user/215784	306	0	7		
+Gurpartap Singh	/user/41470	412	6	69	Gurpartap	Singh
+GuyPaddock	/user/156932	330	0	2		
+Gyt	/user/313100	280	2	2		
+Gabor Hojtsy	/user/4166	524	295	1889	Gabor	Hojtsy
+HS	/user/390611	258	0	3		
+Hanno	/user/18826	451	0	9	Hanno	Lans
+HenkAbma	/user/57668	391	0	6		
+IceCreamYou	/user/201425	311	0	4	Isaac	Sukin
+IceCreamYou2	/user/1021676	154	0	2		
+IshaDakota	/user/532410	227	1	2		
+Island Usurper	/user/86683	366	0	3	Lyle	Mantooth
+Ivan Zugec	/user/86970	365	4	4	Ivan	Zugec
+JJmonterey	/user/1286180	131	0	2		
+Jacine	/user/88931	364	13	67	Jacine	Luisi
+Jack Harich	/user/876398	169	0	4		
+JacobSingh	/user/68912	380	24	122	Jacob	Singh
+JamesAn	/user/322251	278	9	14	James	An
+Jao	/user/139860	336	0	9		
+Jarek Foksa	/user/479726	237	0	11		
+JayKayAu	/user/473152	238	0	2		
+JayMN	/user/780828	184	0	2	Jay	Hambidge
+Jaypan	/user/324696	278	0	2		
+Jaza	/user/15277	461	2	2		
+Jeff Burnz	/user/61393	384	19	236	Jeff	Burnz
+Jelle_S	/user/829198	176	4	14	Jelle	Sebreghts
+Jennifer_M	/user/324829	278	0	4		
+JirkaRybka	/user/106464	352	0	31		
+Jody Lynn	/user/112500	350	71	131	Jody	Hamilton
+John Bryan	/user/105119	352	0	2		
+John Morahan	/user/58170	390	2	2		
+John Pitcairn	/user/425866	246	0	34		
+John T. Haller	/user/35896	418	0	2		
+JohnAlbin	/user/32095	423	18	140	John Albin	Wilkins
+Johnny vd Laar	/user/248932	295	21	55		
+Jolidog	/user/347132	272	1	3	Joao	Belchior
+Jon Pugh	/user/17028	455	1	8	Jon	Pugh
+JonBob	/user/831	654	0	4		
+Jonah Ellison	/user/217669	305	2	4	Jonah	Ellison
+JordiTR	/user/25348	436	0	4		
+Jorge Campo	/user/213590	307	0	4		
+Jose Reyero	/user/4299	524	1	21	Jose	
+Josh Waihi	/user/188162	316	3	6		
+JoshOrndorff	/user/723948	192	0	2		
+JoshuaRogers	/user/157922	330	4	19	Joshua	Rogers
+JuliaKM	/user/109542	351	7	22		
+JulienD	/user/519520	229	2	3		
+JurriaanRoelofs	/user/52638	397	0	2		
+JvE	/user/892998	166	2	2	Joris	van Eijden
+KCarlile	/user/713190	194	1	4	Kenny	Carlile
+KarenS	/user/45874	405	0	33	Karen	Stevenson
+Karmen	/user/2267652	61	2	2	Maria del Carmen	Garcia
+Kars-T	/user/224499	302	1	7	Karsten	Frohwein
+Kartagis	/user/742906	190	0	4		
+KeithH	/user/1004086	156	0	2		
+Ken Hawkins	/user/196351	313	0	3	Kenneth	Hawkins
+KentBye	/user/21673	443	0	3	Kent	Bye
+Kevin Hankens	/user/78090	372	5	5	Kevin	Hankens
+Kevin Morse	/user/1348530	125	5	14	Kevin	Morse
+KeyboardCowboy	/user/176328	322	0	3	Chris	Albrecht
+KingMoore	/user/209791	308	0	3		
+Kiphaas7	/user/248880	295	1	62		
+KrisBulman	/user/190735	315	0	2	Kris	Bulman
+Kristen Pol	/user/8389	496	0	16	Kristen	Pol
+Krummrey	/user/186580	317	0	2		
+LUTi	/user/32063	423	0	5		
+Lars Bo Jensen	/user/1432838	118	0	3	Lars Bo	Jensen
+Lars Toomre	/user/23809	439	0	13		
+LarsKramer	/user/712596	194	0	5		
+LeeHunter	/user/117834	348	0	12	Lee	Hunter
+Lenz Grimmer	/user/94885	360	0	6		
+Les Lim	/user/84263	368	1	11	Les	Lim
+Letharion	/user/373603	264	10	23	Claes	Gyllensvard
+LewisNyman	/user/751964	188	112	439	Lewis	Nyman
+Liam Morland	/user/493050	235	0	3	Liam	Morland
+LoMo	/user/628196	209	2	26		
+Lukas von Blarer	/user/598412	214	3	30	Lukas	von Blarer
+MGParisi	/user/243021	296	0	17		
+Mac_Weber	/user/789986	183	6	28	Weber	Macedo
+Magnity	/user/267154	290	0	2		
+Manuel Garcia	/user/213194	307	4	33		
+Marc DeLay	/user/209336	308	3	5	Marc	DeLay
+Mark Carver	/user/501638	233	0	24	Mark	Carver
+Mark Conroy	/user/336910	275	0	2	Mark	Conroy
+Mark Trapp	/user/212019	307	4	17	Mark	Trapp
+Media Crumb	/user/1067078	149	0	2		
+MegaChriz	/user/654114	205	0	5	Youri	van Koppen
+MichaelCole	/user/8121	497	0	6		
+Michelle	/user/23570	436	0	19	Michelle	Cox
+MickL	/user/1429064	118	0	3		
+Mike Wacker	/user/79520	371	14	47	Mike	Wacker
+Mile23	/user/116231	348	1	13	Paul	Mitchum
+Mirabuck	/user/554270	223	0	5		
+Mixologic	/user/391689	258	1	3		
+Mohammed J. Razem	/user/255384	293	2	3	Mohammed	Razem
+Morbus Iff	/user/9034	492	0	13		
+Mo?ot	/user/1261030	133	0	4	Rafa?	Mo?otkiewicz
+NROTC_Webmaster	/user/1030166	153	5	6		
+NancyDru	/user/101412	352	7	51	Nancy	Wichmann
+Nchase	/user/180094	320	0	2		
+Nick Lewis	/user/27072	432	1	10		
+NikLP	/user/71221	378	0	5	Nik	LePage
+Niklas Fiekas	/user/1089248	147	15	27		
+Noyz	/user/338771	274	2	113		
+OddJob	/user/2252684	62	1	3	Wes	Stansbury
+Oleksa	/user/367588	266	0	5		
+Onnovp	/user/200013	312	0	7		
+Oostie	/user/1446250	117	0	2	Cor	van Oostenbrugge
+Outi	/user/1629998	102	2	5	Outi	Munter
+Owen Barton	/user/19668	449	13	44	Owen	Barton
+Pancho	/user/15425	461	12	119		
+ParisLiakos	/user/1011436	156	2	45	Paris	Liakos
+Pasqualle	/user/80733	370	2	87		
+Paul Natsuo Kis...	/user/70498	378	0	6		
+Paul Simard	/user/902868	165	0	2		
+PawelR	/user/1136936	143	4	5	Pawel	Ratajczak
+Pedro Lozano	/user/123766	345	1	14	Pedro	Lozano
+Pete B	/user/554130	223	6	8		
+Pinolo	/user/443350	243	1	4	Marcello	Testi
+RKS	/user/875154	169	0	5		
+Ralf	/user/43568	409	2	2		
+Ralt	/user/1217654	136	0	4		
+Raphael Apard	/user/410831	251	1	6		
+RaulMuroc	/user/491326	235	0	2	Raul	Rodriguez Cabestany
+RdeBoer	/user/404007	248	0	11	Rik	
+Remon	/user/143827	336	0	2	Remon	Georgy
+Renee S	/user/141051	337	0	2	Renee	Stephen
+Richard Barry	/user/918220	164	0	2	Richard	Barry
+Risse	/user/893196	166	1	3	Kristian	Polso
+Rob C	/user/313382	280	2	8		
+RobLoach	/user/61114	387	65	208	Rob	Loach
+RobRoy	/user/22975	441	0	23		
+RobW	/user/524696	228	0	51		
+Robin Monks	/user/12246	472	0	3		
+RoboPhred	/user/131239	342	0	4		
+Rosamunda	/user/10590	483	0	4		
+Rowanw	/user/100861	355	0	13		
+RoySegall	/user/1812910	88	1	13	Roy	Segall
+RumpledElf	/user/173054	323	0	6	Robyn	Stanley
+Ryan Palmer	/user/44161	408	1	4		
+Ryan Weal	/user/412402	250	2	8	Ryan	Weal
+Sborsody	/user/321061	278	0	5		
+Schnitzel	/user/643820	206	19	46	Michael	Schmid
+Scott Reynolds	/user/60009	388	0	8		
+SeanBannister	/user/163996	327	0	44		
+Seb_CKSource	/user/1943110	77	0	2		
+Senpai	/user/65470	383	9	78	Joel	Farris
+Sergio Beristain	/user/17386	454	0	5		
+Shai	/user/50259	400	8	70		
+Shawn DeArmond	/user/77785	372	10	25	Shawn	DeArmond
+Sheldon Rampton	/user/13085	469	0	5	Sheldon	Rampton
+Shyamala	/user/85730	366	0	126	Shyamala	Rajaram
+Simx0r	/user/89380	364	0	5		
+Snugug	/user/820332	178	0	8	Sam	Richard
+Soul88	/user/1074416	149	1	2		
+SpaJenniOs	/user/2357972	52	0	2	Jennifer	Hoffman
+SpikeX	/user/240916	297	0	3		
+Stalski	/user/322618	278	0	18	Jochen	Stals
+Stefan Lehmann	/user/1272726	132	0	3		
+Stefan Nagtegaal	/user/612	654	0	36		
+Steve Dondley	/user/4131	524	6	19		
+SteveJBayer	/user/117646	348	0	20		
+Stevel	/user/569048	220	10	21	Steven	Langenaken
+Steven	/user/10	652	0	24	Steven	Wittens
+Steven Merrill	/user/218671	304	0	4	Steven	Merrill
+StuartDH	/user/28583	429	0	2		
+StuartJNCC	/user/757792	187	0	2		
+Susurrus	/user/118433	348	0	10		
+Sutharsan	/user/73854	375	10	48	Erik	Stielstra
+Sylvain Lecoy	/user/613378	211	0	11		
+System Message	/user/180064	0	0	2473		
+TBarregren	/user/16678	456	1	2	Thomas	Barregren
+TR	/user/202830	311	0	2		
+TUc	/user/107814	352	0	4		
+Taxoman	/user/95746	359	0	12		
+TechNikh	/user/372123	264	0	2	Nikhil	Dubbaka
+Tectonic	/user/397212	256	0	4		
+TheRec	/user/146860	335	53	126		
+Thox	/user/21913	443	0	6		
+Tiburon	/user/58001	390	0	5	Christian	Larsen
+TimRogersCool	/user/213823	306	0	10		
+Tlommy	/user/1136874	143	0	2		
+Todd Nienkerk	/user/92096	362	0	14	Todd	Nienkerk
+TomDude48	/user/258411	293	0	16	Tom	McCracken
+Tor Arne Thune	/user/290961	284	1	15	Tor Arne	Thune
+Tpainton	/user/44393	407	0	2		
+Transition	/user/820752	178	1	7		
+TravisCarden	/user/236758	298	9	34	Travis	Carden
+TwoD	/user/244227	296	0	9	Henrik	Danielsson
+TwoMice	/user/600924	214	0	5	Allen	Shaw
+VM	/user/72806	376	0	12		
+Vako	/user/391899	258	0	2		
+Webrotta	/user/258211	293	0	6		
+WilliamB	/user/1172982	140	0	2		
+Wim Leers	/user/99777	356	120	595	Wim	Leers
+Wolfflow	/user/62483	386	0	2	Wolf	Zirbs
+WorldFallz	/user/155304	328	0	15	World	Fallz
+WormFood	/user/665880	203	0	8	Dave	
+Xano	/user/62965	384	97	523	Bart	Feenstra
+Xen	/user/91385	362	5	10		
+YaxBalamAhaw	/user/299444	283	1	15		
+YesCT	/user/258568	293	66	1097	Cathy	Theys
+Zach Harkey	/user/16015	458	0	2		
+Zen	/user/21209	444	0	10		
+Zgear	/user/1582816	106	0	2	Zachary	Soper
+ZoeN	/user/53584	395	1	5		
+aLearner	/user/1436816	118	0	2		
+a_thakur	/user/945606	161	0	5		
+aaron	/user/33420	421	1	13	Aaron	Winborn
+aaronbauman	/user/384578	260	12	29	Aaron	Bauman
+aburrows	/user/577844	218	0	2	Alex	Burrows
+acbramley	/user/1036766	152	1	2		
+acouch	/user/151868	332	1	2		
+adam.hastings	/user/722942	192	9	33		
+adamdicarlo	/user/100783	355	3	5	Adam	DiCarlo
+adixon	/user/29205	428	0	2		
+adrian	/user/1337	654	0	4		
+adrinux	/user/2239	546	0	3		
+afeijo	/user/165811	326	1	7		
+afreeman	/user/450370	241	2	2		
+agentrickard	/user/20975	444	10	48	Ken	Rickard
+aharown07	/user/278693	287	0	11		
+ainigma32	/user/311972	280	0	2		
+aiwata55	/user/498504	234	1	5		
+aj045	/user/183938	318	0	4		
+ajeverson	/user/2215052	65	0	2	Anna	Everson
+akamustang	/user/796188	182	0	8		
+alanburke	/user/35997	418	0	8	Alan	Burke
+alberto56	/user/245583	296	11	39	Albert	Albala
+alex_b	/user/53995	392	0	12	Alex	Barth
+alexanderpas	/user/41017	412	13	117		
+alexkb	/user/35674	418	2	2		
+alexpott	/user/157725	330	23	112	Alex	Pott
+alexweber	/user/850856	173	0	3	Alex	Weber
+alippai	/user/109248	351	0	4		
+alpritt	/user/91319	362	6	60		
+amateescu	/user/729614	191	39	99	Andrei	Mateescu
+amc	/user/136955	339	0	88		
+amontero	/user/166637	326	9	26		
+amyhribar	/user/1965486	75	0	2	amy	hribar
+anarcat	/user/1274	654	2	7		
+anavarre	/user/796160	182	0	4	Aurelien	Navarre
+ancamp	/user/1677448	99	2	10		
+andreiashu	/user/212904	307	0	6		
+andrew.elvis	/user/719694	193	0	4		
+andrewfn	/user/60662	388	0	4		
+andrewmacpherson	/user/265648	291	0	13	Andrew	Macpherson
+andyceo	/user/152512	332	2	2	Andrey	Andreev
+andymartha	/user/1204604	138	0	5		
+andypost	/user/118908	347	76	325	Andrey	Postnikov
+animelion	/user/108010	352	0	5		
+ano1	/user/79254	371	1	3		
+anon	/user/464598	239	1	2		
+anrikun	/user/410199	251	10	34		
+antgiant	/user/61047	387	2	3		
+anthonyR	/user/1033102	153	0	3	Anthony	Ringoet
+ap	/user/72548	377	0	4		
+arbel	/user/162520	327	0	3		
+arcaneadam	/user/234551	299	4	8	Adam	Gregory
+arhak	/user/334209	275	7	58		
+arianek	/user/158886	329	6	57	Ariane	Khachatourians
+aritra.ghosh	/user/1830998	87	0	3	aritra	ghosh
+arlinsandbulte	/user/242659	296	0	2	Arlin	Sandbulte
+arosboro	/user/426958	246	0	2		
+arshadcn	/user/571032	219	1	13		
+asak	/user/194818	314	0	2		
+aschiwi	/user/107667	352	1	9	Anja	Schirwinski
+asimmonds	/user/5598	524	1	5		
+aspilicious	/user/172527	323	39	284	Bram	Goffings
+asrob	/user/105777	352	0	2	Peter	Borsa
+attheshow	/user/249768	295	4	11	Mark W.	Jarrell
+attiks	/user/105002	353	101	439	Peter	Droogmans
+audster	/user/1019520	154	0	7		
+authentictech	/user/79816	371	0	4		
+axel.rutz	/user/229048	300	0	3		
+axyjo	/user/303551	282	5	11		
+babbage	/user/270434	290	9	60		
+babruix	/user/386004	260	2	4		
+balrob	/user/741406	190	0	5		
+balsama	/user/223087	302	2	2	Adam	Balsam
+bangpound	/user/100456	355	3	24		
+barraponto	/user/511760	231	1	9	Capi	Etheriel
+bartmcpherson	/user/1683664	99	1	2		
+batigolix	/user/22175	442	0	6		
+bchoc	/user/120294	347	0	4		
+bcn	/user/46820	404	5	15		
+bdone	/user/687670	198	11	21	Brent	Dunn
+bdragon	/user/53081	396	2	3	Brandon	Bergren
+bdu	/user/656476	204	0	2	Bernard	
+bdurbin	/user/165644	326	4	6	Ben	Durbin
+beefzilla	/user/1033158	153	4	14	Ethan	Martin
+beejeebus	/user/38580	415	1	18		
+beeradb	/user/120651	347	2	67	Brad	Bowman
+beginner	/user/23181	440	0	5		
+behindthepage	/user/29262	428	0	8		
+bekasu	/user/326562	277	0	2		
+bellesmanieres	/user/320744	278	2	3		
+beltofte	/user/151799	332	18	42	Jens	Beltofte
+benjf	/user/245206	296	3	4	Benj	Fredrick
+benjifisher	/user/683300	199	7	38	Benji	Fisher
+benjy	/user/1852732	85	5	26	Ben	Dougherty
+bennybobw	/user/72949	376	5	8		
+berenddeboer	/user/143552	336	8	18		
+bergco	/user/260055	292	0	2		
+bertboerland	/user/188	654	0	5	bert	boerland
+bflora	/user/144212	336	0	2		
+bforchhammer	/user/216396	305	3	14	Benedikt	Forchhammer
+bfroehle	/user/381391	261	2	23		
+binford2k	/user/12534	471	0	5		
+birdmanx35	/user/95826	359	2	16		
+birwel	/user/437088	244	0	2		
+bjaspan	/user/46413	404	2	34	Barry	Jaspan
+bjeurn	/user/415444	249	0	5		
+bkayne	/user/759114	187	0	4		
+blackdog	/user/110169	351	2	3	Hans	N. Hjort
+bleen18	/user/77375	373	44	146	Alexander	Ross
+bloomaniac	/user/94862	360	0	4		
+blueblade	/user/319444	279	0	3		
+bluffit	/user/490388	235	0	2		
+bmadore	/user/49282	401	0	2	Barry	Madore
+bmx269	/user/686040	198	0	2	Trent	Stromkins
+boaz_r	/user/107854	352	0	4		
+bojanz	/user/86106	366	4	45	Bojan	Zivanovic
+bookmarvel	/user/2293702	58	0	2		
+boombatower	/user/214218	306	0	2		
+borfast	/user/48765	402	0	2		
+boris sondagh	/user/209246	308	1	8	Boris	Sondagh
+borisbaldinger	/user/651230	205	5	8	Boris	Baldinger
+bowersox	/user/186415	317	53	180	Brandon	Bowersox-Johnson
+bradfordcp	/user/126799	344	8	9		
+bradlis7	/user/16643	456	2	11		
+brainbender	/user/2273444	60	0	2	Alexander	Silva
+brainless	/user/59022	389	0	6		
+bramvdkroef	/user/536320	226	2	2		
+brantwynn	/user/252788	294	2	20	Brant	Wynn
+brenda003	/user/47457	403	0	2	Brenda	Boggs
+brianV	/user/46854	404	21	73	Brian	Vuyk
+bryan kennedy	/user/9777	488	0	2		
+bsandor	/user/291898	284	0	4		
+bsherwood	/user/64410	384	0	36		
+bstoppel	/user/304569	281	0	4	Brett	Stoppel
+btopro	/user/24286	438	0	6	Bryan	Ollendyke
+budda	/user/13164	468	0	6	Mike	Carter
+c31ck	/user/1231448	135	6	9	Cedric	Meiresonne
+c4doug	/user/634672	208	1	3		
+c4rl	/user/235047	298	0	4	Carl	Wiedemann
+c960657	/user/216078	306	13	36	Christian	Schmidt
+cachee	/user/1531834	110	0	2	Caroline	Achee
+caelon	/user/153500	331	0	2	Don	VanDemark
+cafuego	/user/218525	304	25	46	Peter	Lieverdink
+caktux	/user/257108	293	0	2		
+calso000	/user/2616035	20	0	2		
+cam8001	/user/129588	343	1	2	Cameron	Tod
+captaingeek	/user/121786	346	0	2		
+carlos8f	/user/454578	241	1	12		
+carsonevans	/user/1829464	87	0	2	Carson	Evans
+casey	/user/32403	423	54	177		
+casmaron	/user/58331	390	0	2	Michael	Chik
+catch	/user/35733	419	151	1459	Nathaniel	Catchpole
+cbiggins	/user/1045484	152	3	8	Christian	Biggins
+cburschka	/user/28680	429	6	73	Christoph	Burschka
+cdale	/user/298835	283	0	3		
+cdnsteve	/user/1878906	82	0	2	Steven	Leggett
+ceardach	/user/79082	371	0	2	Kathleen	Murtagh
+cellmaker	/user/211206	307	0	2		
+ceng	/user/1150042	142	9	13	John	Ennew
+cfennell	/user/10297	484	0	28		
+cha0s	/user/260571	292	6	17		
+chachasikes	/user/50674	399	0	3		
+chanderbhushan	/user/1470400	115	0	3		
+chellman	/user/55991	393	1	2		
+chia	/user/398572	255	0	2	Tushar	Mahajan
+chiladelphia	/user/210687	308	0	2		
+chrisada	/user/8495	495	0	6		
+chrisjlee	/user/760600	187	0	2	Chris	Lee
+chrisshattuck	/user/166383	326	19	48	Chris	Shattuck
+christefano	/user/104	654	1	5	Christefano	Reyes
+christian_gnoth	/user/260607	292	0	4		
+chx	/user/9446	490	33	230	chx	
+ckrina	/user/1206650	137	1	3		Chumillas
+clashar	/user/531068	227	0	3		
+claudinec	/user/6225	524	3	4	Claudine	Chionh
+clemens.tolboom	/user/125814	344	16	65	Clemens	Tolboom
+cluke009	/user/394258	257	0	2		
+cmsquickstart	/user/134449	340	0	5		
+coderintherye	/user/297478	283	0	33	Kevin	O'Brien
+codycraven	/user/524692	228	16	42		
+cog.rusty	/user/33697	421	0	9		
+colan	/user/58704	390	0	8	Colan	Schwartz
+coltrane	/user/91990	362	3	53		
+corbacho	/user/420096	248	1	19	David	Corbacho Roman
+corey.aufang	/user/163737	327	0	4	Corey	Aufang
+coreyp_1	/user/32335	423	3	5		
+corvus_ch	/user/1865206	84	0	2	Christian	Hausler
+cosmicdreams	/user/42579	410	1	107	Chris	Weber
+cossovich	/user/127560	344	0	4		
+couturier	/user/835716	175	0	2		
+cpugeniusmv	/user/103696	353	0	4		
+craigkendall	/user/385465	260	0	4	Craig	Kendall
+crimsondryad	/user/385597	260	0	12	Angela	Gann
+criscom	/user/188985	316	0	4	Christoph	Potzinger
+cross	/user/639442	207	6	11		
+crowdcg	/user/995722	157	0	2	Sean	Walsh
+crunchywelch	/user/5212	524	0	2	Aaron	Welch
+cryptkeeper	/user/468904	236	0	2	James	D
+cschaub	/user/54218	395	0	2		
+cweagans	/user/404732	253	8	85	Cameron	Eagans
+cwgordon7	/user/157412	330	69	149		
+daggerhart	/user/167806	325	0	5	Jonathan	Daggerhart
+dagmar	/user/154086	331	9	14	Mariano	D'Agostino
+dagmita	/user/2471854	38	0	4		Muth
+dags	/user/1248930	134	0	2	David	Dagino
+dahacouk	/user/99862	356	0	47	Daniel	Harris
+dakala	/user/53175	396	0	5		
+dalin	/user/18981	450	0	13	Dave	Hansen-Lange
+damiankloip	/user/1037976	152	24	97	Damian	Lee
+danbohea	/user/484924	236	0	2	Dan	Bohea
+danielb	/user/134005	340	0	2		
+danielnolde	/user/79829	371	0	2		
+danillonunes	/user/346803	272	7	31		
+danmuzyka	/user/48685	402	0	2	Dan	Muzyka
+das-peter	/user/762870	187	24	43	Peter	Philipp
+dasjo	/user/228295	301	0	7		
+dastagg	/user/626068	209	0	2	David	Stagowski
+davbusu	/user/385424	260	0	2		
+davidchendry	/user/1192498	139	0	4		
+davidhunter	/user/66111	382	0	2		
+davidwatson	/user/533896	227	0	20	David	Watson
+davidzz	/user/778620	184	0	4		
+davisben	/user/1204214	138	1	3		
+davyvdb	/user/185175	318	4	25		
+dawehner	/user/99340	352	95	358	Daniel	Wehner
+dbazuin	/user/1437736	118	0	56	Dirk	Bazuin
+dbeall	/user/381695	261	0	12	dave	beall
+dboulet	/user/139316	338	1	4	Daniel	Boulet
+dcam	/user/1791830	90	2	5	David	Cameron
+dchris	/user/593940	215	0	2		
+dcmistry	/user/1134874	143	0	124	Dharmesh	Mistry
+dcmouyard	/user/376907	263	0	8	Dan	Mouyard
+dcor	/user/474296	237	2	10	Diliny	Corlosquet
+dcrocks	/user/705266	195	0	33	David	Rocks
+dddave	/user/412465	250	0	7		
+ddorian	/user/325815	277	0	4		
+dead_arm	/user/597730	214	14	45	Meghan	Palagyi
+decibel.places	/user/58977	389	0	7	Randall	Goya
+deekayen	/user/972	654	5	11	David	Norman
+deixadilson	/user/497970	234	0	2		
+den33775	/user/897456	165	0	2	David	
+derMatze	/user/987342	158	0	2		
+derhasi	/user/83474	368	7	21	Johannes	Haseitl
+derjochenmeyer	/user/106134	352	5	8	Jochen	Meyer
+dev.cmswebsites...	/user/701430	196	3	3		
+deviantintegral	/user/71291	378	9	35	Andrew	Berry
+dhalbert	/user/191328	315	0	2		
+dhthwy	/user/677134	200	0	2		
+didlix	/user/530486	227	0	3		
+diedlikeahero	/user/1791884	90	2	3		
+dimitriseng	/user/1009954	156	2	5		
+dipen chaudhary	/user/100291	355	0	2	Dipen	Chaudhary
+ditcheva	/user/1310504	128	2	3	Boriana	Ditcheva
+dixon_	/user/239911	297	6	22	Dick	Olsson
+djroshi	/user/727548	192	10	20		
+dlu	/user/1501514	112	4	7	Douglas	Urner
+dman	/user/33240	421	0	40	Dan	Morrison
+dmitrig01	/user/47566	403	48	150	Dmitri	Gaskin
+dodorama	/user/41189	412	1	28		
+doka	/user/73749	376	0	4		
+donquixote	/user/459338	240	0	6	Andreas	Hennings
+donutdan4114	/user/1724652	97	1	3		
+dopry	/user/22202	442	2	4	Darrel	O'Pry
+doq	/user/47016	404	0	4		
+douggreen	/user/29191	428	24	47	Doug	Green
+draftkraft	/user/850938	173	0	2		
+drew reece	/user/168163	325	0	5		
+drewish	/user/34869	420	3	29	andrew	morton
+drifter	/user/26187	434	4	6		
+drob	/user/16216	457	0	4		
+dropcube	/user/37031	417	9	50		
+droplet	/user/591932	215	24	176		
+drumm	/user/3064	535	0	13	Neil	Drumm
+drunken monkey	/user/205582	310	2	9	Thomas	Seidl
+drupalmethod	/user/402524	254	0	2		
+drupalrv	/user/2277548	60	1	2	Max	Petyurenko
+drupalshrek	/user/620770	210	0	2		
+drupalway	/user/2250462	62	0	2		
+dshaw	/user/39611	414	0	6	David	Shaw
+dsnopek	/user/266527	291	1	20	David	Snopek
+dstol	/user/329570	277	2	4	David	Stoline
+duckzland	/user/492890	235	0	3	Jason	Xie
+dugh	/user/190125	316	0	4		
+durgeshs	/user/822172	177	2	2	Durgesh	Srivastava
+duvien	/user/228216	301	2	9		
+dvessel	/user/56782	392	0	13		
+dww	/user/46549	400	54	388	Derek	Wright
+dysrama	/user/494630	235	2	4	Louise	Kummel
+e0ipso	/user/550110	223	47	107		
+eMPee584	/user/105286	352	3	24		
+earnie	/user/86710	366	0	31		
+eatings	/user/105524	352	0	2	David	Hwang
+eaton	/user/16496	457	2	84	Jeff	Eaton
+echoz	/user/38665	415	37	146	Elly	
+ed.hollinghurst	/user/1270610	132	2	4		
+eddie_c	/user/681326	199	1	2	Ed	Crompton
+edmund.kwok	/user/44079	408	6	8		
+edrupal	/user/742990	189	17	33		
+edward_or	/user/801928	181	4	12		
+effulgentsia	/user/78040	372	39	269	Alex	Bronstein
+eigentor	/user/96718	358	41	498		
+ejort	/user/18321	452	0	2		
+ekes	/user/10083	486	0	2		
+elachlan	/user/1021502	154	3	10	Lachlan	Ennis
+eliza411	/user/33570	420	0	9	Melissa	Anderson
+elv	/user/22508	442	0	4	Philippe	Gervaise
+elvis2	/user/49666	400	2	7	Elvis	McNeely
+emarchak	/user/952004	160	2	8	Erin	Marchak
+emma.maria	/user/2104556	69	7	13	Emma	Karayiannis
+emmajane	/user/1773	654	16	61	Emma Jane	Westby
+emok	/user/222186	303	0	2		
+enginpost	/user/325798	277	1	2		
+eojthebrave	/user/79230	371	36	67	Joe	Shindelar
+estenrick	/user/183570	318	0	28		
+eternalistic	/user/72964	376	0	2	Jeremy	Caldwell
+ewhipple	/user/90064	363	0	13		
+factoryjoe	/user/3458	531	0	6		
+fago	/user/16747	456	3	51	Wolfgang	Ziegler
+fajerstarter	/user/20459	446	0	15		
+falcon03	/user/1498740	113	14	135	Vincenzo	Rubano
+farrington	/user/321343	278	3	3	Marcus	Farrington
+fastangel	/user/348228	272	3	8	Jacinto	Capote Robles
+fax8	/user/13637	467	1	11		
+femrich	/user/104769	353	0	2		
+fenda	/user/613292	211	1	2		
+fending	/user/267790	290	0	2	Brian	Fending
+ff1	/user/41738	411	0	9		
+fgm	/user/27985	430	1	14	Frederic	Marand
+fietserwin	/user/750928	188	3	11		
+floretan	/user/66163	382	1	6	Florian	Loretan
+fmizzell	/user/1312210	128	0	2	Gerardo	Gonzalez
+forngren	/user/40238	413	2	5		
+frankbaele	/user/1303560	129	5	7		
+franz	/user/581844	217	0	27	Franz Glauber	Vanderlinde
+frega	/user/243377	296	23	44	Fredrik	Lassen
+fstrevisan_eZly	/user/2664601	12	0	2		
+fubhy	/user/761344	187	11	63	Sebastian	Siemssen
+fureigh	/user/111437	350	1	3		
+gaele	/user/1765	654	2	69		
+galapas	/user/87379	365	1	2		
+galundin	/user/252714	294	0	2		
+gavri	/user/76616	373	0	4		
+ged3000	/user/62461	386	3	5		
+geerlingguy	/user/389011	259	3	58	Jeff	Geerling
+geodaniel	/user/37266	416	1	10	Dan	Karran
+getting-wiser	/user/399565	255	0	4		
+ggamba	/user/31877	423	0	3		
+ghoti	/user/47696	403	0	2		
+giorgio79	/user/235790	298	0	13		
+girishmuraly	/user/61249	387	0	2		
+glewe	/user/351858	271	0	2		
+glipay	/user/381697	261	7	13		
+glitz	/user/755994	188	0	3		
+gmclelland	/user/136048	340	0	31		
+good_man	/user/265439	291	5	20		
+gopherspidey	/user/35238	419	0	9		
+gordon	/user/959	654	4	10	Gordon	Heydon
+gpk	/user/80140	370	3	37		
+grandmaa	/user/438942	243	0	2		
+greenSkin	/user/173855	323	0	15		
+greg.1.anderson	/user/438598	243	0	8		
+greg.harvey	/user/130383	342	0	18	Greg	Harvey
+greggles	/user/36762	418	12	51	Greg	Knaddison
+grendzy	/user/96647	358	1	18	Dylan	Tack
+greyrhino	/user/2087324	69	4	6	James	Lawrence
+grisendo	/user/848238	173	5	9	Francisco Jose	Cruz Romanos
+grndlvl	/user/103553	353	3	5	Jonathan	DeLaigle
+guardian	/user/40032	413	0	2		
+gumanist	/user/773216	185	9	15	Pavel	Makhrinsky
+hansrossel	/user/39422	414	3	5	hans	rossel
+hass	/user/85918	366	2	107		
+haydeniv	/user/149501	333	2	10		
+hctom	/user/112790	350	0	9		
+heather	/user/740	654	8	73	Heather	James
+hedac	/user/81806	369	0	4		
+heddn	/user/1463982	116	1	2	Lucas	Hedding
+hefox	/user/426416	246	1	4	Hunter	Fox
+helmo	/user/449000	242	1	5	Herman	van Rink
+henrrrik	/user/113372	350	3	11		
+herom	/user/1866898	84	5	7		
+heyrocker	/user/128537	343	22	86	Greg	Dunlap
+hgmichna	/user/141046	337	0	19		
+hgurol	/user/188026	317	0	2		
+hickory	/user/70429	378	0	2		
+hunmonk	/user/22079	443	0	30	Chad	Phillips
+hyrcan	/user/26618	434	0	2		
+iLLin	/user/384543	260	5	13	Dennis	Blake
+iStryker	/user/303676	282	1	4	Tyler	Struyk
+iainH	/user/594118	215	0	4		
+iantresman	/user/212878	307	0	23		
+ideogram_nl	/user/1309456	128	1	2		
+idflood	/user/200332	312	9	18		
+iflista	/user/699286	196	7	12	Igor	Flysta
+ifrik	/user/98730	357	0	6		
+igorik	/user/77875	372	0	2		
+illuminaut	/user/360451	268	0	2		
+indigoblue	/user/154352	331	0	3		
+indytechcook	/user/245817	296	0	15	Neil	Hastings
+int	/user/108542	351	0	15		
+ipwa	/user/130909	342	0	3		
+irinaz	/user/225592	302	1	5		
+ironkiat	/user/200468	312	3	4	Kiat	Lim
+irunflower	/user/1566900	107	1	2	Hannah	Bottalla
+ivanjaros	/user/135190	340	0	5		
+ivansf	/user/339335	274	1	2		
+iwuv	/user/1659590	101	0	2		
+izmeez	/user/260168	292	0	3		
+j.somers	/user/120892	347	1	3	Jensen	Somers
+j0rd	/user/61506	387	0	2	Jordan	L
+j0sh	/user/139150	338	0	2	Giuseppe	Milo
+jabapyth	/user/222666	303	1	3		
+jablko	/user/162269	327	1	5		
+jacauc	/user/22548	442	0	2		
+jaffaralia	/user/1450720	117	1	2	Jaffar	Abdul Rasheed
+jakeg	/user/15674	460	0	6		
+james.elliott	/user/720608	193	2	8	James	Elliott
+jamesharv	/user/1508390	112	0	2	James	Harvey
+janusman	/user/153120	332	0	13	Alejandro	Garza
+japerry	/user/45640	405	0	2	Jakob	Perry
+jastraat	/user/105111	353	0	2	Jess	Straatmann
+jayboodhun	/user/169479	324	6	13		
+jbrauer	/user/12363	472	0	4	Joshua	Brauer
+jbrown	/user/46104	405	21	87	Jonathan	Brown
+jcisio	/user/210762	308	0	4	Hai-Nam	Nguyen
+jcnventura	/user/122464	346	2	5	Joao	Ventura
+jdipper	/user/388388	259	0	4		
+jefflinwood	/user/793944	182	0	2	Jeff	Linwood
+jeffschuler	/user/239714	297	2	9	Jeff	Schuler
+jenlampton	/user/85586	366	35	245	Jen	Lampton
+jensimmons	/user/140882	337	5	46	Jen	Simmons
+jerdavis	/user/228997	301	4	18	Jeremiah	Davis
+jerdiggity	/user/334965	275	2	9		
+jeremyjharris	/user/106714	348	0	2		
+jerryitt	/user/866164	170	0	2		
+jess_karels	/user/799680	181	2	4		
+jessebeach	/user/748566	189	55	332	Jesse	Beach
+jesss	/user/203428	310	0	4	Jess	Snyder
+jhedstrom	/user/208732	308	5	19	Jonathan	Hedstrom
+jhodgdon	/user/155601	331	28	429	Jennifer	Hodgdon
+jibninjas	/user/428725	245	0	4		
+jibran	/user/1198144	138	16	73	Jibran	Ijaz
+jide	/user/146088	335	18	104		
+jix_	/user/389188	259	0	13		
+jjeff	/user/17190	455	0	3	Jeff	Robbins
+jlgreen2012	/user/1800056	89	1	2	Jennifer	
+jlinares	/user/34319	420	0	5		
+jmarkel	/user/15171	462	0	4	Jeff	Markel
+jn2	/user/1001014	157	0	4		
+joachim	/user/107701	352	5	206	Joachim	Noreiko
+joao28	/user/758038	187	0	2		
+joates	/user/1009550	156	6	25		
+joelpittet	/user/160302	328	1	4	Joel	Pittet
+joestewart	/user/64620	384	2	2	Joe	Stewart
+joetsuihk	/user/125025	345	0	4		
+johandw	/user/1010860	157	0	4	Johan	Dewachter
+johnheaven	/user/2499792	34	0	4	John	Heaven
+johnv	/user/591042	215	3	9	John	Voskuilen
+jolos	/user/180109	320	1	3	Joris	Geessels
+jonathan1055	/user/92645	361	0	7		
+jonhinkle	/user/339303	274	1	3		
+jonthomas83	/user/673320	201	0	3		
+josephrossetto	/user/2629513	17	0	2		
+joshk	/user/3313	532	1	6	Josh	Koenig
+joshmiller	/user/315047	279	3	22	Josh	Miller
+joshuajabbour	/user/11289	478	0	4	Joshua	Jabbour
+jpamental	/user/174960	322	0	11	Jason	Pamental
+jpstrikesback	/user/105210	352	3	9		
+jrglasgow	/user/36590	417	0	2		
+jromine	/user/423887	247	2	2	John	Romine
+jsbalsera	/user/1483672	114	2	4	Jesus	Sanchez Balsera
+jschrab	/user/451678	241	0	2		
+jstoller	/user/99012	356	42	318	Jeremy	Stoller
+jthorson	/user/148199	334	2	7	Jeremy	Thorson
+jtwalters	/user/1052318	151	1	8	Joel	Walters
+juan_g	/user/362115	267	0	2		
+juhovh	/user/685306	196	0	2	Juho	
+jumpfightgo@gro...	/user/327714	277	2	6		
+jwilson3	/user/220177	304	0	16	James	Wilson
+k4v	/user/744246	189	0	2		
+kaakuu	/user/535754	226	0	61		
+kaizerking	/user/1569890	107	0	6		
+kalabro	/user/1399638	121	5	14		
+karschsp	/user/138216	339	50	112	Steve	Karsch
+kat3_drx	/user/395100	257	3	9	Katherine	Lynch
+katbailey	/user/172987	323	2	5	Katherine	Bailey
+kathyh	/user/404410	253	0	2		
+kattekrab	/user/112345	350	3	27	Donna	Benjamin
+kazar	/user/229944	300	0	6		
+kazim59	/user/72534	377	0	6		
+keith.smith	/user/85980	366	5	72		
+kenorb	/user/191974	316	0	7	Rafal	W
+kervi	/user/412147	250	0	2		
+keyhitman	/user/866970	170	3	5	Colin	Watson
+kfritsche	/user/619702	210	3	7	Karl	Fritsche
+kgoel	/user/820356	178	1	4	Kalpana	Goel
+kiamlaluno	/user/55077	392	1	9	Alberto	Paderno
+kid_icarus	/user/1482934	114	3	4	Ryan	Kois
+kika	/user/11	654	10	183	Kristjan	Jansen
+killes@www.drop.org	/user/227	652	0	12	Gerhard	Killesreiter
+kiverson	/user/288645	284	0	4	Kurt	Iverson
+kkaefer	/user/14572	464	39	131		
+klausi	/user/262198	292	0	2	Klaus	Purer
+klonos	/user/567014	220	0	298	Gregory	
+kmharrell	/user/862140	171	0	2	Kim	Kubali
+konstantin.komelin	/user/1195752	138	5	32	Konstantin	Komelin
+kpm	/user/60619	388	0	4		
+kprmca	/user/358460	269	0	2		
+kratkar	/user/896170	166	0	14		
+kristofer	/user/822134	177	0	4		
+krlucas	/user/271780	289	4	15	Kelly	Lucas
+kscheirer	/user/128191	343	2	11	Karl	Scheirer
+ksenzee	/user/139855	338	30	129	Katherine	Senzee
+kudokatz	/user/157156	330	0	4		
+kwinters	/user/402579	254	4	20		
+kyle_mathews	/user/144288	336	2	2	Kyle	Mathews
+lambic	/user/58843	389	3	6		
+langworthy	/user/25556	436	3	4		
+larowlan	/user/395439	257	21	108		
+laura s	/user/18973	450	0	9	Laura	Scott
+legolas8911	/user/1573734	106	0	3		
+legolasbo	/user/2480548	37	13	22	Chris	Jansen
+leisareichelt	/user/362600	267	0	32		
+lelizondo	/user/193303	314	0	2		
+lightsurge	/user/1229204	135	0	25		
+likin	/user/769560	185	0	2		
+lilou	/user/105892	352	2	12		
+linclark	/user/396253	256	1	16	Lin	Clark
+liquidcms	/user/44114	408	0	2	Peter	Lindstrom
+lisarex	/user/485222	236	12	85	Lisa	Rex
+lixiphp	/user/812208	179	0	2	Li	Xi
+lliss	/user/724750	192	2	3		
+llizards	/user/38974	414	0	4		
+loganfsmyth	/user/571728	219	7	9		
+lokapujya	/user/98799	357	14	18	Jamie	Fallon
+longwave	/user/246492	295	0	4	Dave	Long
+loophole080	/user/729056	192	0	2		
+lostchord	/user/698126	196	0	6		
+lpalgarvio	/user/256027	293	0	24	Luis Pedro	Algarvio
+lreid	/user/32350	423	0	3		
+lslinnet	/user/121684	346	3	10	Lars	Linnet
+lucascaro	/user/87585	365	2	11	Lucas	Caro
+lucaswoj	/user/473912	238	6	10		
+luco	/user/266328	291	0	4		
+lukewertz	/user/1527020	110	0	3		
+lut4rp	/user/162357	327	1	10		
+lyricnz	/user/33667	421	13	24		
+m3avrck	/user/12932	469	0	35		
+maartenvg	/user/109716	351	2	14		
+macgirvin	/user/41805	411	0	9		
+magico	/user/6238	524	0	3	Fernando	Silva
+mahaprasad	/user/403715	254	2	3		
+makemineatriple	/user/529864	227	4	7		
+mallezie	/user/814290	179	2	2	Tim	Mallezie
+manimejia	/user/333159	276	0	2	Manuel	Mejia
+mantyla	/user/99169	356	0	2		
+marcelovani	/user/854220	172	5	18	Marcelo	Vani
+marcingy	/user/77320	373	9	47	Marc	Ingram
+marco.robotangel	/user/212039	307	0	17		
+marcushenningsen	/user/178656	321	0	2		
+marcvangend	/user/158153	329	18	117	Marc	van Gend
+mariomaric	/user/92248	362	0	2	Mario	Maric
+mariusz.slonina	/user/553840	223	11	36		
+markabur	/user/217822	305	0	7		
+markboulton	/user/471666	238	0	2		
+markdorison	/user/346106	272	0	2	Mark	Dorison
+markj	/user/25887	435	0	4		
+markus_petrux	/user/39593	414	3	25		
+marthinal	/user/387593	259	4	7		
+martinjbaker	/user/236009	298	0	4		
+marvil07	/user/132175	342	3	7	Marco	Villegas
+maryedith	/user/437438	243	0	6	Mary Edith	Ingraham
+masagin	/user/490666	235	5	12		
+matason	/user/81488	369	2	10		
+mathankumarc	/user/1315174	128	2	2		
+matt westgate	/user/2275	546	0	4	Matt	Westgate
+matt2000	/user/143172	336	10	38	Matt	Chapman
+matt@antinomia	/user/23810	439	10	21	Matt	Koglin
+mattconnolly	/user/319903	279	2	4		
+mausolos	/user/642118	207	0	3		
+mbrett5062	/user/1182744	139	9	39	Michael	Brett
+mbutcher	/user/201798	311	0	3	Matt	Butcher
+mcarbone	/user/68488	380	3	4	Marco	Carbone
+mcjim	/user/160479	328	9	25	James	Panton
+mcpuddin	/user/564834	220	2	9	James	Mcbryan
+mcrittenden	/user/420631	248	0	101	Mike	Crittenden
+mcurry	/user/60090	388	0	13		
+mdrummond	/user/360968	268	1	19		
+mdupont	/user/400288	255	1	8	Michael	Dupont
+mean0dspt	/user/213395	307	0	2		
+meba	/user/31977	423	0	20	Jakub	Suchy
+medden	/user/123104	346	0	11		
+mediameriquat	/user/12369	472	0	4		
+merlinofchaos	/user/26979	433	0	23	Earl	Miles
+mertskeli	/user/818442	178	0	3		
+mfb	/user/12302	472	5	8	mark	burdett
+mfer	/user/25701	435	4	49	Matt	Farina
+mgifford	/user/27930	430	129	758	Mike	Gifford
+michaelfavia	/user/49137	401	28	78		
+michaelschutz	/user/106142	352	0	2		
+micnap	/user/169037	325	5	9	Mickey	Williamson
+midkemia	/user/104850	353	0	10		
+mikeker	/user/192273	315	6	11	Mike	Keran
+mikeryan	/user/4420	524	0	2	Mike	Ryan
+mikeschinkel	/user/30451	426	0	2		
+mikespence	/user/2007822	71	2	4	Mike	Spence
+mikey_p	/user/62496	386	1	17	Michael	Prasuhn
+mikeytown2	/user/282446	287	0	15	Mike	Carper
+mikkopaltamaa	/user/549850	223	0	3	Mikko	Paltamaa
+mindless	/user/33033	422	0	3		
+minimism	/user/3424	531	0	2		
+miro_dietiker	/user/227761	301	0	2	Miro	Dietiker
+misterT	/user/1435254	118	0	2		
+misty3	/user/99058	356	0	6		
+mitchell	/user/68284	380	0	24		
+mitchmac	/user/281206	287	3	8		
+mitron	/user/2349814	53	1	18	Garcon	Boulanger
+mjlF95	/user/325433	277	0	2		
+mjohnq3	/user/43433	409	7	39		
+mjonesdinero	/user/1409988	120	2	5		
+mjreich	/user/939950	160	0	2	Mike	Reich
+mkadin	/user/1093166	147	7	8	Mike	Kadin
+mkalkbrenner	/user/124705	345	0	2		
+mkesper	/user/2580138	25	0	11		
+mki	/user/58150	390	1	4		
+mlncn	/user/64383	384	0	58	Benjamin	Melancon
+mlsamuelson	/user/47411	403	0	5	Michael	Samuelson
+mnp	/user/380457	261	0	2		
+moe4715	/user/2344064	54	1	3	Maurice	Malherbe
+mohammadjolani	/user/1431134	118	0	3	Mohammad	Jolani
+mohammed76	/user/74667	375	0	8		
+momendo	/user/30654	425	0	12		
+mooffie	/user/78454	372	0	3		
+moonray	/user/68275	380	0	2	Bala	Bosch
+mordonez	/user/57894	390	0	2		
+mori	/user/710680	194	0	2	Marcus	Morba
+morphir	/user/37969	416	0	26		
+moshe weitzman	/user/23	654	9	241	Moshe	Weitzman
+mot	/user/304270	281	0	3		
+mototribe	/user/1232608	135	0	9		
+mpaler	/user/202213	311	0	2	Michael	Paler
+mpearrow	/user/13144	468	0	2		
+mr.baileys	/user/383424	260	10	29	Ivo	Van Geertruyen
+mradcliffe	/user/157079	330	1	14	Matthew	Radcliffe
+mrfelton	/user/305669	281	25	66	Tom	Kirkpatrick
+mrtoner	/user/79398	371	0	6	Don	Morris
+msameer	/user/9094	491	0	4		
+msonnabaum	/user/75278	374	0	5	Mark	Sonnabaum
+mstrelan	/user/314289	280	1	15		
+mtift	/user/751908	188	4	4	Matthew	Tift
+mtolmacs	/user/72361	377	0	4	Mark	Tolmacs
+my-family	/user/237482	298	0	4		
+myke	/user/23956	439	0	2	Myke	Folkes
+mysak	/user/161988	328	0	9		
+nagiek	/user/655986	204	0	2		
+nagwani	/user/278167	288	14	34	Prafful	Nagwani
+naquah	/user/26342	434	1	4	Dennis	Stevense
+naught101	/user/44216	408	2	27		
+naxoc	/user/297068	283	15	23	Camilla	Krag Jensen
+nbz	/user/123528	345	2	36		
+neRok	/user/1762590	93	0	2		
+neclimdul	/user/48673	402	0	13	James	Gilliland
+nedjo	/user/4481	524	4	32		
+neilnz	/user/284465	286	3	6		
+nerdcore	/user/985680	158	0	2		
+netsensei	/user/350460	271	2	11	Matthias	Vandermaesen
+nevergone	/user/58654	390	0	7		
+nevets	/user/12856	469	0	4		
+newz2000	/user/92678	361	0	4		
+nick_daffodil	/user/1585306	106	0	2	Nick	
+nick_schuch	/user/1412036	120	0	9		
+nickbits	/user/83492	368	0	2		
+nigel	/user/61837	386	2	6		
+nikkubhai	/user/1083990	148	0	5		
+nilnullvoid	/user/2627787	18	1	3	Justin	Kelly
+nneuman	/user/639854	207	0	2		
+no_angel	/user/2238022	63	0	5	Angie, Ange,	Maunz
+no_longer_active_13	/user/209696	0	0	22		
+nod_	/user/598310	214	58	324	Theodore	Biadala
+noels	/user/551958	223	0	2		
+oddbit	/user/758702	187	0	4		
+odegard	/user/703222	196	0	2		
+olamaekle	/user/769756	185	1	4	Ola Meale	Kleppa
+omar	/user/7909	499	0	16	Omar	Bickell
+omaster	/user/838114	175	5	10	Dane	Cavanagh
+oresh	/user/2282630	60	7	24	Kirill	Cebotari
+oriol_e9g	/user/66422	382	5	15		
+oseldman	/user/147794	334	0	2	Oliver	Seldman
+p.brouwers	/user/308654	281	3	10		
+pameeela	/user/1431110	118	0	10	Pamela	Barone
+pandaeskimo	/user/1393336	121	0	2		
+paranojik	/user/19501	449	0	10	Tadej	Basa
+patrickd	/user/1358080	124	0	5	Patrick	Drotleff
+paul.lovvik	/user/289213	285	1	2		
+pbz1912	/user/337318	275	1	5		
+pcambra	/user/122101	346	1	2	Pedro	Cambra
+pdjohnson	/user/72810	376	0	4	Paul	Johnson
+penyaskito	/user/959536	160	11	51	Christian	Lopez Espinola
+peterx	/user/23516	440	0	12		
+peximo	/user/209981	308	15	29	Francesco	Pesenti
+pfrenssen	/user/382067	261	2	13		
+philbar	/user/99951	355	0	12		
+piersonr	/user/36870	417	0	5		
+pillarsdotnet	/user/36148	418	13	53		
+pixelbandito	/user/535902	224	0	4	Chris	Garcia
+pixelite	/user/341265	274	2	5	Suzanne	Kennedy
+pjcdawkins	/user/1025236	154	0	2	Patrick	Dawkins
+plach	/user/183211	319	134	529	Francesco	Placella
+plato1123	/user/454774	241	0	5		
+plopesc	/user/282415	287	2	4		
+pmelab	/user/555322	222	0	2		
+podarok	/user/116002	349	0	19	Andriy	Podanenko
+pounard	/user/240164	297	0	14		
+pp	/user/59215	389	25	44		
+pplantinga	/user/2603490	22	0	2	Peter	Massey-Plantinga
+profix898	/user/35192	419	0	11	Thilo	Wawrzik
+psicomante	/user/29518	427	5	12		
+pvasili	/user/88480	364	0	5		
+pverrier	/user/1563974	107	0	2		
+pwarn	/user/457580	240	0	7	Patrick	Warn
+pwaterz	/user/672996	201	0	2		
+pwolanin	/user/49851	400	32	223	Peter	Wolanin
+q0rban	/user/31022	425	0	2	James	Sansbury
+qbnflaco	/user/187780	317	0	3		
+quartsize	/user/760454	187	5	9		
+quicksketch	/user/35821	418	65	312	Nathan	Haug
+quietone	/user/2572884	26	0	2	V	Spagnolo
+rachel_norfolk	/user/66273	382	0	2	Rachel	Lawson
+radoeka	/user/585480	216	0	4		
+radolin	/user/151147	333	1	2		
+rafamd	/user/795678	182	0	7		
+ray007	/user/96114	359	0	4		
+raytiley	/user/577124	218	0	29	Ray	Tiley
+rbayliss	/user/772738	185	2	4		
+rcaracaus	/user/272310	289	1	5	Robert	Caracaus
+rcross	/user/35936	418	0	2	Ryan	Cross
+realityloop	/user/139189	338	1	16	Brian	Gilbert
+redben	/user/125039	345	0	2		
+redndahead	/user/160320	328	7	20	Adam	Moore
+reglogge	/user/205988	309	28	59	Reinhard	Gloggengiesser
+rema52	/user/354561	270	0	6		
+rfay	/user/30906	425	3	45	Randy	Fay
+rfsbsb	/user/4382	524	0	2	Rafael	Silva
+rgristroph	/user/516442	230	1	4	Robert	Ristroph
+rhimes	/user/194545	314	0	3		
+rhouse	/user/171604	324	0	7		
+ricardobaeta	/user/111786	350	0	6		
+richardj	/user/557716	222	0	4	Richard	Japenga
+rickvug	/user/42239	411	4	45		
+risoy	/user/780154	180	0	2	Alexander	
+rkerr	/user/20129	447	2	5		
+rli	/user/633216	208	0	4		
+rlmumford	/user/794682	182	0	2	Rob	Mumford
+roball	/user/405360	253	0	2	Robert	Allerstorfer
+robertDouglass	/user/5449	524	0	35	Robert	Douglass
+robertgarrigos	/user/16581	456	0	5	Robert	Garrigos
+roborn	/user/139474	338	2	4	Roberto	Ornelas
+rocket_nova	/user/616296	211	14	24		
+roderik	/user/8841	493	0	2	Roderik	Muit
+rogueturnip	/user/111498	350	0	9		
+rokr	/user/118857	347	0	2		
+ron_sparks	/user/824820	177	0	2		
+ronald_istos	/user/200188	312	3	17		
+ronan.orb	/user/174449	322	0	8		
+ronia	/user/512448	231	0	3		
+rootwork	/user/28506	429	3	10	Ivan	Boothe
+roper.	/user/154438	331	0	6		
+rovo	/user/248680	295	0	3		
+rsaddington	/user/171394	324	6	7	Richard	Saddington
+rschwab	/user/586922	216	16	37		
+rszrama	/user/49344	401	0	15	Ryan	Szrama
+rteijeiro	/user/780508	184	6	76	Ruben	Teijeiro
+rucativava	/user/518814	230	0	2		
+rupl	/user/411999	248	0	3	Chris	Ruppel
+rvilar	/user/293298	284	1	2	Ramon	Vilar Gavalda
+ry5n	/user/1883808	82	49	290	Ryan	Frederick
+ryan.armstrong	/user/382704	261	0	8	Ryan	Armstrong
+ryanissamson	/user/1312756	128	3	9	Ryan	Gibson
+rzilouc2	/user/593844	215	0	4		
+s.Daniel	/user/140989	337	0	7	Sebastian	Daniel
+sai571	/user/378164	262	0	7		
+salvis	/user/82964	369	0	18	Hans	Salvisberg
+samhassell	/user/18915	450	3	7		
+saml	/user/44397	407	0	4		
+samwillc	/user/1333274	126	0	2		
+sandhya.m	/user/594184	215	5	6		
+sandipmkhairnar	/user/739524	190	0	2		
+sanduhrs	/user/28074	430	1	3	Stefan	Auditor
+sanketmedhi	/user/68419	380	0	4		
+sannejanssen	/user/1668166	100	3	7	Sanne	Janssen
+sbakshian	/user/1048116	151	0	14		
+sccherry	/user/2453456	39	1	2		
+scor	/user/52142	397	1	27	Stephane	Corlosquet
+scorchio	/user/882788	167	3	6	Zoltan	Adamek
+scottrigby	/user/145945	335	0	6	Scott	Rigby
+scottrouse	/user/571892	219	0	2	Scott	Rouse
+scronide	/user/138817	338	1	7	Marcus	Campbell
+scroogie	/user/35351	419	0	2		
+sdboyer	/user/146719	335	8	27	Sam	Boyer
+seanburlington	/user/142969	336	0	3		
+seanyo	/user/504434	233	1	3		
+sepeck	/user/5195	524	0	3		
+sergiu.savva	/user/1758280	93	2	2	Sergiu	Savva
+sethcohn	/user/14944	462	0	5	Seth	Cohn
+seutje	/user/264148	291	57	224	Steve	De Jonghe
+sfyn	/user/400944	255	4	6		
+sgabe	/user/232117	299	0	4		
+sgtsaughter	/user/1355676	124	0	2	Patrick	Baxter
+shanly	/user/996516	157	0	2		
+shartz	/user/1454748	116	0	2		
+shenzhuxi	/user/193802	314	0	2	Liang	Shen
+shp	/user/112279	350	0	5		
+shuklasp	/user/112059	350	0	12		
+shunting	/user/123690	345	0	26		
+sidharthap	/user/1159696	141	0	4	Sidhartha	Panda
+sign	/user/37679	416	12	27		
+sillygwailo	/user/8791	493	0	2		
+silurius	/user/24568	437	0	6		
+silverhosting	/user/531532	227	0	2		
+silverwing	/user/13009	470	0	3	david	
+sir_squall	/user/361698	268	0	3		
+sirkitree	/user/59025	389	3	4	Jerad	Bitner
+sirtet	/user/1209728	137	2	7	Thomas	Rogenmoser
+sitiveni	/user/652858	205	2	3		
+sivaji	/user/328724	277	9	22		
+skessler	/user/183796	318	0	4	Steve	Kessler
+skilip	/user/100880	355	1	37		
+skiminki	/user/265179	291	0	2		
+skiquel	/user/143673	336	0	3		
+skor	/user/27014	433	0	4		
+skwashd	/user/116305	348	1	7	Dave	Hall
+smiletrl	/user/1353082	125	4	13		
+smileytech	/user/863224	168	0	5	Russell	O'Neill
+smk-ka	/user/48898	401	0	2	Stefan	Kudwien
+snorkers	/user/329611	0	0	6		
+snufkin	/user/58645	390	0	12	Balazs	Dianiska
+softfacade	/user/626642	209	0	8		
+solange_sari	/user/1859768	84	0	2	Solange	Sari
+solipsist	/user/37564	416	0	2		
+solodky	/user/613710	211	0	4		
+sparr	/user/91299	362	0	10		
+spatz4000	/user/46472	404	3	5		
+sphism	/user/195684	313	1	10		
+ssemaganda	/user/150270	333	0	2		
+stBorchert	/user/36942	417	86	181	Stefan	Borchert
+starbow	/user/33290	421	11	36		
+starlilyth	/user/285561	286	0	3		
+stefan.r	/user/551886	223	0	2	Stefan	Ruijsenaars
+stefano73	/user/7410	501	0	4	Stefano	Mallozzi
+steinmb	/user/74669	375	1	11	Stein Magne	Bjorklund
+stella	/user/66894	382	9	26	Stella	Power
+stephthegeek	/user/47874	403	0	4		
+steve02476	/user/230003	300	0	2		
+stevector	/user/179805	320	2	12	Steve	Persch
+stpaultim	/user/752364	188	2	6	Tim	Erickson
+suffering drupal	/user/215292	306	0	2		
+sumitk	/user/267786	290	0	6	sumit	kataria
+sun	/user/54136	395	350	1691	Daniel	Kudwien
+sun.core	/user/420140	248	0	12		
+sung-suh park	/user/172046	323	0	2		
+sven.lauer	/user/848928	173	0	3		
+svendecabooter	/user/35369	419	2	5	Sven	Decabooter
+svenryen	/user/667244	202	0	2		
+swentel	/user/107403	348	50	178	Kristof	De Jaeger
+sxnc	/user/1298054	129	10	18	Victor	Kunzig
+syedforislam	/user/2292962	56	0	2	Syed Ahtasham	ul haq
+sym	/user/21702	443	0	2		
+synth3tk	/user/245163	296	5	7	David	Thomas
+szantog	/user/610310	212	3	4		
+tara@neier.me	/user/128264	343	0	4		
+tarekdj	/user/745218	189	5	10		
+tarmstrong	/user/1155632	141	2	8		
+tcarnell	/user/814464	179	0	2		
+te-brian	/user/271439	289	1	43		
+technicka	/user/488182	236	0	5	Becky	Gessler
+techsoldaten	/user/16339	457	0	10	Michael	Haggerty
+tedbow	/user/240860	297	0	2	Ted	Bowman
+teledyn	/user/1403	654	0	2		
+tgeller	/user/181428	319	0	5	Tom	Geller
+thamas	/user/53339	396	3	17		
+theborg	/user/116668	348	4	12		
+thedavidmeister	/user/657782	204	3	102		
+thekevinday	/user/338195	275	0	2		
+theresaanna	/user/215660	306	0	2		
+thinker	/user/9853	487	0	5		
+thinkyhead	/user/156379	330	0	4		
+tic2000	/user/103877	353	4	42		
+tim foley	/user/991782	157	0	5		
+tim.plunkett	/user/241634	292	99	418	Tim	Plunkett
+timmillwood	/user/227849	301	3	20	Tim	Millwood
+timtrinidad	/user/211603	307	0	4		
+tizzo	/user/168251	325	6	15	Howard	Tyson
+tkoleary	/user/627430	209	0	264		
+tmsimont	/user/566678	220	0	2	Trevor	Simonton
+tobiasb	/user/183956	318	8	17	Tobias	Bahr
+toddgee	/user/83606	368	0	2		
+tombigel	/user/173787	323	0	5		
+tomdavidson	/user/693092	197	0	4	Tom	Davidson
+tostinni	/user/13041	469	0	3		
+treksler	/user/62109	386	0	4	Risto	Treksler
+trobey	/user/653476	205	0	5	Thomas	Robey
+tronathan	/user/361851	267	0	63		
+trrroy	/user/145613	335	10	15	Troy	Dohner
+tsi	/user/322980	278	2	9		
+tstoeckler	/user/107158	352	15	258	Tobias	Stockler
+tsvenson	/user/364106	267	7	92	Thomas	Svenson
+tutumlum	/user/413570	250	0	2		
+tvn	/user/999848	157	0	6		
+tylor	/user/143420	336	8	14		
+typhonius	/user/1295980	130	0	4	Adam	Malone
+uNeedStuff	/user/109297	351	0	6		
+ugerhard	/user/153980	331	1	2		
+ultimateboy	/user/153963	331	6	42	Matt	Tucker
+unstatu	/user/2419232	45	1	2	Carlos	Reig Matut
+ursula	/user/971338	159	1	9		
+valante	/user/541184	225	0	2		
+valokettu	/user/110912	351	0	4		
+valthebald	/user/239562	297	3	8	Valery	Lourie
+vangorra	/user/121671	346	4	16		
+vasi1186	/user/342104	273	0	2	Vasile	Chindris
+vegantriathlete	/user/491720	235	0	4	Marc	Isaacson
+videographics	/user/521844	229	0	2	Brian	Shaw
+vijay.cgs	/user/2299234	57	0	8	Vijay	M
+vijaycs85	/user/93488	361	22	29	Vijayachandran	Mani
+vineet.osscube	/user/308321	281	0	2		
+vladimir.dolgopolov	/user/227283	301	0	4		
+vordude	/user/150473	333	1	8	Matt	Kleve
+vosechu	/user/600756	214	0	2		
+vrMarc	/user/1384894	122	0	2		
+wanabeanon	/user/273059	0	0	3		
+watbe	/user/285700	286	3	10	Wayne	Tsai
+webbykat	/user/1466686	115	1	2	Kat	Kuhl
+webchick	/user/24967	437	13	1693	Angie	Byron
+webcomm	/user/234504	299	0	4		
+webflo	/user/254778	293	3	10	Florian	Weber
+webkenny	/user/246154	296	1	10	Kenny	Silanskas
+whoviz	/user/768058	186	1	3		
+wildkatana	/user/307704	281	13	50		
+wildmtsky	/user/294874	284	0	2		
+willhall	/user/37875	416	2	7		
+willmoy	/user/20611	446	0	7		
+wilto	/user/2187426	66	0	2	Mathew	Marquis
+winston	/user/50839	399	5	15		
+wizonesolutions	/user/739994	190	0	4	Kevin	Kaland
+wmbetts	/user/298264	283	2	3		
+wmostrey	/user/21228	444	0	2	Wim	Mostrey
+wretched sinner...	/user/232164	299	5	20		
+wrunt	/user/59132	389	0	5		
+wwalc	/user/184556	318	0	5		
+xatoo_	/user/397541	256	0	6		
+ximo	/user/88701	364	2	15	Joakim	Stai
+xjm	/user/65776	383	62	681	Jess	(xjm)
+xmacinfo	/user/12131	473	4	195	Jacques	Blier
+xtfer	/user/31698	424	1	19	Christopher	Skene
+yang_yi_cn	/user/87442	365	0	4		
+yannickoo	/user/531118	227	1	7		
+yannisc	/user/1145950	142	0	4		
+yched	/user/39567	414	60	412	Yves	Chedemois
+yeti22	/user/990062	157	0	10		
+yhager	/user/71425	378	0	2		
+yhahn	/user/264833	291	6	22		
+yktdan	/user/5827	524	0	3		
+yoroy	/user/41502	412	75	1469	Roy	Scholten
+ytsurk	/user/1153644	142	0	8		
+yukare	/user/889254	167	0	3	Fernando	Conceicao
+zatarain21	/user/653782	205	0	2		
+zeta ?	/user/138528	338	0	10		
+zilverdistel	/user/276047	288	0	2		
+zirvap	/user/41459	412	0	21		
+zoo33	/user/37075	417	0	2		
+zroger	/user/67977	380	5	7	Roger	Lopez
+zschmid	/user/2294356	58	6	18	Zachary	Schmid
+zuuperman	/user/361625	268	1	4	Nils	Destoop
+zzolo	/user/147331	334	1	17	Alan	Palazzolo
+null	/user/12734	470	0	2		

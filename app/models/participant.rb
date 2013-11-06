@@ -13,4 +13,7 @@ class Participant
   has n, :criterias, :required =>false
   has n, :issues,:required =>false
   has n, :user_actions, :required =>false
+
+  has n, :participant_networks, :child_key => [ :source_id ]
+  has n, :pnetworks, self, :through => :participant_networks, :via => :target
 end

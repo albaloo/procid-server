@@ -2,9 +2,9 @@ class Issue
   include DataMapper::Resource
   include ActionView::Helpers::DateHelper
   property :id,           Serial
-  property :title,        String,:length=>1000
+  property :title,       String,:length=>1000
   property :status,	String
-  property :link, 	String,:length=>500,   :required => true
+  property :link,	String,:length=>500,   :required => true
   property :created_at,	DateTime, :required => false
   
   belongs_to :participant
@@ -32,12 +32,12 @@ class Issue
 
   def insert_current_participant_issue_relations
     issue = Issue.first({:id => id})
-    comments = Comment.all({:issue_id => id})			 
+    comments = Comment.all({:issue_id => id})
     comments.each do |comment|
       currentParticipant = Participant.first(:id=>comment.participant.id);
       currentNet = Network.first_or_create({:participant => currentParticipant, :issue => issue})
       currentNet.attributes = {
-			:commented_at => comment.commented_at
+         :commented_at => comment.commented_at
       }
       currentNet.save
     end
@@ -57,7 +57,7 @@ class Issue
 
     potentials = potentials.uniq
     potentials = potentials.select { |h| !(h['author'].include? "System Message") }
-    return potentials.sample(30)
+    return potentials
   end
   
   #select all participants who are not participating in this thread
@@ -69,7 +69,7 @@ class Issue
     return potentials
   end
 
-  def gather_participant_info_description (currentParticipant, num, recency)
+  def gather_participant_info_description (currentParticipant, num, recency, triads)
     description = ""
     experienceInfo = 0
     #Experience
@@ -126,7 +126,12 @@ class Issue
       description.concat(", not recently commented on a usability thread")
     end
    #Triads
-   random = 1+Random.rand(6)
+   if(triads != 0 && !(triads.nil?))
+      description.concat(", has previously interacted with #{triads} of the current participants.")
+   else
+      description.concat(", no previous interactions with current participants.")
+   end
+=begin   random = 1+Random.rand(6)
    if(num < 3 && experienceInfo == 1)
       description.concat(", no previous interactions with current participants.")
    else
@@ -137,7 +142,7 @@ class Issue
       #end
       description.concat(", has previously interacted with #{numTriads} of the current #{triadString}.")
     end
-
+=end
   end
 
 
@@ -151,13 +156,20 @@ class Issue
     res = adapter.select("SELECT max(t1.commented_at) FROM (networks AS t1 INNER JOIN issues AS t2 ON t1.issue_id=t2.id) WHERE t1.participant_id=#{p_id};")
     return res[0]
   end
+  def find_participant_triad(p_id)
+    issueid = Issue.first(:link => link).id
+    adapter = DataMapper.repository(:default).adapter
+    res = adapter.select("SELECT COUNT(t1.target) FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t1.target=t2.participant_id) WHERE t1.source=#{p_id} AND t2.issue_id=#{issueid});")
+    res2 = adapter.select("SELECT COUNT(t1.source) FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t1.source=t2.participant_id) WHERE t1.target=#{p_id} AND t2.issue_id=#{issueid});") 
+    return res[0]+res2[0]
+  end
   #randomly selects 10 participants between 100 experienced members who are not participating in this thread
   def find_experienced_potential_participants
     adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
     res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY experience DESC;")
     potentials = Array.new
-    indx = 0	
+    indx = 0
     res.each do |p_id|
       currentParticipant = Participant.first(:id=>p_id);
 
@@ -165,13 +177,14 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       consensus = find_participant_consensus(p_id) 
+      triads = find_participant_triad(p_id)
       recency = find_participant_recency(p_id)
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency, triads)
       
       potentials.push currentPInfo
       indx = indx + 1
       break if indx == 20
-    end			
+    end
     return potentials
   end
 
@@ -190,12 +203,13 @@ class Issue
       currentPInfo["authorLink"]=currentParticipant.link
       consensus = find_participant_consensus(p_id) 
       recency = find_participant_recency(p_id)
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency)#Time.now)
+      triads = find_participant_triad(p_id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency, triads)#Time.now)
 
       potentials.push currentPInfo
       indx = indx + 1
       break if indx == 20
-    end			
+    end
 
     return potentials
   end
@@ -205,7 +219,7 @@ class Issue
   #TODO: write this function
     adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY usability_patches DESC;")
+    res = adapter.select("SELECT n1.source as id1, n1.target as id2, n3.source as id3 FROM PPNetwork as n1, PPNetwork as n2, PPNetwork as n3 WHERE (n1.source=n3.target OR n1.source=n3.source OR n1.target=n3.target OR n1.target=n3.source) AND (n1.target=n2.source OR n1.source=n2.source OR n1.source=n2.target OR n1.target=n2.target) AND (n2.target=n3.source OR n2.source=n3.target OR n2.target=n3.target OR n2.source=n3.source) AND n1.source<n2.source AND n1.source<n3.source;")
     indx = 0
     potentials = Array.new
     res.each do |p_id|
@@ -216,12 +230,13 @@ class Issue
       currentPInfo["authorLink"]=currentParticipant.link
       consensus = find_participant_consensus(p_id) 
       recency = find_participant_recency(p_id)
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency)#Time.now)
+      #triads = find_participant_triad(p_id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency, 0)#Time.now)
 
       potentials = potentials.to_a.push p_id
       indx = indx + 1
       break if indx == 20
-    end			
+    end	
 
     return potentials
   end
@@ -240,7 +255,8 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       recency = find_participant_recency(row[0])
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, row[1], recency)
+      triads = find_participant_triad(p_id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, row[1], recency, triads)
       
       potentials.push currentPInfo
       indx = indx + 1
@@ -264,7 +280,8 @@ class Issue
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
       consensus = find_participant_consensus(row[0])
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, row[1])
+      triads = find_participant_triad(p_id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, row[1], triads)
       
       potentials.push currentPInfo
       indx = indx + 1
@@ -299,145 +316,164 @@ class Issue
 
   #find conversations in a new thread
   def find_conversations(start,convoLen,maxContinuous)
-  	comments = Comment.all(:issue_id=>id)
-  	x=start
-  	while(x<comments.size-convoLen)
-	  	tagComments=Array.new			#array to store comments that will get tagged
-  		currAuthor=comments[x].participant	#currAuthor and secAuthor keep track of the 2 conversation participants
-  		secAuthor=currAuthor
-  		pos=x					#current position in comments array
-  		numLastAuth=0				#number of consecutive posts made by the currAuthor
-  		isConvo=true				#boolean to keep of whether or not it is a conversation
-  		firstIter=true				#boolean to keep track of first iteration of the while loop
-  		grace=false				#boolean that keeps track of whether a comment was skipped over eg: ABACBA where A and B are the conversation participants and C is skipped
-  		while (isConvo && (tagComments.length < convoLen))
-  			maxPosts=pos+maxContinuous
-  			while ((tagComments.length < convoLen) && (comments[pos].participant==currAuthor))
-  				tagComments.push(comments[pos])
-  				numLastAuth+=1
-  				pos+=1
-  			end
-  			if(pos>maxPosts || pos==maxPosts-maxContinuous || numLastAuth > maxContinuous)
-  				numLastAuth=0
-  				isConvo=false
-  			end
-  			if(firstIter)
-  				countPosts=0
-  				countAuth=1
-  				iter=pos
-  				currPostAuth=comments[pos].participant
-  				while(iter<x+convoLen)
-  					if(currPostAuth==comments[iter].participant)
-  						countPosts+=1
-  					else
-  						countAuth+=1
-  					end
-  					iter+=1
-  				end
-  				if(countPosts==1)
-  					grace=true
-  					pos+=1
-  				else 
-  					numLastAuth=0
-  				end
-  				currAuthor=comments[pos].participant
-  				firstIter=false
-  				if(currAuthor.user_name == "System Message" || secAuthor.user_name == "System Message")
-  					isConvo=false
-  				end
-  			else
-  				if(!grace && (comments[pos].participant!=currAuthor && comments[pos].participant!=secAuthor))
-  					grace=true
-  					pos+=1
-  					if(pos >= comments.size-convoLen)
-  						break
-  					elsif(comments[pos].participant!=comments[pos-2].participant)
-  						numLastAuth=0
-  					end
-  				elsif(tagComments.length < convoLen)
-  					numLastAuth=0
-  				end
-  				temp=currAuthor
-		  		currAuthor=secAuthor
-		  		secAuthor=temp
-  			end
-  		end  		
-  		if(isConvo && tagComments.size == convoLen)
-  			if((comments[pos-1].participant!=currAuthor) && (comments[pos-1].participant!=secAuthor))
-	  			if((comments[pos].participant==currAuthor) || (comments[pos].participant==secAuthor))
-	  				if(comments[pos-2].participant != comments[pos].participant)
-	  					numLastAuth=1
-	  					tagComments.push(comments[pos])
-	  					pos+=1
-	  				elsif(numLastAuth<maxContinuous)
-	  					numLastAuth+=1
-	  					tagComments.push(comments[pos])
-	  					pos+=1
-	  				end
-	  			end
-	  		elsif(comments[pos].participant!=comments[pos-1].participant)
-	  			numLastAuth=0
-	  		end
-  			continue=true
-  			while(continue && (pos<comments.size) && ((comments[pos].participant==currAuthor) || (comments[pos].participant==secAuthor)))
-  				if(comments[pos].participant==comments[pos-1].participant)
-  					if(numLastAuth<maxContinuous)
-  						numLastAuth+=1
-  						tagComments.push(comments[pos])
-  						pos+=1
-  					else
-  						continue=false
-  					end
-  				else
-	  				numLastAuth=1
-	  				tagComments.push(comments[pos])
-	  				pos+=1
-	  			
-  				end  				
-  			end
-  			tagComments.each do |curr|
-  				curr.tags.first_or_create({:name=>"conversation", :participant => curr.participant})
-  			end
-  			x=pos
-  		else 
-  			x+=1
-  		end
-  	end
+  comments = Comment.all(:issue_id=>id)
+    x=start
+    while(x<comments.size-convoLen)
+      tagComments=Array.new     #array to store comments that will get tagged
+      currAuthor=comments[x].participant  #currAuthor and secAuthor keep track of the 2 conversation participants
+      secAuthor=currAuthor
+      pos=x         #current position in comments array
+      numLastAuth=0       #number of consecutive posts made by the currAuthor
+      isConvo=true        #boolean to keep of whether or not it is a conversation
+      firstIter=true        #boolean to keep track of first iteration of the while loop
+      grace=false       #boolean that keeps track of whether a comment was skipped over eg: ABACBA where A and B are the conversation participants and C is skipped
+      while (isConvo && (tagComments.length < convoLen))
+        maxPosts=pos+maxContinuous
+        while ((tagComments.length < convoLen) && (comments[pos].participant==currAuthor))
+          tagComments.push(comments[pos])
+          numLastAuth+=1
+          pos+=1
+        end
+        if(pos>maxPosts || pos==maxPosts-maxContinuous || numLastAuth > maxContinuous)
+          numLastAuth=0
+          isConvo=false
+        end
+        if(firstIter)
+          countPosts=0
+          countAuth=1
+          iter=pos
+          currPostAuth=comments[pos].participant
+          while(iter<x+convoLen)
+            if(currPostAuth==comments[iter].participant)
+              countPosts+=1
+            else
+              countAuth+=1
+            end
+            iter+=1
+          end
+          if(countPosts==1)
+            grace=true
+            pos+=1
+          else 
+            numLastAuth=0
+          end
+          currAuthor=comments[pos].participant
+          firstIter=false
+          if(currAuthor.user_name == "System Message" || secAuthor.user_name == "System Message")
+            isConvo=false
+          end
+        else
+          if(!grace && (comments[pos].participant!=currAuthor && comments[pos].participant!=secAuthor))
+            grace=true
+            pos+=1
+            if(pos >= comments.size-convoLen)
+              break
+            elsif(comments[pos].participant!=comments[pos-2].participant)
+              numLastAuth=0
+            end
+          elsif(tagComments.length < convoLen)
+            numLastAuth=0
+          end
+          temp=currAuthor
+          currAuthor=secAuthor
+          secAuthor=temp
+        end
+      end     
+      if(isConvo && tagComments.size == convoLen)
+        if((comments[pos-1].participant!=currAuthor) && (comments[pos-1].participant!=secAuthor))
+          if((comments[pos].participant==currAuthor) || (comments[pos].participant==secAuthor))
+            if(comments[pos-2].participant != comments[pos].participant)
+              numLastAuth=1
+              tagComments.push(comments[pos])
+              pos+=1
+            elsif(numLastAuth<maxContinuous)
+              numLastAuth+=1
+              tagComments.push(comments[pos])
+              pos+=1
+            end
+          end
+        elsif(comments[pos].participant!=comments[pos-1].participant)
+          numLastAuth=0
+        end
+        continue=true
+        while(continue && (pos<comments.size) && ((comments[pos].participant==currAuthor) || (comments[pos].participant==secAuthor)))
+          if(comments[pos].participant==comments[pos-1].participant)
+            if(numLastAuth<maxContinuous)
+              numLastAuth+=1
+              tagComments.push(comments[pos])
+              pos+=1
+            else
+              continue=false
+            end
+          else
+            numLastAuth=1
+            tagComments.push(comments[pos])
+            pos+=1
+          
+          end         
+        end
+        tagComments.each do |curr|
+          curr.tags.first_or_create({:name=>"conversation", :participant => curr.participant})
+        end
+        x=pos
+      else 
+        x+=1
+      end
+    end
   end
 
 
-def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
-        Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
+  def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal,frequentPostVal,experienceVal)
+    #Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
+    scores = {}
     comments = Comment.all(:issue_id=>id)
     references=Array.new(comments.length) {Array.new}
     tonal=Array.new(comments.length){Boolean}
     x=start
     tokenizer = TactfulTokenizer::Model.new
+    commentAuthors = {}
+    comments.each do |comment|
+      user = comment.participant.user_name
+      if(commentAuthors.key?(user))
+        commentAuthors[user]+=1
+      else
+        commentAuthors[user]=1
+      end
+    end
+    averagePostsByUser = 0
+    commentAuthors.each do |key, value|
+      averagePostsByUser += value
+    end
+    averagePostsByUser = (averagePostsByUser/commentAuthors.length).to_i
     while(x<comments.length)
+        commentXParticipant = comments[x].participant
         tonal[x]=false
+        numbers = comments[x].content.scan(/\d+/)
+        numbers.each do |num|
+          if(contains_post_num_ref(comments[x].content,num))
+            if(!tonal[num] && isTonal(tokenizer,comments[x].content,comments[num].title))
+                tonal[num]=true
+            end
+            references[num].push(comments[i])
+          end
+        end
         i=x+1
         stop=(x+numCheck)+1
         if(stop>comments.length)
             stop=comments.length
         end
         checkNames=true
-        while(i<comments.length)
-            if(contains_post_num_ref(comments[i].content,comments[x].title[/\d+/].to_i))
-                if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].title))
-                    tonal[x]=true
-                end
-                references[x].push(comments[i])
-            elsif(i<stop)
-                if(checkNames && comments[i].participant == comments[x].participant)
+        while(i<stop)
+            if(checkNames && comments[i].content)
+                if(comments[i].participant == commentXParticipant)
                     checkNames=false
-                end
-                if(checkNames && comments[i].content.include?(comments[x].participant.user_name))
-                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.user_name))
+                elsif(comments[i].content.include?(commentXParticipant.user_name))
+                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,commentXParticipant.user_name))
                         tonal[x]=true
                     end
                     references[x].push(comments[i])
-                elsif(checkNames && !comments[x].participant.first_name.eql?("") && comments[i].content.include?(comments[x].participant.first_name))
-                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.first_name))
+                elsif(!commentXParticipant.first_name.eql?("") && comments[i].content.include?(commentXParticipant.first_name))
+                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,commentXParticipant.first_name))
                         tonal[x]=true
                     end
                     references[x].push(comments[i])
@@ -445,28 +481,51 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
             end
             i+=1
         end
-	#IF a single person refered to a comment more than once, it needs to be removed.
-
-	ref_participants=references[x].uniq{|com| com.participant}
-        rank = (ref_participants.length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
-
-        if(rank > minRank)
-	    statusStr = "Ongoing"
-	    if(comments[x].patch)
-	       statusStr = "Implemented"
-	    end
-            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>statusStr})    
-            comments[x].ideasource = idea
-            tag = Tag.first_or_create({:name => "idea", :comment => comments[x], :participant => comments[x].participant})
-            comments[x].save
-            references[x].each do |reference|        
-              reference.idea = idea
-              reference.save
-            end
+      x+=1
+    end  
+    x=start
+    while(x<comments.length)
+      commentXParticipant = comments[x].participant
+      experiencedUsers = find_top_experienced_participants()
+      #IF a single person refered to a comment more than once, it needs to be removed.
+      ref_participants=references[x].uniq{|com| com.participant}
+      frequentPosts = averagePostsByUser < commentAuthors[commentXParticipant.user_name]
+      rank = (ref_participants.length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal) + ((frequentPosts ? 1 : 0) * frequentPostVal)  + ((experiencedUsers.include?(commentXParticipant.user_name) ? 1 : 0) * experienceVal)
+      if(rank > minRank)
+        statusStr = "Ongoing"
+        if(comments[x].patch)
+          statusStr = "Implemented"
         end
-        x+=1
-    end                
+        idea = Idea.first_or_create({:comment=> comments[x]},{:status=>statusStr})    
+        comments[x].ideasource = idea
+        tag = Tag.first_or_create({:name => "idea", :comment => comments[x], :participant => commentXParticipant})
+        comments[x].save
+        references[x].each do |reference|        
+          reference.idea = idea
+          reference.save
+        end
+        idea.save
+      end
+      x+=1
+    end              
   end
+
+  def find_top_experienced_participants
+    adapter = DataMapper.repository(:default).adapter
+    issueid = Issue.first(:link => link).id
+    res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY experience DESC;")
+    experiencedUsers = Array.new
+    indx = 0  
+    amount = res.size * 0.05
+    res.each do |p_id|
+      currentParticipant = Participant.first(:id=>p_id);
+      experiencedUsers.push currentParticipant.user_name
+      indx = indx + 1
+      break if indx >= amount
+    end     
+    return experiencedUsers
+  end
+
   def contains_post_num_ref(content,postnum)
 =begin
     x=0
@@ -485,23 +544,23 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
     return false
 
 =end
-  	charArray=content.chars.to_a
-  	x=0
-  	while(x<charArray.length)
-  		if(charArray[x]=='#'||charArray[x]=='@')
-  			x+=1
-  			ref=""
-  			while(charArray[x].to_i !=0 || charArray[x] == "0")
-  				ref << charArray[x]
-  				x+=1
-  			end
-  			if(ref.to_i==postnum)
-  				return true
-  			end
-  		end
-  		x+=1
-  	end	
-  	return false
+ charArray=content.chars.to_a
+    x=0
+    while(x<charArray.length)
+      if(charArray[x]=='#'||charArray[x]=='@')
+        x+=1
+        ref=""
+        while(charArray[x].to_i !=0 || charArray[x] == "0")
+          ref << charArray[x]
+          x+=1
+        end
+        if(ref.to_i==postnum)
+          return true
+        end
+      end
+      x+=1
+    end 
+    return false
 
   end
 
@@ -525,52 +584,13 @@ def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
     end
   end
 
-  
-
-=begin
-  def find_ideas(start,numCheck,minWithImg,minNoImg)
-        Rails.logger.debug "start: #{start}, numCheck: #{numCheck}, minWithImg: #{minWithImg}, , minNoImg: #{minNoImg}"
-  	comments = Comment.all(:issue_id=>id)
-      references=Array.new(comments.length) {Array.new}
-      x=start
-      while(x<comments.length)
-          i=x+1
-          stop=(x+numCheck)+1
-          if(stop>comments.length)
-              stop=comments.length
-          end
-          checkNames=true
-          while(i<stop)
-              if(checkNames && comments[i].participant == comments[x].participant)
-                  checkNames=false
-              end
-              if(comments[i].content.include?(comments[x].title) || (checkNames && (comments[i].content.include?(comments[x].participant.first_name || comments[i].content.include?(comments[x].participant.user_name)))))
-                  references[x].push(comments[i])
-              end
-              i+=1
-          end
-          if(references[x].length>=minNoImg || (comments[x].has_image && references[x].length >= minWithImg))
-            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>"Ongoing"})    
-            comments[x].ideasource = idea
-            tag = Tag.first_or_create({:name => "idea", :comment => comments[x]})
-            comments[x].save        
-        end
-          x+=1
-      end            	
-  end
-=end
-
-
-def find_recent_potential_participants_Dmapper
+  def find_recent_potential_participants_Dmapper
+    adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = Network.all()
-    res2 = Network.all(:conditions=>{:issue_id=>issueid})
-    indx = 0
-    sortedRes = sorted = res.group_by {|x| x.participant_id}.sort_by {|x,list| [list.max_by{|y| y.commented_at}.commented_at,x]}.map{|x| x.second.max_by{|y| y.commented_at}}
-    sortedRes = sortedRes.find_all{|x| !(res2.map{|y| y.participant_id}.include?x.participant_id)}
-   
+    res = adapter.select("SELECT participant_id, commented_at FROM networks WHERE issue_id<>" + issueid.to_s + " ORDER BY commented_at DESC LIMIT 20;")
+  
     potentials = Array.new
-    sortedRes.reverse.each do |row|
+    res.each do |row|
       currentParticipant = Participant.first(:id=>row.participant_id);
 
       currentPInfo=Hash.new
@@ -580,46 +600,27 @@ def find_recent_potential_participants_Dmapper
       currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, row.commented_at)
       
       potentials.push currentPInfo
-      indx = indx + 1
-      break if indx == 20
-    end			
-
+    end
     return potentials
   end  
 
   def find_consensus_potential_participants_Dmapper
+    adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = Network.all(:conditions=>{Network.issue.status.like => "closed%"}) + Network.all(:conditions=>{Network.issue.status.like => "fix%", :issue_id.not=>issueid})
-    res2 = Network.all(:conditions=>{:issue_id=>issueid})
-    indx = 0
-    participantIds = Array.new
-    res.each do |row|
-      participantIds.push(row.participant_id);
-    end
+    res = adapter.select("SELECT networks.participant_id as id, COUNT(networks.participant_id) as total FROM networks, issues WHERE networks.issue_id=issues.id AND networks.issue_id<>" + issueid.to_s + " AND (issues.status LIKE 'closed%' OR issues.status LIKE 'fix%') GROUP BY networks.participant_id ORDER BY total DESC LIMIT 20;")
 
-    currentParticipantIds = Array.new
-    res2.each do |row|
-      currentParticipantIds.push(row.participant_id);
-    end
-
-    participantIds=participantIds - currentParticipantIds
-
-    participantIds_counts = participantIds.group_by {|x| x}.sort_by {|x,list| [-list.size,x]}.map{|x| [x.first, x.second.size]}
     potentials = Array.new
-    participantIds_counts.each do |row|
-      currentParticipant = Participant.first(:id=>row[0]);
+    res.each do |row|
+      currentParticipant = Participant.first(:id=>row.id);
 
       currentPInfo=Hash.new
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
-      recency = find_participant_recency(row[0])
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, row[1], recency)
+      recency = find_participant_recency(row.id)
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, row.total, recency)
       
       potentials.push currentPInfo
-      indx = indx + 1
-      break if indx == 20
     end			
-
     return potentials
   end  
 

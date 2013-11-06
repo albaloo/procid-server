@@ -1,3 +1,4 @@
+require iconv
 class HomepageController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	@@data = Rails.root.to_s+'/input.json'
@@ -21,7 +22,8 @@ class HomepageController < ApplicationController
 	def processInputFile(commentInfos,issue)
 		t1 = Time.now
 		names=issue["author"].split
-		threadInitiator = Participant.first_or_create({:user_name =>issue["author"]},{:link=>issue["authorLink"],:first_name=>names[0],:last_name=>names[1]})
+		participantName = Iconv.iconv('ascii//translit', 'utf-8', issue["author"]).to_s
+		threadInitiator = Participant.first_or_create({:user_name =>participantName},{:link=>issue["authorLink"],:first_name=>names[0],:last_name=>names[1]})
 		
 		currentIssue = Issue.first_or_create({:link => issue["link"]},{:status =>issue["status"],:participant=>threadInitiator,:title => issue["title"], :created_at=>issue["created_at"]})
 		
