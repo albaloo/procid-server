@@ -54,6 +54,7 @@ class Issue
     potentials.concat(find_patchsubmitter_potential_participants)
     potentials.concat(find_consensus_potential_participants)
     potentials.concat(find_recent_potential_participants)
+    potentials.concat(find_triad_potential_participants)
 
     potentials = potentials.uniq
     potentials = potentials.select { |h| !(h['author'].include? "System Message") }
@@ -215,25 +216,30 @@ class Issue
   end
 
   #randomly selects 10 participants between 100 who create triads with current participants
-  def find_triadmakers_potential_participants
+  def find_triad_potential_participants
   #TODO: write this function
     adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = adapter.select("SELECT n1.source as id1, n1.target as id2, n3.source as id3 FROM PPNetwork as n1, PPNetwork as n2, PPNetwork as n3 WHERE (n1.source=n3.target OR n1.source=n3.source OR n1.target=n3.target OR n1.target=n3.source) AND (n1.target=n2.source OR n1.source=n2.source OR n1.source=n2.target OR n1.target=n2.target) AND (n2.target=n3.source OR n2.source=n3.target OR n2.target=n3.target OR n2.source=n3.source) AND n1.source<n2.source AND n1.source<n3.source;")
+    res = adapter.select("SELECT t1.source_id, COUNT(t1.target_id) AS tr FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t2.participant_id=t1.target_id) WHERE (t2.issue_id=#{issueid}) AND t1.source_id IN (SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid})) GROUP BY t1.source_id ORDER BY tr DESC LIMIT 10;")
+
+    res2 = adapter.select("SELECT t1.target_id, COUNT(t1.source_id) AS tr FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t2.participant_id=t1.source_id) WHERE (t2.issue_id=#{issueid}) AND t1.target_id IN (SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid})) GROUP BY t1.target_id ORDER BY tr DESC LIMIT 10;")
+    
+    res.concat(res2)
+
     indx = 0
     potentials = Array.new
-    res.each do |p_id|
-      currentParticipant = Participant.first(:id=>p_id);
+    res.each do |row|
+      currentParticipant = Participant.first(:id=>row[0]);
 
       currentPInfo=Hash.new
       currentPInfo["author"]=currentParticipant.user_name
       currentPInfo["authorLink"]=currentParticipant.link
-      consensus = find_participant_consensus(p_id) 
-      recency = find_participant_recency(p_id)
-      #triads = find_participant_triad(p_id)
-      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency, 0)#Time.now)
+      consensus = find_participant_consensus(row[0]) 
+      recency = find_participant_recency(row[0])
+      triads = find_participant_triad(row[0])
+      currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency, triads)#Time.now)
 
-      potentials = potentials.to_a.push p_id
+      potentials.push currentPInfo
       indx = indx + 1
       break if indx == 20
     end	
