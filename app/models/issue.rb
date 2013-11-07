@@ -428,7 +428,6 @@ class Issue
     end
   end
 
-=begin
   def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal,frequentPostVal,experienceVal)
     #Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
     scores = {}
@@ -514,69 +513,6 @@ class Issue
       end
       x+=1
     end              
-  end
-=end
-
-def find_ideas(start,numCheck,minRank,refVal,imgVal,toneVal,patchVal)
-        Rails.logger.info "start: #{start}, numCheck: #{numCheck}, minRank: #{minRank},refVal: #{refVal},imgVal: #{imgVal},toneVal: #{toneVal},patchVal: #{patchVal}"
-    comments = Comment.all(:issue_id=>id)
-    references=Array.new(comments.length) {Array.new}
-    tonal=Array.new(comments.length){Boolean}
-    x=start
-    tokenizer = TactfulTokenizer::Model.new
-    while(x<comments.length)
-        tonal[x]=false
-        i=x+1
-        stop=(x+numCheck)+1
-        if(stop>comments.length)
-            stop=comments.length
-        end
-        checkNames=true
-        while(i<comments.length)
-            if(contains_post_num_ref(comments[i].content,comments[x].title[/\d+/].to_i))
-                if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].title))
-                    tonal[x]=true
-                end
-                references[x].push(comments[i])
-            elsif(i<stop)
-                if(checkNames && comments[i].participant == comments[x].participant)
-                    checkNames=false
-                end
-                if(checkNames && comments[i].content.include?(comments[x].participant.user_name))
-                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.user_name))
-                        tonal[x]=true
-                    end
-                    references[x].push(comments[i])
-                elsif(checkNames && !comments[x].participant.first_name.nil? && !comments[x].participant.first_name.eql?("") && comments[i].content.include?(comments[x].participant.first_name))
-                    if(!tonal[x] && isTonal(tokenizer,comments[i].content,comments[x].participant.first_name))
-                        tonal[x]=true
-                    end
-                    references[x].push(comments[i])
-                end
-            end
-            i+=1
-        end
-	#IF a single person refered to a comment more than once, it needs to be removed.
-
-	ref_participants=references[x].uniq{|com| com.participant}
-        rank = (ref_participants.length * refVal) + ((tonal[x] ? 1 : 0) * toneVal) + ((comments[x].has_image ? 1 : 0) * imgVal) + ((comments[x].patch ? 1 : 0) * patchVal)
-
-        if(rank > minRank)
-	    statusStr = "Ongoing"
-	    if(comments[x].patch)
-	       statusStr = "Implemented"
-	    end
-            idea = Idea.first_or_create({:comment=> comments[x]},{:status=>statusStr})    
-            comments[x].ideasource = idea
-            tag = Tag.first_or_create({:name => "idea", :comment => comments[x], :participant => comments[x].participant})
-            comments[x].save
-            references[x].each do |reference|        
-              reference.idea = idea
-              reference.save
-            end
-        end
-        x+=1
-    end                
   end
 
 

@@ -81,7 +81,7 @@ class HomepageController < ApplicationController
 			cashed = false
 		end
 		if(numPrevComments==0)
-			currentIssue.find_ideas(numPrevComments,10,4,1,3,2,3)#changed the patch and image value to 3
+			currentIssue.find_ideas(numPrevComments,10,4,1,3,2,3,2,1)#changed the patch and image value to 3
 		end
 		if(numPrevComments < commentInfos.length)
 			if(numPrevComments<7)
