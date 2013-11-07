@@ -162,6 +162,7 @@ class HomepageController < ApplicationController
 			curr_json["id"]=currCriteria.currentId
 			curr_json["title"]=currCriteria.title
 			curr_json["description"]=currCriteria.description
+			curr_json["author"]=currCriteria.participant.user_name
 			criteria_json.push curr_json		
 		end
 		
@@ -237,7 +238,7 @@ class HomepageController < ApplicationController
 
 			end
 		end
-		message="You are good to go!"
+		message="We did not detect any negative words in your comment. You are good to go!"
 		positiveRatio = 0.0
 		negativeRatio = 0.0
 
@@ -262,10 +263,10 @@ class HomepageController < ApplicationController
 		#	message = "Nice, your comment is more positive than average comments in Drupal!"
 		#	highlightedWords = []
 		#end
-		#if(negativeRatio > 0.01)
+		if(negativeRatio > 0)#if(negativeRatio > 0.01)
 			message = "To reach consensus, it is important to have a constructive tone. Highlighted words are negative, please consider rephrasing in a more constructive manner."
 			#message = "Your comment is more negative than the average comments in Drupal. Please consider revising it."
-		#end 
+		end 
 		result_json=Hash.new
 		result_json["highlightedWords"]=highlightedWords
 		result_json["totalNumWords"]=totalNumWords
