@@ -287,7 +287,7 @@ adapter.select("SELECT t1.participant_id, COUNT(t2.status) AS cb FROM (networks 
   def find_recent_potential_participants
     adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = adapter.select("SELECT t1.participant_id, MAX(t1.commented_at) as mx FROM (networks AS t1 INNER JOIN issues AS t2 ON t1.issue_id=t2.id) WHERE t1.participant_id NOT IN (SELECT networks.participant_id FROM networks WHERE networks.issue_id=#{issueid}) GROUP BY participant_id ORDER BY mx DESC;")
+    res = adapter.select("SELECT t1.participant_id, MAX(t1.commented_at) as mx FROM networks AS t1 WHERE t1.participant_id NOT IN (SELECT networks.participant_id FROM networks WHERE networks.issue_id=#{issueid}) GROUP BY t1.participant_id ORDER BY mx DESC;")
 
 =begin
 res = adapter.select("SELECT t1.participant_id, MAX(t1.commented_at) as mx FROM (networks AS t1 INNER JOIN issues AS t2 ON t1.issue_id=t2.id) WHERE t1.participant_id IN (SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid})) GROUP BY participant_id ORDER BY mx DESC;")
