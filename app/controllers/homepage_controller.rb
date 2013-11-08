@@ -17,12 +17,12 @@ class HomepageController < ApplicationController
 		#issueId = 
 		processInputFile(commentInfos,issue)
 		#prepareOutputFile(issueId)
-	end
-	
+	end	
+
 	def processInputFile(commentInfos,issue)
 		t1 = Time.now
 		names=issue["author"].split
-		participantName = Iconv.iconv('ascii//translit', 'utf-8', issue["author"]).to_s
+		participantName = Iconv.iconv('ascii//translit', 'utf-8', issue["author"])[0]
 		threadInitiator = Participant.first_or_create({:user_name =>participantName},{:link=>issue["authorLink"],:first_name=>names[0],:last_name=>names[1]})
 		
 		currentIssue = Issue.first_or_create({:link => issue["link"]},{:status =>issue["status"],:participant=>threadInitiator,:title => issue["title"], :created_at=>issue["created_at"]})
@@ -36,7 +36,8 @@ class HomepageController < ApplicationController
 		
 		commentInfos.from(index).each do |curr|	
 			names=curr["author"].split
-			currentParticipant = Participant.first_or_create({:user_name =>curr["author"]},{:link=>curr["authorLink"],:first_name=>names[0],:last_name=>names[1]})
+		        currentparticipantName = Iconv.iconv('ascii//translit', 'utf-8', curr["author"])[0]
+			currentParticipant = Participant.first_or_create({:user_name =>currentparticipantName},{:link=>curr["authorLink"],:first_name=>names[0],:last_name=>names[1]})
 
 			#insert network objects
 			currentNet = Network.first_or_create({:participant => currentParticipant, :issue => currentIssue})
