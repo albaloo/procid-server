@@ -168,7 +168,7 @@ class Issue
   def find_experienced_potential_participants
     adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY experience DESC;")
+    res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY CASE WHEN experience IS NULL THEN 1 ELSE 0 END,experience DESC LIMIT 20;")
     potentials = Array.new
     indx = 0
     res.each do |p_id|
@@ -193,7 +193,7 @@ class Issue
   def find_patchsubmitter_potential_participants
     adapter = DataMapper.repository(:default).adapter
     issueid = Issue.first(:link => link).id
-    res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY usability_patches DESC;")
+    res = adapter.select("SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid}) ORDER BY CASE WHEN usability_patches IS NULL THEN 1 ELSE 0 END, usability_patches DESC LIMIT 20;")
     indx = 0
     potentials = Array.new
     res.each do |p_id|

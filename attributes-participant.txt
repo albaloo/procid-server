@@ -1,4 +1,3 @@
-		0	0	16		
 -Shaman-	/user/153145	332	0	3		
 -enzo-	/user/294937	283	3	10	Jose Eduardo	Garcia Torres
 2createwdrupal	/user/238928	297	0	3		
