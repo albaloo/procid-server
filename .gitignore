@@ -1,4 +1,6 @@
 *~
 *.txt
 *.pem
+*-old.rb
+.DS_Store
 log/development.log

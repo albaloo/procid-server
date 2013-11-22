@@ -21,6 +21,8 @@ class HomepageController < ApplicationController
 
 	def processInputFile(commentInfos,issue)
 		t1 = Time.now
+        ideaComments = Rails.cache.read("ideaComments")
+        ideaReferences = Rails.cache.read("ideaReferences")
 		names=issue["author"].split
 		participantName = Iconv.iconv('ascii//translit', 'utf-8', issue["author"])[0]
 		threadInitiator = Participant.first_or_create({:user_name =>participantName},{:link=>issue["authorLink"],:first_name=>names[0],:last_name=>names[1]})
@@ -72,7 +74,52 @@ class HomepageController < ApplicationController
 					currentComment.attributes = {:patch => true}
 				end
 			end
-								
+            
+            #If a new idea has been added through the comment composition window
+            index = 0
+            while index < ideaComments.size
+               if ideaComments[index][:authorLink] == currentParticipant.link and ideaComments[index][:content] == currentComment.content and ideaComments[index][:issueLink] == currentIssue.link
+                   statusStr = "Ongoing"
+                   
+                   if currentComment.patch
+                       statusStr = "Implemented"
+                   end
+                   
+                   idea = Idea.first_or_create({:comment=> currentComment},{:status=>statusStr})
+                   currentComment.ideasource = idea
+                   tag = Tag.first_or_create({:name => "idea", :comment => currentComment, :participant => currentParticipant})
+                   currentComment.save
+                   ideaComments.delete_at(index)
+                else
+                   index+=1
+               end
+            end
+            
+            index = 0
+            while index < ideaReferences.size
+                if ideaReferences[index][:authorLink] == currentParticipant.link and ideaReferences[index][:content] == currentComment.content and ideaReferences[index][:issueLink] == currentIssue.link
+                    comments = Comment.all(:issue => currentIssue)
+                    ideaCom = comments[Integer(ideaReferences[index][:ideaNum]) - 1]
+                    statusStr = "Ongoing"
+                    
+                    if ideaCom.patch
+                        statusStr = "Implemented"
+                    end
+                    
+                    idea = Idea.first_or_create({:comment=> ideaCom},{:status=>statusStr})
+                    ideaCom.ideasource = idea
+                    tag = Tag.first_or_create({:name => "idea", :comment => ideaCom, :participant => ideaCom.participant})
+                            currentComment.attributes = {:idea => idea, :tone => ideaReferences[index][:type]}
+                    ideaCom.summary = ideaCom.findSummary
+                    currentComment.save
+                    idea.save
+                    ideaCom.save
+                    ideaReferences.delete_at(index)
+                else
+                    index+=1
+                end
+            end
+            
 			currentComment.raise_on_save_failure = true
 			currentComment.save
 		end
