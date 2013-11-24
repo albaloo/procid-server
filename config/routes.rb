@@ -19,6 +19,7 @@ Backend::Application.routes.draw do
 	match "/addNewComment" => "ideapage#addNewComment"
 	match "/newIdeaComment" => "homepage#newIdeaComment"
 	match "/newIdeaReference" => "homepage#newIdeaReference"
+    match "/changeCommentTone" => "homepage#changeCommentTone"
 
 
   # The priority is based upon order of creation:
