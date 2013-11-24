@@ -17,11 +17,8 @@ Backend::Application.routes.draw do
 	match "/deleteCriteria" => "ideapage#deleteCriteria"
 	match "/deleteCriteriaStatus" => "ideapage#deleteCriteria"
 	match "/addNewComment" => "ideapage#addNewComment"
-
-
-
-
-
+	match "/newIdeaComment" => "homepage#newIdeaComment"
+	match "/newIdeaReference" => "homepage#newIdeaReference"
 
 
   # The priority is based upon order of creation:
