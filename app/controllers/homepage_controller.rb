@@ -145,6 +145,55 @@ class HomepageController < ApplicationController
 		prepareOutputFile(currentIssue.id, cashed)
 		#return currentIssue.id	
 	end
+
+	def newIdeaComment
+		ideaComments = Rails.cache.read("ideaComments")
+    		if ideaComments.nil?
+      			ideaComments = Array.new
+    		end
+    		
+		info = Hash.new
+    		info[:authorLink] = params[:authorLink]
+    		info[:content] = params[:content]
+    		issueLink = params[:issueLink]
+    		if(issueLink.ends_with?('#'))
+      			issueLink.chop
+    		end
+
+    		info[:issueLink] = issueLink
+    		ideaComments.push(info)
+    		Rails.cache.write("ideaComments", ideaComments)
+    		render :nothing => true
+	end
+	
+	def newIdeaReference
+		ideaReferences = Rails.cache.read("ideaReferences")
+		if ideaReferences.nil?
+      			ideaReferences = Array.new
+    		end
+    		info = Hash.new
+    		info[:authorLink] = params[:authorLink]
+    		info[:content] = params[:content]
+    		issueLink = params[:issueLink]
+
+    		if(issueLink.ends_with?('#'))
+      			issueLink.chop
+    		end
+
+    		info[:issueLink] = issueLink
+    		info[:ideaNum] = params[:ideaNum]
+    		info[:type] = params[:type]
+    		ideaReferences.push(info)
+    		Rails.cache.write("ideaReferences", ideaReferences)
+    		render :nothing => true
+	end
+	
+	def changeCommentTone
+		comment = Comment.first(:link => params[:commentLink])
+		comment.update(:tone => params[:tone])
+		render :nothing => true
+	end
+	
 	
 	def prepareOutputFile(issueId, cashed)
 		t1 = Time.now
