@@ -77,7 +77,7 @@ class HomepageController < ApplicationController
             
             #If a new idea has been added through the comment composition window
             index = 0
-            while index < ideaComments.size
+            while (!(ideaComments.nil?) && index < ideaComments.size)
                if ideaComments[index][:authorLink] == currentParticipant.link and ideaComments[index][:content] == currentComment.content and ideaComments[index][:issueLink] == currentIssue.link
                    statusStr = "Ongoing"
                    
@@ -96,7 +96,7 @@ class HomepageController < ApplicationController
             end
             
             index = 0
-            while index < ideaReferences.size
+            while (!(ideaReferences.nil?) && index < ideaReferences.size)
                 if ideaReferences[index][:authorLink] == currentParticipant.link and ideaReferences[index][:content] == currentComment.content and ideaReferences[index][:issueLink] == currentIssue.link
                     comments = Comment.all(:issue => currentIssue)
                     ideaCom = comments[Integer(ideaReferences[index][:ideaNum]) - 1]
