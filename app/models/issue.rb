@@ -129,18 +129,19 @@ class Issue
 		else
 			description.concat(", no previous interactions with current participants.")
 		end
-	=begin   random = 1+Random.rand(6)
-	if(num < 3 && experienceInfo == 1)
-	description.concat(", no previous interactions with current participants.")
-	else
-	numTriads = 1+Random.rand(12)
-	triadString = "participants"
-	#if(numTriads==1)
-	#  triadString = "participant"
-	#end
-	description.concat(", has previously interacted with #{numTriads} of the current #{triadString}.")
-	end
-	=end
+=begin   random = 1+Random.rand(6)
+if(num < 3 && experienceInfo == 1)
+description.concat(", no previous interactions with current participants.")
+else
+numTriads = 1+Random.rand(12)
+triadString = "participants"
+#if(numTriads==1)
+#  triadString = "participant"
+#end
+description.concat(", has previously interacted with #{numTriads} of the current
+# #{triadString}.")
+end
+=end
 	end
 
 	def find_participant_consensus(p_id)
@@ -219,7 +220,6 @@ class Issue
 	#randomly selects 10 participants between 100 who create triads with current
 	# participants
 	def find_triad_potential_participants
-		#TODO: write this function
 		adapter = DataMapper.repository(:default).adapter
 		issueid = Issue.first(:link => link).id
 		res = adapter.select("SELECT t1.source_id, COUNT(t1.target_id) AS tr FROM (participant_networks AS t1 INNER JOIN networks AS t2 ON t2.participant_id=t1.target_id) WHERE (t2.issue_id=#{issueid}) AND t1.source_id IN (SELECT id FROM participants WHERE NOT EXISTS (SELECT participant_id, issue_id FROM networks WHERE networks.participant_id=participants.id AND networks.issue_id=#{issueid})) GROUP BY t1.source_id ORDER BY tr DESC LIMIT 10;")
@@ -582,7 +582,6 @@ return true
 end
 end
 return false
-
 =end
 		charArray=content.chars.to_a
 		x=0
