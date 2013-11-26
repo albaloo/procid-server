@@ -191,13 +191,13 @@ class IdeapageController < ApplicationController
 
 		render :json => { }
 
-	=begin		updatedCriterias.each do |curr|
+=begin		updatedCriterias.each do |curr|
 	currentCriteria = Criteria.first({:issue => currentIssue, :currentId => curr["id"]})
 	currentCriteria.update({:title => curr["title"], :description => curr["description"]})
 	currentCriteria.save
 	end
 	render :json => { }
-	=end
+=end
 	end
 
 	def deleteCriteria
