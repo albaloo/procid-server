@@ -89,8 +89,8 @@ class IdeapageController < ApplicationController
 		issueLink.chop
 		end
 		currentIssue = Issue.first(:link => issueLink)
-		currentParticipant = Participant.first_or_create({:user_name
-		# =>userName})#,{:link=>issue["authorLink"]})
+		currentParticipant = Participant.first_or_create({:user_name => userName})
+		#,{:link=>issue["authorLink"]})
 		currentCriteria = Criteria.first_or_create({:issue => currentIssue, :currentId => criteriaID},{:title=>criteriaTitle, :description=>criteriaDescription, :participant => currentParticipant})
 		currentCriteria.save
 
@@ -209,8 +209,8 @@ class IdeapageController < ApplicationController
 		issueLink.chop
 		end
 		currentIssue = Issue.first(:link => issueLink)
-		currentParticipant = Participant.first_or_create({:user_name
-		# =>userName})#,{:link=>issue["authorLink"]})
+		currentParticipant = Participant.first_or_create({:user_name => userName})
+		#,{:link=>issue["authorLink"]})
 		currentCriteria = Criteria.first({:issue => currentIssue, :currentId => criteriaID})
 		oldTitle=currentCriteria.title
 		oldDescription=currentCriteria.description
