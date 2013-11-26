@@ -19,6 +19,8 @@ class HomepageController < ApplicationController
     if Issue.count(:link=>issueLink) > 0
       result = Issue.first(:link=>issueLink).find_num_previous_comments
     end
+    Rails.logger.info "result: #{result}"
+    
     result_json = Hash.new
     result_json["result"]=result
     render :json => result_json.to_json
