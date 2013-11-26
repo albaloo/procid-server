@@ -239,8 +239,7 @@ end
 			consensus = find_participant_consensus(row[0])
 			recency = find_participant_recency(row[0])
 			triads = find_participant_triad(row[0])
-			currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency,
-			# triads)#Time.now)
+			currentPInfo["description"]= gather_participant_info_description(currentParticipant, consensus, recency, triads)#Time.now)
 
 			potentials.push currentPInfo
 			indx = indx + 1
