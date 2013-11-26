@@ -6,7 +6,6 @@ class HomepageController < ApplicationController
 	before_filter :authenticate
 
 	def postcomments
-		#render :nothing => true
 		commentInfos = ActiveSupport::JSON.decode(params[:commentInfos])
 		issue = ActiveSupport::JSON.decode(params[:issue])
 
@@ -14,6 +13,17 @@ class HomepageController < ApplicationController
 		prepareOutputFile(issueId)
 	end
 
+  def issueExists
+    issueLink = params[:issueLink]
+    result = 0
+    if Issue.count(:link=>issueLink) > 0
+      result = Issue.first(:link=>issueLink).find_num_previous_comments
+    end
+    result_json = Hash.new
+    result_json["result"]=result
+    render :json => result_json.to_json
+  end
+  
 	def processInputFile(commentInfos,issue)
 		ideaComments = Rails.cache.read("ideaComments")
 		ideaReferences = Rails.cache.read("ideaReferences")
