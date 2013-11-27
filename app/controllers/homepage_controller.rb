@@ -520,21 +520,10 @@ deleteCriteria = 		(participant,issue,"Delete Criteria",old criteria title,old
 	def authenticate
 	
 	Rails.logger.info "request.env['HTTP_ORIGIN']: #{request.env['HTTP_ORIGIN']}, #{request.headers['HTTP_ORIGIN']}"
-	
-	  if(request.end['HTTP_ORIGIN'].start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"))
-      return true
-    end
-    
-	  if(request.headers["HTTP_ORIGIN"].start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"))
-	    return true
-	  end
-	  
-		if(request.referer.start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"))
-			return true
-		else
-			Rails.logger.info "request.referer: #{request.referer}"
-			head :ok
-		end
+		  
+	  allowed_sites = ["http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"]
+    return allowed_sites.include?(request.env['HTTP_ORIGIN'])
+      
 		#authenticate_or_request_with_http_basic do |username, password|
 		#	username == "procid" && password == "procid"
 		#end
