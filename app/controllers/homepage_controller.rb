@@ -518,6 +518,10 @@ deleteCriteria = 		(participant,issue,"Delete Criteria",old criteria title,old
 	protected
 
 	def authenticate
+	  if(request.headers["HTTP_ORIGIN"]..start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"))
+	    return true
+	  end
+	  
 		if(request.referer.start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"))
 			return true
 		else
