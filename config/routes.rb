@@ -21,6 +21,9 @@ Backend::Application.routes.draw do
 	match "/newIdeaReference" => "homepage#newIdeaReference"
 	match "/changeCommentTone" => "homepage#changeCommentTone"
 	match "/issueExists" => "homepage#issueExists"
+	match "/startProcid" => "homepage#startProcid"
+	match "/inviteLensClicked" => "invitepage#inviteLensClicked"
+	match "/invitedParticipant" => "invitepage#invitedParticipant"
 
 # The priority is based upon order of creation:
 # first created -> highest priority.

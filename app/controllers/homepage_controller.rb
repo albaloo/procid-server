@@ -19,11 +19,26 @@ class HomepageController < ApplicationController
     if Issue.count(:link=>issueLink) > 0
       result = Issue.first(:link=>issueLink).find_num_previous_comments
     end
-    Rails.logger.info "result: #{result}"
-    
+   
     result_json = Hash.new
     result_json["result"]=result
     render :json => result_json.to_json
+  end
+  
+  def startProcid
+    issueLink = params[:issueLink]
+    userName = params[:userName]
+
+    if(issueLink.ends_with?('#'))
+    issueLink.chop
+    end
+
+    currentIssue = Issue.first(:link => issueLink)
+    currentParticipant = Participant.first_or_create({:user_name =>userName})
+
+    addAction(currentParticipant,currentIssue,"Start Procid",nil,nil,nil,nil)
+
+    render :json => { }
   end
   
 	def processInputFile(commentInfos,issue)
@@ -142,7 +157,7 @@ class HomepageController < ApplicationController
 			end
 		currentIssue.find_conversations(numPrevComments,5,2)
 		end
-
+  
 	  return currentIssue.id
 	end
 
@@ -189,8 +204,20 @@ class HomepageController < ApplicationController
 	end
 
 	def changeCommentTone
+	  issueLink = params[:issueLink]
+    userName = params[:userName]
 		comment = Comment.first(:link => params[:commentLink])
+		
+		if(issueLink.ends_with?('#'))
+		 issueLink.chop
+    end
+
+    currentIssue = Issue.first(:link => issueLink)
+    currentParticipant = Participant.first_or_create({:user_name =>userName})
 		comment.update(:tone => params[:tone])
+
+		addAction(currentParticipant,currentIssue,"Change Comment Tone",comment.tone,nil,comment.id,nil)
+  
 		render :nothing => true
 	end
 
@@ -270,6 +297,16 @@ class HomepageController < ApplicationController
 
 	def findNegativeWords
 		commentContent = params[:comment]
+		issueLink = params[:issueLink]
+    userName = params[:userName]
+    
+    if(issueLink.ends_with?('#'))
+    issueLink.chop
+    end
+
+    currentIssue = Issue.first(:link => issueLink)
+    currentParticipant = Participant.first_or_create({:user_name =>userName})
+    
 		words=Array.new
 		words_file = "#{Rails.root}/words.json"
 		currentWords = ""
@@ -342,6 +379,9 @@ class HomepageController < ApplicationController
 			message = "To reach consensus, it is important to have a constructive tone. Highlighted words are negative, please consider rephrasing in a more constructive manner."
 		#message = "Your comment is more negative than the average comments in Drupal. Please consider revising it."
 		end
+		
+		addAction(currentParticipant,currentIssue,"Find Negative Words",commentContent,message,nil,nil)
+		
 		result_json=Hash.new
 		result_json["highlightedWords"]=highlightedWords
 		result_json["totalNumWords"]=totalNumWords
@@ -478,12 +518,12 @@ deleteCriteria = 		(participant,issue,"Delete Criteria",old criteria title,old
 	protected
 
 	def authenticate
-		#if(request.referer.start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/"))
-		#	return true
-		#else
-		#	Rails.logger.info "request.referer: #{request.referer}"
-		#	head :ok
-		#end
+		if(request.referer.start_with?("http://drupal.org/node/","https://drupal.org/node/","http://www.drupal.org/node/","https://www.drupal.org/node/", "http://drupal.org/comment/","https://drupal.org/comment/","http://www.drupal.org/comment/", "https://www.drupal.org/comment/"))
+			return true
+		else
+			Rails.logger.info "request.referer: #{request.referer}"
+			head :ok
+		end
 		#authenticate_or_request_with_http_basic do |username, password|
 		#	username == "procid" && password == "procid"
 		#end
