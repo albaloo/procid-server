@@ -175,6 +175,10 @@ class HomepageController < ApplicationController
 		issueLink.chop
 		end
 
+    currentIssue = Issue.first(:link => issueLink)
+    currentParticipant = Participant.first_or_create({:link =>info[:authorLink]})
+    addAction(currentParticipant,currentIssue,"Mark Comment as Idea",info[:content],nil,nil,nil)
+
 		info[:issueLink] = issueLink
 		ideaComments.push(info)
 		Rails.cache.write("ideaComments", ideaComments)
@@ -194,6 +198,10 @@ class HomepageController < ApplicationController
 		if(issueLink.ends_with?('#'))
 		issueLink.chop
 		end
+
+    currentIssue = Issue.first(:link => issueLink)
+    currentParticipant = Participant.first_or_create({:link =>info[:authorLink]})
+    addAction(currentParticipant,currentIssue,"Mark Comment as referal to Idea",info[:content],info[:ideaNum],nil,nil)
 
 		info[:issueLink] = issueLink
 		info[:ideaNum] = params[:ideaNum]
