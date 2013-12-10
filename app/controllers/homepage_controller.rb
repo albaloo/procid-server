@@ -488,6 +488,20 @@ class HomepageController < ApplicationController
 		render :json => { }
 	end
 
+  def sendFeedback
+    issueLink = params[:issueLink]
+    userName = params[:userName]
+    if(issueLink.ends_with?('#'))
+      issueLink.chop
+    end
+    
+    currentIssue = Issue.first(:link => issueLink)
+    currentParticipant = Participant.first_or_create({:user_name =>userName})
+
+    addAction(currentParticipant,currentIssue,"Procid Feedback",params[:content],nil,nil,nil)
+    render :json => { }
+  end
+
 =begin
 Values for addAction call from various actions:
 addNewIdea =  (participant,issue,"Add New Idea",nil,nil,new idea ID,current

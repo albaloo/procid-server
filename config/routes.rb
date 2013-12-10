@@ -22,6 +22,7 @@ Backend::Application.routes.draw do
 	match "/changeCommentTone" => "homepage#changeCommentTone"
 	match "/issueExists" => "homepage#issueExists"
 	match "/startProcid" => "homepage#startProcid"
+	match "/sendFeedback" => "homepage#sendFeedback"
 	match "/inviteLensClicked" => "invitepage#inviteLensClicked"
 	match "/invitedParticipant" => "invitepage#invitedParticipant"
 
