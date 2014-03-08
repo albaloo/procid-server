@@ -352,6 +352,9 @@ res = adapter.select("SELECT t1.participant_id, MAX(t1.commented_at) as mx FROM
 	#find conversations in a new thread
 	def find_conversations(start,convoLen,maxContinuous)
 		comments = Comment.all(:issue_id=>id)
+		if(comments.length < convoLen)
+      return
+    end
 		x=start
 		while(x<comments.size-convoLen)
 			tagComments=Array.new     #array to store comments that will get tagged
@@ -465,6 +468,9 @@ res = adapter.select("SELECT t1.participant_id, MAX(t1.commented_at) as mx FROM
 		# #{patchVal}"
 		scores = {}
 		comments = Comment.all(:issue_id=>id)
+		if(comments.length <= 3)
+		  return
+		end
 		references=Array.new(comments.length) {Array.new}
 		tonal=Array.new(comments.length){Boolean}
 		x=start
